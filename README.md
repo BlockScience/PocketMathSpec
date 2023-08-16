@@ -13,6 +13,11 @@ The following are broad behaviors that will be need to be modeled:
 3. Servicer Relay Rewards: Rewards for servicers doing work
 4. Servicer Stake Burn: Slashing for servicers who do not perform
 5. Servicer Jailing: Behavior for additonal incentive to perform
+6. Validator Staking: Behaviors for validators staking into the network
+7. Validator Block Reward: Rewards allocated on a block basis
+8. Validator Stake Burn: Slashing from bad behavior
+9. Validator Jailing: The process of jailing a validator for bad behavior
+10. Validator Transaction Fees: Provide validators with an additional incentive for producing blocks
 
 ### Entity Modeling
 
@@ -21,6 +26,8 @@ The following are the entities that need to be created within the spec:
 1. Servicers
 2. Validators
 3. DAO Group
+4. Portals
+5. Applications
 
 ### Parameters
 
@@ -67,3 +74,29 @@ The following are the entities that need to be created within the spec:
 2. MaxJailedBlocks: The amount of time (in blocks) a node has to unjail before being force unstaked and slashed. Reaching MaxJailedBlocks will result in a node’s entire stake being slashed.
 
 
+#### Validator Staking
+
+Modeling the Validator Threshold would need to be a product of:
+
+1. MaxValidators - currently 1,000 (expanding set will lower threshold)
+2. ProposerAllocation - currently 5% (increasing will incentivize more competition to be a validator, which will increase threshold)
+
+#### Validator Block Reward
+
+1. Initial parameter = 5% as per current v0 value, proportion of total block reward
+
+#### Validator Stake Burn
+
+1. double_sign_burn_percentage, default 5%
+2. missed_blocks_burn_percentage, default 1%
+
+#### Validator Jailing
+
+1. DowntimeJailDuration: The amount of time (in nanoseconds) before a node can unjail and resume service.
+2. MaxJailedBlocks: The amount of time (in blocks) a node has to unjail before being force unstaked and slashed. Reaching MaxJailedBlocks will result in a node’s entire stake being slashed.
+
+#### Validator Transaction Fees
+
+1. Transaction Fee = 0.01 POKT
+2. Proposer percentage of fees = 10%
+3. DAO percentage of fees = 90%
