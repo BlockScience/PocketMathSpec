@@ -4,7 +4,7 @@
 
 The mathematical specification handles the following attributes of the system:
 
-### Broad Behaviors Modeled
+## Broad Behaviors Modeled
 
 The following are broad behaviors that will be need to be modeled:
 
@@ -26,7 +26,7 @@ The following are broad behaviors that will be need to be modeled:
 16. DAO Transaction Fee: A percentage of the fee for every transaction goes to the DAO, with the remaining proportion going to the producer of the block containing such transaction fees. 
 17. DAO Allocation: The DAO treasury earns this proportion of the total POKT block reward. Value is a percentage. 
 
-### Entity Modeling
+## Entity Modeling
 
 The following are the entities that need to be created within the spec:
 
@@ -36,9 +36,38 @@ The following are the entities that need to be created within the spec:
 4. Portals
 5. Applications
 
-### Parameters
+## Boundary Actions
 
-#### Mint and Burn
+A list of boundary actions to model:
+
+1. Mint POKT
+2. Burn POKT
+3. Servicer Stakes
+4. Servicer Unstakes
+5. Servicer Claims Stake Rewards?
+6. Servicer Relays
+7. Slash Servicer Stake
+8. Servicer Jailed
+9. Servicer Unjailed?
+10. Validator Stakes
+11. Validator Unstakes
+12. Block Rewards Allocated
+13. Slash Validator Stake
+14. Validator Jailed
+15. Validator Unjailed?
+16. Validator Produces Block
+17. Portal Security Stake
+18. Portal Security Unstake
+19. Portal App Stake
+20. Portal App Unstake
+21. Portal Relay
+22. Application App Stake
+23. Application App Unstake
+24. Application Relay
+
+## Parameters
+
+### Mint and Burn
 
 1. Relays per day
 2. Relays to Tokens Multiplier
@@ -57,11 +86,11 @@ The following are the entities that need to be created within the spec:
 15. Servicer Relay rewards
 16. Validator block reward
 
-#### Servicer Stake
+### Servicer Stake
 
 1. servicer_minimum_stake
 
-#### Servicer Relay Rewards
+### Servicer Relay Rewards
 
 1. Servicer share of block rewards
 2. DAO Allocation
@@ -70,71 +99,71 @@ The following are the entities that need to be created within the spec:
 5. Number of servicers
 6. Relay QoS
 
-#### Servicer Stake Burn
+### Servicer Stake Burn
 
 1. SlashFractionDowntime: The % of a node’s stake that is burned for downtime, where 1 is 100%.
 2. ReplayAttackBurnMultiplier: The multiplier slash factor for submitting a replay attack. The base slash is directly proportional to the amount of relays claimed.
 
-#### Servicer Jailing
+### Servicer Jailing
 
 1. DowntimeJailDuration: The amount of time (in nanoseconds) before a node can unjail and resume service.
 2. MaxJailedBlocks: The amount of time (in blocks) a node has to unjail before being force unstaked and slashed. Reaching MaxJailedBlocks will result in a node’s entire stake being slashed.
 
 
-#### Validator Staking
+### Validator Staking
 
 Modeling the Validator Threshold would need to be a product of:
 
 1. MaxValidators - currently 1,000 (expanding set will lower threshold)
 2. ProposerAllocation - currently 5% (increasing will incentivize more competition to be a validator, which will increase threshold)
 
-#### Validator Block Reward
+### Validator Block Reward
 
 1. Initial parameter = 5% as per current v0 value, proportion of total block reward
 
-#### Validator Stake Burn
+### Validator Stake Burn
 
 1. double_sign_burn_percentage, default 5%
 2. missed_blocks_burn_percentage, default 1%
 
-#### Validator Jailing
+### Validator Jailing
 
 1. DowntimeJailDuration: The amount of time (in nanoseconds) before a node can unjail and resume service.
 2. MaxJailedBlocks: The amount of time (in blocks) a node has to unjail before being force unstaked and slashed. Reaching MaxJailedBlocks will result in a node’s entire stake being slashed.
 
-#### Validator Transaction Fees
+### Validator Transaction Fees
 
 1. Transaction Fee = 0.01 POKT
 2. Proposer percentage of fees = 10%
 3. DAO percentage of fees = 90%
 
-#### Portal Security Stake
+### Portal Security Stake
 
 1. Portal Minimum Stake, starting parameter = 150,000 POKT
 
-#### Portal App Stake
+### Portal App Stake
 
 1. Token to Relays Multiplier, starting parameter = 100
 
-#### Portal fee per relay
+### Portal fee per relay
 
 1. Portal Fee Per Relay
 
-#### Application App Stake
+### Application App Stake
 
 1. Token to Relays Multiplier, starting parameter = 100
 
 
-#### Application Fee Per Relay
+### Application Fee Per Relay
 
 1. Application Fee per Relay
 
-#### DAO Transaction Fee
+### DAO Transaction Fee
 
 1. Transaction Fee = 0.01 POKT
 2. Proposer percentage of fees = 10%
 3. DAO percentage of fees = 90%
 
-#### DAO Allocation
+### DAO Allocation
 
 1. Initial Percentage = 10% as per current v0 value
