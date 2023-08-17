@@ -18,6 +18,9 @@ The following are broad behaviors that will be need to be modeled:
 8. Validator Stake Burn: Slashing from bad behavior
 9. Validator Jailing: The process of jailing a validator for bad behavior
 10. Validator Transaction Fees: Provide validators with an additional incentive for producing blocks
+11. Portal Security Stake: Staking for the security of the service
+12. Portal App Stake: "Reduce transaction costs for the system by requiring portal's to bond POKT to guarantee the bandwith they expect from Pocket's servicers, and optimise the balance between accessibility of the service for applications, as well as the economic potential of POKT. "
+13. Portal fee per relay: The fees earned by portals for relaying
 
 ### Entity Modeling
 
@@ -100,3 +103,11 @@ Modeling the Validator Threshold would need to be a product of:
 1. Transaction Fee = 0.01 POKT
 2. Proposer percentage of fees = 10%
 3. DAO percentage of fees = 90%
+
+#### Portal Security Stake
+
+1. Portal Minimum Stake, starting parameter = 150,000 POKT
+
+#### Portal App Stake
+
+1. Token to Relays Multiplier, starting parameter = 100
