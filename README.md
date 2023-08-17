@@ -21,6 +21,10 @@ The following are broad behaviors that will be need to be modeled:
 11. Portal Security Stake: Staking for the security of the service
 12. Portal App Stake: "Reduce transaction costs for the system by requiring portal's to bond POKT to guarantee the bandwith they expect from Pocket's servicers, and optimise the balance between accessibility of the service for applications, as well as the economic potential of POKT. "
 13. Portal fee per relay: The fees earned by portals for relaying
+14. Application app stake: The behavior for applications staking
+15. Application fee per relay: The fees that applications get for relaying
+16. DAO Transaction Fee: A percentage of the fee for every transaction goes to the DAO, with the remaining proportion going to the producer of the block containing such transaction fees. 
+17. DAO Allocation: The DAO treasury earns this proportion of the total POKT block reward. Value is a percentage. 
 
 ### Entity Modeling
 
@@ -111,3 +115,26 @@ Modeling the Validator Threshold would need to be a product of:
 #### Portal App Stake
 
 1. Token to Relays Multiplier, starting parameter = 100
+
+#### Portal fee per relay
+
+1. Portal Fee Per Relay
+
+#### Application App Stake
+
+1. Token to Relays Multiplier, starting parameter = 100
+
+
+#### Application Fee Per Relay
+
+1. Application Fee per Relay
+
+#### DAO Transaction Fee
+
+1. Transaction Fee = 0.01 POKT
+2. Proposer percentage of fees = 10%
+3. DAO percentage of fees = 90%
+
+#### DAO Allocation
+
+1. Initial Percentage = 10% as per current v0 value
