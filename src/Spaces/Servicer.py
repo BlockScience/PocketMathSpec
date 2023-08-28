@@ -10,7 +10,7 @@ servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKe
 })
 
 
-
+#TODO
 servicer_pause_space = TypedDict("Servicer Pause Space", {})
-
 servicer_unpause_space = TypedDict("Servicer Unpause Space", {})
+assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {})
