@@ -14,3 +14,6 @@ RelayChainType = NewType('Relay Chain', str)
 
 # The physical geo-location identifier this Servicer registered in
 GeoZoneType = NewType('GeoZone', str)
+
+#TODO
+ServicerReportCardType = NewType('GeoZone', dict)
