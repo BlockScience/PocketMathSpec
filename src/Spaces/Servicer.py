@@ -1,8 +1,7 @@
-from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType, ServicerAddressType
+from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType
 from typing import TypedDict, List
 
-servicer_stake_space = TypedDict("Servicer Stake Space", {"servicer_address": ServicerAddressType, # The address of the servicer calling the staking
-                                                          "public_key": PublicKeyType, # The public cryptographic id of the custodial account
+servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "stake_amount": uPOKTType, # The amount of uPOKT in escrow (i.e. a security deposit)
                                                           "service_url": ServiceURLType, # The API endpoint where the Web3 service is provided
                                                           "relay_chains": List[RelayChainType], # The flavor(s) of Web3 hosted by this Servicer
@@ -11,8 +10,16 @@ servicer_stake_space = TypedDict("Servicer Stake Space", {"servicer_address": Se
 })
 
 
-modify_servicer_pokt_space = TypedDict("Modify Servicer POKT Space", {"servicer_address": ServicerAddressType, # The address of the servicer calling the staking
+modify_servicer_pokt_space = TypedDict("Modify Servicer POKT Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "amount": uPOKTType, # The amount of uPOKT to modify by
+})
+
+
+servicer_param_update_space = TypedDict("Servicer Param Update Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "service_url": ServiceURLType, # The API endpoint where the Web3 service is provided
+                                                          "relay_chains": List[RelayChainType], # The flavor(s) of Web3 hosted by this Servicer
+                                                          "geo_zone": GeoZoneType, # The physical geo-location identifier this Servicer registered in
+                                                          "operator_public_key": PublicKeyType # OPTIONAL; The non-custodial pubKey operating this node
 })
 
 #TODO

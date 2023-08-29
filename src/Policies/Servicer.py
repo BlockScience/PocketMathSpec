@@ -1,4 +1,4 @@
-from ..Spaces import servicer_stake_space, modify_servicer_pokt_space
+from ..Spaces import servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "",
@@ -15,6 +15,6 @@ set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
                         "description": "",
                         "constraints": [],
                         "policy_options": [],
-                        "domain": [servicer_stake_space],
+                        "domain": [servicer_param_update_space, servicer_param_update_space],
                         "codomain": [],
                         "parameters_used": []}
