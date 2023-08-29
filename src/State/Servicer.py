@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, ServicerReportCardType
+from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType
 
 servicer_state = {"name": "Servicer State",
               "notes": "",
@@ -8,8 +8,13 @@ servicer_state = {"name": "Servicer State",
                              "symbol": None,
                              "domain": None},
                              {"type": ServicerReportCardType,
-                             "name": "Servicer Report Card",
+                             "name": "Report Card",
                              "description": "The report card used when determing salary for a servicer",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": ServicerTestScoresType,
+                             "name": "Test Scores",
+                             "description": "The QoS test scores",
                              "symbol": None,
                              "domain": None},
                              {"type": uPOKTType,
@@ -22,3 +27,4 @@ servicer_state = {"name": "Servicer State",
                              "description": "The personal holdings of the servicer in uPOKT",
                              "symbol": None,
                              "domain": None}]}
+

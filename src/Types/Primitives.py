@@ -16,4 +16,5 @@ RelayChainType = NewType('Relay Chain', str)
 GeoZoneType = NewType('GeoZone', str)
 
 #TODO
-ServicerReportCardType = NewType('GeoZone', dict)
+ServicerReportCardType = NewType('Service Report Card', dict)
+ServicerTestScoresType = NewType('Service Test Scores', dict)

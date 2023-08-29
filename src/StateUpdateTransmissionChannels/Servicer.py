@@ -10,4 +10,12 @@ servicer_transmission_channels.append({"origin": "Modify Servicer Stake",
                                      "variable": "Staked POKT",
                                      "optional": False})
 
+servicer_transmission_channels.append({"origin": "Prune Servicer QoS",
+                                     "entity": "Servicer",
+                                     "variable": "Report Card",
+                                     "optional": False})
 
+servicer_transmission_channels.append({"origin": "Prune Servicer QoS",
+                                     "entity": "Servicer",
+                                     "variable": "Test Scores",
+                                     "optional": False})
