@@ -1,4 +1,4 @@
-from ..Spaces import servicer_stake_space
+from ..Spaces import servicer_stake_space, modify_servicer_pokt_space
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "",
@@ -8,7 +8,7 @@ servicer_stake_policy = {"name": "Servicer Stake Policy",
                                         "All chains in DOMAIN[0].relay_chains must be valid"],
                         "policy_options": [],
                         "domain": [servicer_stake_space],
-                        "codomain": [servicer_stake_space],
+                        "codomain": [servicer_stake_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
                         "parameters_used": []}
 
 set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
