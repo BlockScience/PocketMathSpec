@@ -9,12 +9,12 @@ servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "policy_options": [],
                         "domain": [servicer_stake_space],
                         "codomain": [servicer_stake_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
-                        "parameters_used": []}
+                        "parameters_used": ["minimum_stake_servicer"]}
 
 set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
                         "description": "",
                         "constraints": [],
                         "policy_options": [],
-                        "domain": [servicer_param_update_space, servicer_param_update_space],
-                        "codomain": [],
+                        "domain": [servicer_stake_space],
+                        "codomain": [servicer_param_update_space, servicer_param_update_space],
                         "parameters_used": []}
