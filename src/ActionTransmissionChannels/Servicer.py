@@ -6,3 +6,8 @@ servicer_transmission_channels.append({"origin": "Servicer Stake",
                                         "target": "Servicer Stake Policy",
                                         "space": servicer_stake_space,
                                         "optional": False})
+
+servicer_transmission_channels.append({"origin": "Servicer Stake Policy",
+                                        "target": "Set Servicer Parameters Policy",
+                                        "space": servicer_stake_space,
+                                        "optional": True})
