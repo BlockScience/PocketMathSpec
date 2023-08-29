@@ -10,6 +10,18 @@ servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKe
 })
 
 
+modify_servicer_pokt_space = TypedDict("Modify Servicer POKT Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "amount": uPOKTType, # The amount of uPOKT to modify by
+})
+
+
+servicer_param_update_space = TypedDict("Servicer Param Update Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "service_url": ServiceURLType, # The API endpoint where the Web3 service is provided
+                                                          "relay_chains": List[RelayChainType], # The flavor(s) of Web3 hosted by this Servicer
+                                                          "geo_zone": GeoZoneType, # The physical geo-location identifier this Servicer registered in
+                                                          "operator_public_key": PublicKeyType # OPTIONAL; The non-custodial pubKey operating this node
+})
+
 #TODO
 servicer_pause_space = TypedDict("Servicer Pause Space", {})
 servicer_unpause_space = TypedDict("Servicer Unpause Space", {})
