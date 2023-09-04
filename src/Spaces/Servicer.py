@@ -26,3 +26,4 @@ servicer_param_update_space = TypedDict("Servicer Param Update Space", {"public_
 servicer_pause_space = TypedDict("Servicer Pause Space", {})
 servicer_unpause_space = TypedDict("Servicer Unpause Space", {})
 assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {})
+servicer_unstake_space = TypedDict("Servicer Unstake Space", {})
