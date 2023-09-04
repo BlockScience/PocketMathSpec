@@ -1,4 +1,4 @@
-from ..Spaces import servicer_stake_space, servicer_pause_space, servicer_unpause_space
+from ..Spaces import servicer_stake_space, servicer_pause_space, servicer_unpause_space, servicer_unstake_space
 
 servicer_stake = {
     "name": "Servicer Stake",
@@ -7,6 +7,16 @@ servicer_stake = {
     "boundary_action_options": [],
     "called_by": ["Servicer"],
     "codomain": [servicer_stake_space],
+    "parameters_used": [],
+}
+
+servicer_unstake = {
+    "name": "Servicer Unstake",
+    "description": "The action of unstaking from the network for a servicer",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Servicer"],
+    "codomain": [servicer_unstake_space],
     "parameters_used": [],
 }
 
