@@ -1,4 +1,4 @@
-from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType
+from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType, ActorType, AddressType, BlockHeightType
 from typing import TypedDict, List
 
 servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
@@ -22,8 +22,19 @@ servicer_param_update_space = TypedDict("Servicer Param Update Space", {"public_
                                                           "operator_public_key": PublicKeyType # OPTIONAL; The non-custodial pubKey operating this node
 })
 
+
+servicer_unpause_space = TypedDict("Servicer Unpause Space", {"actor_type": ActorType,
+                                                              "address": AddressType,
+                                                              "signer": AddressType,})
+
+# For recording the height of the block at which unpause happens
+servicer_unpause_space2 = TypedDict("Servicer Unpause Space 2", {"actor_type": ActorType,
+                                                              "address": AddressType,
+                                                              "signer": AddressType,
+                                                              "block_height": BlockHeightType})
+
 #TODO
 servicer_pause_space = TypedDict("Servicer Pause Space", {})
-servicer_unpause_space = TypedDict("Servicer Unpause Space", {})
+
 assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {})
 servicer_unstake_space = TypedDict("Servicer Unstake Space", {})

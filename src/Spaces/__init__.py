@@ -1,6 +1,7 @@
 from .Dummy import dummy_space1, dummy_space2
 from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
-                       assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space)
+                       assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space,
+                       servicer_unpause_space2)
 from .Application import (application_stake_space)
 spaces = {"Dummy Space 1": dummy_space1,
           "Dummy Space 2": dummy_space2,
@@ -11,4 +12,5 @@ spaces = {"Dummy Space 1": dummy_space1,
           "Modify Servicer POKT Space": modify_servicer_pokt_space,
           "Servicer Param Update Space": servicer_param_update_space,
           "Servicer Unstake Space": servicer_unstake_space,
-          "Application Stake Space": application_stake_space}
+          "Application Stake Space": application_stake_space,
+          "Servicer Unpause Space 2": servicer_unpause_space2}

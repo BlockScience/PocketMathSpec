@@ -1,4 +1,4 @@
-from ..Spaces import modify_servicer_pokt_space, servicer_param_update_space
+from ..Spaces import modify_servicer_pokt_space, servicer_param_update_space, servicer_unpause_space2
 
 
 modify_servicer_pokt_holdings = {"name": "Modify Servicer POKT Holdings",
@@ -29,5 +29,9 @@ update_servicer_params = {"name": "Update Servicer Params",
                            "domain": [servicer_param_update_space],
                            "parameters_used": None}
 
-
-
+servicer_unpause_mechanism = {"name": "Servicer Unpause Mechanism",
+                           "description": "The mechanism which unpauses a servicer",
+                           "constraints": [],
+                           "logic": "The servicer at DOMAIN[0].address has its pause_height variable updated to None",
+                           "domain": [servicer_unpause_space2],
+                           "parameters_used": None}

@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType, PublicKeyType, GeoZoneType, RelayChainType, ServiceURLType
+from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType, PublicKeyType, GeoZoneType, RelayChainType, ServiceURLType, BlockHeightType
 from typing import List
 
 servicer_state = {"name": "Servicer State",
@@ -53,4 +53,9 @@ servicer_state = {"name": "Servicer State",
                              "description": "OPTIONAL; The non-custodial pubKey operating this node",
                              "symbol": None,
                              "domain": None},
+                             {"type": BlockHeightType,
+                             "name": "Pause Height",
+                             "description": "The height for which a servicer has been paused at",
+                             "symbol": None,
+                             "domain": None}
                              ]}
