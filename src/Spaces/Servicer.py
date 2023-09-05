@@ -23,8 +23,8 @@ servicer_param_update_space = TypedDict("Servicer Param Update Space", {"public_
 })
 
 
-servicer_unpause_space = TypedDict("Servicer Unpause Space", {"actor_type": ActorType, # The actor calling for the unpause
-                                                              "address": AddressType, # Address to unpause
+servicer_unpause_space = TypedDict("Servicer Unpause Space", {"actor_type": ActorType,
+                                                              "address": AddressType,
                                                               "signer": AddressType,})
 
 #TODO
