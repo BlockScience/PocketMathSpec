@@ -13,4 +13,9 @@ servicer_parameter_set = {"name": "Servicer Parameter Set",
                                        "description": "The minimum required period of time that a servicer has to be staked for, default is 21 days.",
                                        "symbol": None,
                                        "domain": None
-                                       }]}
+                                       },
+                                       {"variable_type": Days,
+                                       "name": "minimum_pause_time",
+                                       "description": "The minimum required period of time that a servicer has to be paused for before being able to be unpaused.",
+                                       "symbol": None,
+                                       "domain": None}]}
