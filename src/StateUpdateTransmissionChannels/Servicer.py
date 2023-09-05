@@ -39,3 +39,9 @@ servicer_transmission_channels.append({"origin": "Update Servicer Params",
                                      "entity": "Servicer",
                                      "variable": "Operator Public Key",
                                      "optional": False})
+
+servicer_transmission_channels.append({"origin": "Servicer Unpause Mechanism",
+                                     "entity": "Servicer",
+                                     "variable": "Pause Height",
+                                     "optional": False})
+

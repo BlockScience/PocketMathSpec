@@ -28,7 +28,7 @@ servicer_unpause_space = TypedDict("Servicer Unpause Space", {"actor_type": Acto
                                                               "signer": AddressType,})
 
 # For recording the height of the block at which unpause happens
-servicer_unpause_space2 = TypedDict("Servicer Unpause Space", {"actor_type": ActorType,
+servicer_unpause_space2 = TypedDict("Servicer Unpause Space 2", {"actor_type": ActorType,
                                                               "address": AddressType,
                                                               "signer": AddressType,
                                                               "block_height": BlockHeightType})

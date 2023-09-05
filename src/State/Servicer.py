@@ -54,7 +54,7 @@ servicer_state = {"name": "Servicer State",
                              "symbol": None,
                              "domain": None},
                              {"type": BlockHeightType,
-                             "name": "Servicer Pause Height",
+                             "name": "Pause Height",
                              "description": "The height for which a servicer has been paused at",
                              "symbol": None,
                              "domain": None}
