@@ -1,3 +1,3 @@
 application_entity = {"name": "Application",
-               "notes": "",
+               "notes": "Actors that purchase Web3 access over a function of volume and time",
                "state": "Application"}
