@@ -7,3 +7,8 @@ application_stake_space = TypedDict("Application Stake Space", {"public_key": Pu
                                                                 "geo_zone": GeoZoneType, # The physical geo-location identifier this Servicer registered in
                                                                 "number_servicers": int, # The number of Servicers requested per session
                                                                 })
+
+
+modify_application_pokt_space = TypedDict("Modify Application POKT Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "amount": uPOKTType, # The amount of uPOKT to modify by
+})
