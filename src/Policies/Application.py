@@ -19,5 +19,5 @@ set_application_parameters_policy = {"name": "Set Application Parameters Policy"
                                         "DOMAIN[0].number_servicers <= PARAMS.MaxServicersPerSession"],
                         "policy_options": [],
                         "domain": [application_stake_space],
-                        "codomain": [application_param_update_space, application_param_update_space],
+                        "codomain": [application_param_update_space],
                         "parameters_used": ["minimum_servicers_per_session", "maximum_servicers_per_session"]}
