@@ -24,3 +24,4 @@ application_param_update_space = TypedDict("Application Param Update Space", {"p
 # TODO
 
 application_unstake_space = TypedDict("Application Unstake Space", {})
+application_delegate_to_portal_space = TypedDict("Application Delegate to Portal Space", {})
