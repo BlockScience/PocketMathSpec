@@ -19,3 +19,8 @@ application_param_update_space = TypedDict("Application Param Update Space", {"p
                                                                 "geo_zone": GeoZoneType, # The physical geo-location identifier this Servicer registered in
                                                                 "number_servicers": int, # The number of Servicers requested per session
                                                                 })
+
+
+# TODO
+
+application_unstake_space = TypedDict("Application Unstake Space", {})

@@ -1,4 +1,4 @@
-from ..Spaces import application_stake_space
+from ..Spaces import application_stake_space, application_unstake_space
 
 application_stake = {
     "name": "Application Stake",
@@ -7,5 +7,15 @@ application_stake = {
     "boundary_action_options": [],
     "called_by": ["Application"],
     "codomain": [application_stake_space],
+    "parameters_used": [],
+}
+
+application_unstake = {
+    "name": "Application Unstake",
+    "description": "The action of unstaking from the network for an application",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Application"],
+    "codomain": [application_unstake_space],
     "parameters_used": [],
 }
