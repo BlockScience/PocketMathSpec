@@ -1479,6 +1479,7 @@
         <th>Symbol</th>
         <th>Domain</th>
       </tr></table><h2>Spaces</h2><h3>Dummy Space 1</h3><p>{a: Dummy Type 1}</p><h3>Dummy Space 2</h3><p>{a: Dummy Type 1,<br/>b: Dummy Type 1,<br/>c: Dummy Type 2}</p><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Pause Space</h3><p>{}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Assign Servicer Salary Space</h3><p>{}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unstake Space</h3><p>{}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h2>Behavioral Action Space</h2><h3>Dummy Boundary Action</h3><p>Dummy</p><h4>Called By:</h4>
+
 <p>1. Dummy</p><h4>Constraints:</h4>
 <h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
@@ -1489,6 +1490,10 @@
 <h3>Servicer Unstake</h3><p>The action of unstaking from the network for a servicer</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
 <h3>Application Stake</h3><p>In order to participate as a Application in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are consuming the Web3 access. Upon registration, the Application is required to provide information necessary to create applicable Sessions (GeoZone(s), RelayChain(s), etc...).</p><h4>Called By:</h4>
+<p>1. Application</p><h4>Constraints:</h4>
+<h3>Application Unstake</h3><p>The action of unstaking from the network for an application</p><h4>Called By:</h4>
+<p>1. Application</p><h4>Constraints:</h4>
+<h3>Application Delegate to Portal</h3><p>An action where the application delegates to a portal to control their on-chain actions</p><h4>Called By:</h4>
 <p>1. Application</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Dummy Policy</h3><p>Dummy Policy</p><h4>Preceded By:</h4>
 <p>1. Dummy Boundary Action</p><h4>Domain Spaces:</h4>
