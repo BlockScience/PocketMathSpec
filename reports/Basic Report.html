@@ -1,4 +1,4 @@
-<h2>Action Maps</h2><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<p>For explanations of generalized dynamical systems as well as how the mathematical specification library works in detail, please consult the documentation <a href="https://github.com/BlockScience/MSML/tree/main/docs">here</a></p>Graph Legend:<br/>Cylinder: Entity<br/>Orange Diamond: Boundary Action<br/>Red Square: Policy<br/>Blue Circle: Mechanism<br/>Transparent Circle: State Variable<h2>Action Maps</h2><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 
@@ -1436,133 +1436,50 @@
 </g>
 
 </svg>
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<h2>State</h2><h3>Local States</h3><h4>Dummy State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr><tr><td>Variable A</td><td>Variable A</td><td>Dummy Compound Type</td><td></td><td></td></tr><tr><td>Variable B</td><td>Variable B</td><td>Dummy Type 1</td><td></td><td></td></tr><tr><td>Variable C</td><td>Variable C</td><td>Dummy Type 2</td><td></td><td></td></tr></table><h4>Servicer State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Relay Chains</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Relay Chain]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr></table><h4>Fisherman State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr></table><h4>Application State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr><tr><td>Public key</td><td>The identifier of the application</td><td>Public Key</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The staked amount of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Relay Chains</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Relay Chain]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Number of Servicers</td><td>The number of servicers per request to be using</td><td>int</td><td></td><td></td></tr></table><h4>Validator State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr></table><h4>Portal State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr></table><h2>Spaces</h2><h3>Dummy Space 1</h3><p>{a: Dummy Type 1}</p><h3>Dummy Space 2</h3><p>{a: Dummy Type 1,<br/>b: Dummy Type 1,<br/>c: Dummy Type 2}</p><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Pause Space</h3><p>{}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Assign Servicer Salary Space</h3><p>{}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unstake Space</h3><p>{}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h2>Behavioral Action Space</h2><h3>Dummy Boundary Action</h3><p>Dummy</p><h4>Called By:</h4>
 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<!-- Generated by graphviz version 2.48.0 (0)
-
- -->
-
-<!-- Title: Application Unstake Pages: 1 -->
-
-<svg width="251pt" height="116pt"
-
- viewBox="0.00 0.00 250.66 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
-
-<title>Application Unstake</title>
-
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 246.66,-112 246.66,4 -4,4"/>
-
-<!-- Application -->
-
-<g id="node1" class="node">
-
-<title>Application</title>
-
-<path fill="none" stroke="black" d="M162.83,-104.73C162.83,-106.53 144.23,-108 121.33,-108 98.43,-108 79.83,-106.53 79.83,-104.73 79.83,-104.73 79.83,-75.27 79.83,-75.27 79.83,-73.47 98.43,-72 121.33,-72 144.23,-72 162.83,-73.47 162.83,-75.27 162.83,-75.27 162.83,-104.73 162.83,-104.73"/>
-
-<path fill="none" stroke="black" d="M162.83,-104.73C162.83,-102.92 144.23,-101.45 121.33,-101.45 98.43,-101.45 79.83,-102.92 79.83,-104.73"/>
-
-<text text-anchor="middle" x="121.33" y="-86.3" font-family="Times,serif" font-size="14.00">Application</text>
-
-</g>
-
-<!-- Application Unstake -->
-
-<g id="node2" class="node">
-
-<title>Application Unstake</title>
-
-<polygon fill="orange" stroke="orange" points="121.33,-36 0.17,-18 121.33,0 242.49,-18 121.33,-36"/>
-
-<text text-anchor="middle" x="121.33" y="-14.3" font-family="Times,serif" font-size="14.00">Application Unstake</text>
-
-</g>
-
-<!-- Application&#45;&gt;Application Unstake -->
-
-<g id="edge1" class="edge">
-
-<title>Application&#45;&gt;Application Unstake</title>
-
-<path fill="none" stroke="black" d="M121.33,-71.7C121.33,-63.98 121.33,-54.71 121.33,-46.11"/>
-
-<polygon fill="black" stroke="black" points="124.83,-46.1 121.33,-36.1 117.83,-46.1 124.83,-46.1"/>
-
-</g>
-
-</g>
-
-</svg>
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<!-- Generated by graphviz version 2.48.0 (0)
-
- -->
-
-<!-- Title: Application Delegate to Portal Pages: 1 -->
-
-<svg width="352pt" height="116pt"
-
- viewBox="0.00 0.00 351.76 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
-
-<title>Application Delegate to Portal</title>
-
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 347.76,-112 347.76,4 -4,4"/>
-
-<!-- Application -->
-
-<g id="node1" class="node">
-
-<title>Application</title>
-
-<path fill="none" stroke="black" d="M213.38,-104.73C213.38,-106.53 194.78,-108 171.88,-108 148.98,-108 130.38,-106.53 130.38,-104.73 130.38,-104.73 130.38,-75.27 130.38,-75.27 130.38,-73.47 148.98,-72 171.88,-72 194.78,-72 213.38,-73.47 213.38,-75.27 213.38,-75.27 213.38,-104.73 213.38,-104.73"/>
-
-<path fill="none" stroke="black" d="M213.38,-104.73C213.38,-102.92 194.78,-101.45 171.88,-101.45 148.98,-101.45 130.38,-102.92 130.38,-104.73"/>
-
-<text text-anchor="middle" x="171.88" y="-86.3" font-family="Times,serif" font-size="14.00">Application</text>
-
-</g>
-
-<!-- Application Delegate to Portal -->
-
-<g id="node2" class="node">
-
-<title>Application Delegate to Portal</title>
-
-<polygon fill="orange" stroke="orange" points="171.88,-36 0.12,-18 171.88,0 343.65,-18 171.88,-36"/>
-
-<text text-anchor="middle" x="171.88" y="-14.3" font-family="Times,serif" font-size="14.00">Application Delegate to Portal</text>
-
-</g>
-
-<!-- Application&#45;&gt;Application Delegate to Portal -->
-
-<g id="edge1" class="edge">
-
-<title>Application&#45;&gt;Application Delegate to Portal</title>
-
-<path fill="none" stroke="black" d="M171.88,-71.7C171.88,-63.98 171.88,-54.71 171.88,-46.11"/>
-
-<polygon fill="black" stroke="black" points="175.38,-46.1 171.88,-36.1 168.38,-46.1 175.38,-46.1"/>
-
-</g>
-
-</g>
-
-</svg>
-<h2>Behavioral Action Space</h2><h3>Dummy Boundary Action</h3><p>Dummy</p><h4>Called By:</h4>
 <p>1. Dummy</p><h4>Constraints:</h4>
 <h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
@@ -1671,4 +1588,4 @@ Dummy
 <p>1. Application Param Update Space</p><h4>State Updates:</h4>
 <p>1. Application.Relay Chains</p><p>2. Application.GeoZone</p><p>3. Application.Number of Servicers</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
-<p>The application at DOMAIN[0].public_key has its params updated</p>
+<p>The application at DOMAIN[0].public_key has its params updated</p><h2>Parameters</h2><p>dummy_parameter</p><p>minimum_stake_servicer</p><p>minimum_stake_period_servicer</p><p>minimum_pause_time</p><p>minimum_servicers_per_session</p><p>maximum_servicers_per_session</p>
