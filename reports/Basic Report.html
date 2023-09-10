@@ -1,4 +1,4 @@
-<h2>Action Maps</h2><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<p>For explanations of generalized dynamical systems as well as how the mathematical specification library works in detail, please consult the documentation <a href="https://github.com/BlockScience/MSML/tree/main/docs">here</a></p>Graph Legend:<br/>Cylinder: Entity<br/>Orange Diamond: Boundary Action<br/>Red Square: Policy<br/>Blue Circle: Mechanism<br/>Transparent Circle: State Variable<h2>Action Maps</h2><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 
@@ -730,17 +730,17 @@
 
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-112 185.99,-112 185.99,4 -4,4"/>
 
-<!-- Servicer -->
+<!-- Fisherman -->
 
 <g id="node1" class="node">
 
-<title>Servicer</title>
+<title>Fisherman</title>
 
-<path fill="none" stroke="black" d="M78.5,-104.73C78.5,-106.53 64.38,-108 47,-108 29.62,-108 15.5,-106.53 15.5,-104.73 15.5,-104.73 15.5,-75.27 15.5,-75.27 15.5,-73.47 29.62,-72 47,-72 64.38,-72 78.5,-73.47 78.5,-75.27 78.5,-75.27 78.5,-104.73 78.5,-104.73"/>
+<path fill="none" stroke="black" d="M85,-104.73C85,-106.53 67.96,-108 47,-108 26.03,-108 9,-106.53 9,-104.73 9,-104.73 9,-75.27 9,-75.27 9,-73.47 26.03,-72 47,-72 67.96,-72 85,-73.47 85,-75.27 85,-75.27 85,-104.73 85,-104.73"/>
 
-<path fill="none" stroke="black" d="M78.5,-104.73C78.5,-102.92 64.38,-101.45 47,-101.45 29.62,-101.45 15.5,-102.92 15.5,-104.73"/>
+<path fill="none" stroke="black" d="M85,-104.73C85,-102.92 67.96,-101.45 47,-101.45 26.03,-101.45 9,-102.92 9,-104.73"/>
 
-<text text-anchor="middle" x="47" y="-86.3" font-family="Times,serif" font-size="14.00">Servicer</text>
+<text text-anchor="middle" x="47" y="-86.3" font-family="Times,serif" font-size="14.00">Fisherman</text>
 
 </g>
 
@@ -756,11 +756,11 @@
 
 </g>
 
-<!-- Servicer&#45;&gt;Servicer Pause -->
+<!-- Fisherman&#45;&gt;Servicer Pause -->
 
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 
-<title>Servicer&#45;&gt;Servicer Pause</title>
+<title>Fisherman&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M57.87,-71.7C63.35,-62.98 70.08,-52.28 76.03,-42.81"/>
 
@@ -768,25 +768,25 @@
 
 </g>
 
-<!-- Fisherman -->
+<!-- Servicer -->
 
 <g id="node2" class="node">
 
-<title>Fisherman</title>
+<title>Servicer</title>
 
-<path fill="none" stroke="black" d="M173,-104.73C173,-106.53 155.96,-108 135,-108 114.03,-108 97,-106.53 97,-104.73 97,-104.73 97,-75.27 97,-75.27 97,-73.47 114.03,-72 135,-72 155.96,-72 173,-73.47 173,-75.27 173,-75.27 173,-104.73 173,-104.73"/>
+<path fill="none" stroke="black" d="M166.5,-104.73C166.5,-106.53 152.38,-108 135,-108 117.62,-108 103.5,-106.53 103.5,-104.73 103.5,-104.73 103.5,-75.27 103.5,-75.27 103.5,-73.47 117.62,-72 135,-72 152.38,-72 166.5,-73.47 166.5,-75.27 166.5,-75.27 166.5,-104.73 166.5,-104.73"/>
 
-<path fill="none" stroke="black" d="M173,-104.73C173,-102.92 155.96,-101.45 135,-101.45 114.03,-101.45 97,-102.92 97,-104.73"/>
+<path fill="none" stroke="black" d="M166.5,-104.73C166.5,-102.92 152.38,-101.45 135,-101.45 117.62,-101.45 103.5,-102.92 103.5,-104.73"/>
 
-<text text-anchor="middle" x="135" y="-86.3" font-family="Times,serif" font-size="14.00">Fisherman</text>
+<text text-anchor="middle" x="135" y="-86.3" font-family="Times,serif" font-size="14.00">Servicer</text>
 
 </g>
 
-<!-- Fisherman&#45;&gt;Servicer Pause -->
+<!-- Servicer&#45;&gt;Servicer Pause -->
 
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 
-<title>Fisherman&#45;&gt;Servicer Pause</title>
+<title>Servicer&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M124.12,-71.7C118.64,-62.98 111.92,-52.28 105.96,-42.81"/>
 
@@ -1436,7 +1436,49 @@
 </g>
 
 </svg>
-<h2>Behavioral Action Space</h2><h3>Dummy Boundary Action</h3><p>Dummy</p><h4>Called By:</h4>
+<h2>State</h2><h3>Local States</h3><h4>Dummy State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr><tr><td>Variable A</td><td>Variable A</td><td>Dummy Compound Type</td><td></td><td></td></tr><tr><td>Variable B</td><td>Variable B</td><td>Dummy Type 1</td><td></td><td></td></tr><tr><td>Variable C</td><td>Variable C</td><td>Dummy Type 2</td><td></td><td></td></tr></table><h4>Servicer State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Relay Chains</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Relay Chain]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr></table><h4>Fisherman State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr></table><h4>Application State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr><tr><td>Public key</td><td>The identifier of the application</td><td>Public Key</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The staked amount of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Relay Chains</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Relay Chain]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Number of Servicers</td><td>The number of servicers per request to be using</td><td>int</td><td></td><td></td></tr></table><h4>Validator State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr></table><h4>Portal State</h4><table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Domain</th>
+      </tr></table><h2>Spaces</h2><h3>Dummy Space 1</h3><p>{a: Dummy Type 1}</p><h3>Dummy Space 2</h3><p>{a: Dummy Type 1,<br/>b: Dummy Type 1,<br/>c: Dummy Type 2}</p><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Pause Space</h3><p>{}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Assign Servicer Salary Space</h3><p>{}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unstake Space</h3><p>{}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h2>Behavioral Action Space</h2><h3>Dummy Boundary Action</h3><p>Dummy</p><h4>Called By:</h4>
 <p>1. Dummy</p><h4>Constraints:</h4>
 <h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
@@ -1541,4 +1583,4 @@ Dummy
 <p>1. Application Param Update Space</p><h4>State Updates:</h4>
 <p>1. Application.Relay Chains</p><p>2. Application.GeoZone</p><p>3. Application.Number of Servicers</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
-<p>The application at DOMAIN[0].public_key has its params updated</p>
+<p>The application at DOMAIN[0].public_key has its params updated</p><h2>Parameters</h2><p>dummy_parameter</p><p>minimum_stake_servicer</p><p>minimum_stake_period_servicer</p><p>minimum_pause_time</p><p>minimum_servicers_per_session</p><p>maximum_servicers_per_session</p>
