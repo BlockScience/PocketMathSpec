@@ -5,11 +5,12 @@ servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "constraints": ["DOMAIN[0].public_key must not be null",
                                         "DOMAIN[0].amount > 0",
                                         "LEN(DOMAIN[0].relay_chains) > 0",
-                                        "All chains in DOMAIN[0].relay_chains must be valid"],
+                                        "All chains in DOMAIN[0].relay_chains must be valid",
+                                        "LEN(DOMAIN[0].relay_chains) <= PARAMS.max_chains_servicer"],
                         "policy_options": [],
                         "domain": [servicer_stake_space],
                         "codomain": [servicer_stake_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
-                        "parameters_used": ["minimum_stake_servicer"]}
+                        "parameters_used": ["minimum_stake_servicer", "max_chains_servicer"]}
 
 set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
                         "description": "",
