@@ -1,4 +1,5 @@
-from ..Spaces import servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unpause_space, servicer_unpause_space2
+from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space,
+                      servicer_unpause_space, servicer_unpause_space2, servicer_pause_space, servicer_pause_space2)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "",
@@ -27,3 +28,11 @@ servicer_unpause_policy = {"name": "Servicer Unpause Policy",
                         "domain": [servicer_unpause_space],
                         "codomain": [servicer_unpause_space2],
                         "parameters_used": ["minimum_pause_time"]}
+
+servicer_pause_policy = {"name": "Servicer Pause Policy",
+                        "description": "The policy which determines if a servicer will be paused. One consideration is whether or not the servicer is already paused currently.",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [servicer_pause_space],
+                        "codomain": [servicer_pause_space2],
+                        "parameters_used": []}
