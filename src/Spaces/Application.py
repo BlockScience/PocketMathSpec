@@ -1,5 +1,5 @@
 from typing import TypedDict, List
-from ..Types import PublicKeyType, uPOKTType, RelayChainType, GeoZoneType
+from ..Types import PublicKeyType, uPOKTType, RelayChainType, GeoZoneType, ActorType, AddressType
 
 application_stake_space = TypedDict("Application Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the Application
                                                                 "stake_amount": uPOKTType, # The amount of uPOKT in escrow (i.e. a security deposit)
@@ -20,8 +20,9 @@ application_param_update_space = TypedDict("Application Param Update Space", {"p
                                                                 "number_servicers": int, # The number of Servicers requested per session
                                                                 })
 
+application_unstake_space = TypedDict("Application Unstake Space", {"actor_type": ActorType,
+                                                              "address": AddressType,
+                                                              "signer": AddressType,})
 
-# TODO
 
-application_unstake_space = TypedDict("Application Unstake Space", {})
 application_delegate_to_portal_space = TypedDict("Application Delegate to Portal Space", {})

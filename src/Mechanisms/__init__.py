@@ -1,5 +1,6 @@
 from .Dummy import dummy_mechanism
-from .Servicer import modify_servicer_pokt_holdings, modify_servicer_stake, update_servicer_params, prune_servicer_qos, servicer_unpause_mechanism
+from .Servicer import (modify_servicer_pokt_holdings, modify_servicer_stake, update_servicer_params,
+                       prune_servicer_qos, servicer_unpause_mechanism, servicer_update_pause_height)
 from .Application import modify_application_pokt_holdings, modify_application_stake, update_application_params
 
 mechanism = {"Dummy Mechanism": dummy_mechanism,
@@ -10,5 +11,6 @@ mechanism = {"Dummy Mechanism": dummy_mechanism,
 "Servicer Unpause Mechanism": servicer_unpause_mechanism,
 "Modify Application POKT Holdings": modify_application_pokt_holdings,
 "Modify Application Stake": modify_application_stake,
-"Update Application Params": update_application_params}
+"Update Application Params": update_application_params,
+"Servicer Update Pause Height": servicer_update_pause_height}
 
