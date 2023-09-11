@@ -33,8 +33,14 @@ servicer_unpause_space2 = TypedDict("Servicer Unpause Space 2", {"actor_type": A
                                                               "signer": AddressType,
                                                               "block_height": BlockHeightType})
 
-servicer_pause_space = TypedDict("Servicer Pause Space", {})
-servicer_pause_space2 = TypedDict("Servicer Pause Space 2", {})
+servicer_pause_space = TypedDict("Servicer Pause Space", {"actor_type": ActorType,
+                                                              "address": AddressType,
+                                                              "caller_address": AddressType, # Who called for the servicer to be paused
+                                                              "signer": AddressType,})
+servicer_pause_space2 = TypedDict("Servicer Pause Space 2", {"actor_type": ActorType,
+                                                              "address": AddressType,
+                                                              "caller_address": AddressType, # Who called for the servicer to be paused
+                                                              "signer": AddressType,})
 
 servicer_unstake_space = TypedDict("Servicer Unstake Space", {"actor_type": ActorType,
                                                               "address": AddressType,
