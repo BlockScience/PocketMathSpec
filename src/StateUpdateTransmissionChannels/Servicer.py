@@ -45,3 +45,7 @@ servicer_transmission_channels.append({"origin": "Servicer Unpause Mechanism",
                                      "variable": "Pause Height",
                                      "optional": False})
 
+servicer_transmission_channels.append({"origin": "Servicer Update Pause Height",
+                                     "entity": "Servicer",
+                                     "variable": "Pause Height",
+                                     "optional": False})
