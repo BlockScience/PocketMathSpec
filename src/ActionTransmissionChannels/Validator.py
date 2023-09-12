@@ -7,5 +7,8 @@ validator_transmission_channels.append({"origin": "Validator Stake",
                                         "space": validator_stake_space,
                                         "optional": False})
 
-
+validator_transmission_channels.append({"origin": "Validator Stake Policy",
+                                        "target": "Set Validator Parameters Policy",
+                                        "space": validator_stake_space,
+                                        "optional": True})
 
