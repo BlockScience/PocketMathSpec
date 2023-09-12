@@ -1,4 +1,30 @@
+from ..Types import uPOKTType, PublicKeyType, ServiceURLType
+
 validator_state = {"name": "Validator State",
               "notes": "",
-              "variables": [
-                             ]}
+              "variables": [{"type": PublicKeyType,
+                             "name": "Public key",
+                             "description": "The identifier of the validator",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": uPOKTType,
+                             "name": "POKT Holdings",
+                             "description": "The personal holdings of the validator in uPOKT",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": uPOKTType,
+                             "name": "Staked POKT",
+                             "description": "The staked amount of the validator in uPOKT",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": ServiceURLType,
+                             "name": "Service URL",
+                             "description": "The API endpoint where the Web3 service is provided",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": PublicKeyType,
+                             "name": "Operator Public Key",
+                             "description": "OPTIONAL; The non-custodial pubKey operating this node",
+                             "symbol": None,
+                             "domain": None}]}
+
