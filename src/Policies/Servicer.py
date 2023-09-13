@@ -2,7 +2,7 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space, servicer_pause_space2)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
-                        "description": "",
+                        "description": "Policy which takes care of actions to occur after a servicer attempts to stake",
                         "constraints": ["DOMAIN[0].public_key must not be null",
                                         "DOMAIN[0].amount > 0",
                                         "LEN(DOMAIN[0].relay_chains) > 0",
@@ -14,7 +14,7 @@ servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "parameters_used": ["minimum_stake_servicer", "max_chains_servicer"]}
 
 set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
-                        "description": "",
+                        "description": "Policy for determining the impact of servicer parameter changes",
                         "constraints": [],
                         "policy_options": [],
                         "domain": [servicer_stake_space],
