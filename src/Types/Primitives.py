@@ -1,5 +1,8 @@
-from typing import NewType
+from typing import NewType, TypedDict, List
+from datetime import datetime
 
+PercentType = NewType('Percent', float)
+MillisecondsType = NewType('Percent', int)
 
 # A public key for cryptography
 PublicKeyType = NewType('Public Key', str)
@@ -22,6 +25,15 @@ AddressType = NewType("Address", int)
 
 BlockHeightType = NewType("Block Height", int)
 
+
+ServicerTestScoresType = NewType('Service Test Scores', TypedDict('Service Test Scores', {"sampling_start": datetime,
+                                                                                          "total_samples": int,
+                                                                                          "null_indices": List[int],
+                                                                                          "data_accuracy": PercentType,
+                                                                                          "average_latency": MillisecondsType,
+                                                                                          "volume": int
+                                                                                          }))
+
 #TODO
 ServicerReportCardType = NewType('Service Report Card', dict)
-ServicerTestScoresType = NewType('Service Test Scores', dict)
+
