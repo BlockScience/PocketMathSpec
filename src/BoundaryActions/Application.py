@@ -1,4 +1,4 @@
-from ..Spaces import application_stake_space, application_unstake_space, application_delegate_to_portal_space
+from ..Spaces import application_stake_space, application_unstake_space, application_delegate_to_portal_space, application_undelegation_space
 
 application_stake = {
     "name": "Application Stake",
