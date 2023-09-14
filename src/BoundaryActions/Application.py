@@ -29,3 +29,13 @@ application_delegate_to_portal = {
     "codomain": [application_delegate_to_portal_space],
     "parameters_used": [],
 }
+
+application_undelegation = {
+    "name": "Application Undelegation",
+    "description": "If a staked Application wants to stop using a Portal, and prevent the Portal from further signing relays on its behalf, it would simply submit an on-chain UndelegateMsg. Further relays signed by the Portal on behalf of the Application would be rejected by the Servicers.",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Application"],
+    "codomain": [application_undelegation_space],
+    "parameters_used": [],
+}
