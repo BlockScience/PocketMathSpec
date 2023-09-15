@@ -1,4 +1,4 @@
-from ..Spaces import validator_stake_space, validator_pause_space, validator_unstake_space
+from ..Spaces import validator_stake_space, validator_pause_space, validator_unstake_space, validator_unpause_space
 
 validator_stake = {
     "name": "Validator Stake",
@@ -27,5 +27,15 @@ validator_unstake = {
     "boundary_action_options": [],
     "called_by": ["Validator"],
     "codomain": [validator_unstake_space],
+    "parameters_used": [],
+}
+
+validator_unpause = {
+    "name": "Validator Unpause",
+    "description": "If a Validator is paused, they are able to reverse the paused state by submitting an UnpauseMsg after the MinValidatorPauseTime has elapsed. After a successful UnpauseMsg, the Validator is once again eligible to execute Validator operations.",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Validator"],
+    "codomain": [validator_unpause_space],
     "parameters_used": [],
 }

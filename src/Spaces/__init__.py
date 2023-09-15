@@ -6,7 +6,8 @@ from .Application import (application_stake_space, modify_application_pokt_space
                           application_unstake_space, application_delegate_to_portal_space,
                           application_undelegation_space)
 from .Validator import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
-                        validator_pause_space, validator_stake_burning_space, validator_unstake_space)
+                        validator_pause_space, validator_stake_burning_space, validator_unstake_space,
+                        validator_unpause_space)
 from .Portal import (portal_registration_space, portal_unregistration_space)
 
 spaces = {"Dummy Space 1": dummy_space1,
@@ -33,7 +34,8 @@ spaces = {"Dummy Space 1": dummy_space1,
           "Application Undelegation Space": application_undelegation_space,
           "Validator Pause Space": validator_pause_space,
           "Validator Stake Burning Space": validator_stake_burning_space,
-          "Validator Unstake Space": validator_unstake_space}
+          "Validator Unstake Space": validator_unstake_space,
+          "Validator Unpause Space": validator_unpause_space}
 
 
 
