@@ -5,7 +5,8 @@ from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpa
 from .Application import (application_stake_space, modify_application_pokt_space, application_param_update_space,
                           application_unstake_space, application_delegate_to_portal_space,
                           application_undelegation_space)
-from .Validator import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space)
+from .Validator import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
+                        validator_pause_space)
 from .Portal import (portal_registration_space, portal_unregistration_space)
 
 spaces = {"Dummy Space 1": dummy_space1,
@@ -29,7 +30,8 @@ spaces = {"Dummy Space 1": dummy_space1,
           "Validator Param Update Space": validator_param_update_space,
           "Portal Registration Space": portal_registration_space,
           "Portal Unregistration Space": portal_unregistration_space,
-          "Application Undelegation Space": application_undelegation_space}
+          "Application Undelegation Space": application_undelegation_space,
+          "Validator Pause Space": validator_pause_space}
 
 
 

@@ -1,4 +1,4 @@
-from ..Spaces import validator_stake_space
+from ..Spaces import validator_stake_space, validator_pause_space
 
 validator_stake = {
     "name": "Validator Stake",
@@ -7,5 +7,15 @@ validator_stake = {
     "boundary_action_options": [],
     "called_by": ["Validator"],
     "codomain": [validator_stake_space],
+    "parameters_used": [],
+}
+
+validator_pause = {
+    "name": "Validator Pause",
+    "description": "The action for a validator pausing their service.",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Validator"],
+    "codomain": [validator_pause_space],
     "parameters_used": [],
 }
