@@ -1,7 +1,7 @@
 from .Dummy import dummy_boundary_action
 from .Servicer import servicer_stake, servicer_pause, servicer_unpause, servicer_unstake
 from .Application import application_stake, application_unstake, application_delegate_to_portal, application_undelegation
-from .Validator import validator_stake, validator_pause
+from .Validator import validator_stake, validator_pause, validator_unstake
 from .Portal import portal_registration, portal_unregistration
 
 boundary_actions = {
@@ -17,5 +17,6 @@ boundary_actions = {
     "Portal Registration": portal_registration,
     "Portal Unregistration": portal_unregistration,
     "Application Undelegation": application_undelegation,
-    "Validator Pause": validator_pause
+    "Validator Pause": validator_pause,
+    "Validator Unstake": validator_unstake
 }

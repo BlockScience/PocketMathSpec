@@ -20,3 +20,4 @@ validator_param_update_space = TypedDict("Validator Param Update Space", {"publi
 
 validator_pause_space = TypedDict("Validator Pause Space", {})
 validator_stake_burning_space = TypedDict("Validator Stake Burning Space", {})
+validator_unstake_space = TypedDict("Validator Unstake Space", {})
