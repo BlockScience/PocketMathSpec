@@ -19,3 +19,4 @@ validator_param_update_space = TypedDict("Validator Param Update Space", {"publi
 #TODO
 
 validator_pause_space = TypedDict("Validator Pause Space", {})
+validator_stake_burning_space = TypedDict("Validator Stake Burning Space", {})
