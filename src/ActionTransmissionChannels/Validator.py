@@ -1,4 +1,4 @@
-from ..Spaces import validator_stake_space, modify_validator_pokt_space, validator_param_update_space
+from ..Spaces import validator_stake_space, modify_validator_pokt_space, validator_param_update_space, validator_unpause_space
 
 validator_transmission_channels = []
 
@@ -26,3 +26,8 @@ validator_transmission_channels.append({"origin": "Set Validator Parameters Poli
                                         "target": "Update Validator Params",
                                         "space": validator_param_update_space,
                                         "optional": True})
+
+validator_transmission_channels.append({"origin": "Validator Unpause",
+                                        "target": "Validator Unpause Policy",
+                                        "space": validator_unpause_space,
+                                        "optional": False})
