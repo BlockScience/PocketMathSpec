@@ -15,3 +15,7 @@ validator_param_update_space = TypedDict("Validator Param Update Space", {"publi
                                                           "service_url": ServiceURLType, # The API endpoint where the Web3 service is provided
                                                           "operator_public_key": PublicKeyType # OPTIONAL; The non-custodial pubKey operating this node
 })
+
+#TODO
+
+validator_pause_space = TypedDict("Validator Pause Space", {})

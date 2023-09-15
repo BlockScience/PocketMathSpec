@@ -24,5 +24,9 @@ application_unstake_space = TypedDict("Application Unstake Space", {"actor_type"
                                                               "address": AddressType,
                                                               "signer": AddressType,})
 
+application_undelegation_space = TypedDict("Application Undelegation Space", {"application_public_key": PublicKeyType, # The cryptographic ID of the Application
+                                                                              "portal_public_key": PublicKeyType, # The cryptographic ID of the Portal
+                                                                              })
+
 
 application_delegate_to_portal_space = TypedDict("Application Delegate to Portal Space", {})
