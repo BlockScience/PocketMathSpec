@@ -11,6 +11,7 @@ from .Validator import (validator_stake_space, modify_validator_pokt_space, vali
                         validator_block_reward_space)
 from .Portal import (portal_registration_space, portal_unregistration_space)
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space)
+from .Node import unjail_node_space
 
 spaces = {"Dummy Space 1": dummy_space1,
           "Dummy Space 2": dummy_space2,
@@ -45,7 +46,8 @@ spaces = {"Dummy Space 1": dummy_space1,
           "Servicer Relay Space": servicer_relay_space,
           "Mint Block Rewards Space": mint_block_rewards_space,
           "Burn POKT Space": burn_pokt_space,
-          "Jail Node Space": jail_node_space}
+          "Jail Node Space": jail_node_space,
+          "Unjail Node Space": unjail_node_space}
 
 
 
