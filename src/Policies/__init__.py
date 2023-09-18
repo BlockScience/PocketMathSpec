@@ -1,10 +1,8 @@
-from .Dummy import dummy_policy
 from .Servicer import servicer_stake_policy, set_servicer_parameters_policy, servicer_unpause_policy, servicer_pause_policy
 from .Application import application_stake_policy, set_application_parameters_policy
 from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy
 
 policies = {
-    "Dummy Policy": dummy_policy,
     "Servicer Stake Policy": servicer_stake_policy,
     "Set Servicer Parameters Policy": set_servicer_parameters_policy,
     "Servicer Unpause Policy": servicer_unpause_policy,
