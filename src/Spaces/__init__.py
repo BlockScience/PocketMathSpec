@@ -1,10 +1,10 @@
 from .Dummy import dummy_space1, dummy_space2
 from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
                        assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space,
-                       servicer_unpause_space2, servicer_pause_space2)
+                       servicer_unpause_space2, servicer_pause_space2, servicer_relay_space)
 from .Application import (application_stake_space, modify_application_pokt_space, application_param_update_space,
                           application_unstake_space, application_delegate_to_portal_space,
-                          application_undelegation_space)
+                          application_undelegation_space, submit_relay_request_space)
 from .Validator import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
                         validator_pause_space, validator_stake_burning_space, validator_unstake_space,
                         validator_unpause_space, validator_jail_space, become_validator_space,
@@ -39,7 +39,9 @@ spaces = {"Dummy Space 1": dummy_space1,
           "Validator Unpause Space": validator_unpause_space,
           "Validator Jail Space": validator_jail_space,
           "Become Validator Space": become_validator_space,
-          "Validator Block Reward Space": validator_block_reward_space}
+          "Validator Block Reward Space": validator_block_reward_space,
+          "Submit Relay Request": submit_relay_request_space,
+          "Servicer Relay Space": servicer_relay_space}
 
 
 

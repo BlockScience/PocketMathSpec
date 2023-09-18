@@ -1,4 +1,5 @@
-from ..Spaces import servicer_stake_space, servicer_pause_space, servicer_unpause_space, servicer_unstake_space
+from ..Spaces import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
+                      servicer_unstake_space, servicer_relay_space)
 
 servicer_stake = {
     "name": "Servicer Stake",
@@ -37,5 +38,15 @@ servicer_unpause = {
     "boundary_action_options": [],
     "called_by": ["Servicer"],
     "codomain": [servicer_unpause_space],
+    "parameters_used": [],
+}
+
+servicer_relay = {
+    "name": "Servicer Relay",
+    "description": "A Servicer ‘services’ the Application, by routing the Relay Request to the Relay Chain and forwarding the response to the Application.",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Servicer"],
+    "codomain": [servicer_relay_space],
     "parameters_used": [],
 }
