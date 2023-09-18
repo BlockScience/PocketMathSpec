@@ -50,3 +50,4 @@ servicer_unstake_space = TypedDict("Servicer Unstake Space", {"actor_type": Acto
 
 
 assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {})
+servicer_relay_space = TypedDict("Servicer Relay Space", {})
