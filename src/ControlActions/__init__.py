@@ -1,7 +1,7 @@
 from .Dummy import dummy_control_action
 from .Servicer import assign_servicer_salary
 from .Validator import validator_stake_burning, validator_unstake_forced, validator_jailed, validator_block_reward
-from .Treasury import mint_block_rewards
+from .Treasury import mint_block_rewards, jail_node
 
 control_actions = {
     "Dummy Control Action": dummy_control_action,
@@ -10,5 +10,6 @@ control_actions = {
     "Validator Unstake Forced": validator_unstake_forced,
     "Validator Jailed": validator_jailed,
     "Validator Block Reward": validator_block_reward,
-    "Mint Block Rewards": mint_block_rewards
+    "Mint Block Rewards": mint_block_rewards,
+    "Jail Node": jail_node
 }
