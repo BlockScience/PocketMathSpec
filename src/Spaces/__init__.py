@@ -1,4 +1,3 @@
-from .Dummy import dummy_space1, dummy_space2
 from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
                        assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space,
                        servicer_unpause_space2, servicer_pause_space2, servicer_relay_space)
@@ -13,9 +12,7 @@ from .Portal import (portal_registration_space, portal_unregistration_space)
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space)
 from .Node import unjail_node_space
 
-spaces = {"Dummy Space 1": dummy_space1,
-          "Dummy Space 2": dummy_space2,
-          "Servicer Stake Space": servicer_stake_space,
+spaces = {"Servicer Stake Space": servicer_stake_space,
           "Servicer Pause Space": servicer_pause_space,
           "Servicer Pause Space 2": servicer_pause_space2,
           "Servicer Unpause Space": servicer_unpause_space,

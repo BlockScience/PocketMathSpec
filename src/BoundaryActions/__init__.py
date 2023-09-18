@@ -1,4 +1,3 @@
-from .Dummy import dummy_boundary_action
 from .Servicer import (servicer_stake, servicer_pause, servicer_unpause, servicer_unstake,
                        servicer_relay)
 from .Application import (application_stake, application_unstake, application_delegate_to_portal,
@@ -9,7 +8,6 @@ from .Treasury import (burn_pokt)
 from .Node import (unjail_node)
 
 boundary_actions = {
-    "Dummy Boundary Action": dummy_boundary_action,
     "Servicer Stake": servicer_stake,
     "Servicer Pause": servicer_pause,
     "Servicer Unpause": servicer_unpause,
