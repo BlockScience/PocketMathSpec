@@ -1,4 +1,6 @@
-from ..Spaces import application_stake_space, application_unstake_space, application_delegate_to_portal_space, application_undelegation_space
+from ..Spaces import (application_stake_space, application_unstake_space,
+                      application_delegate_to_portal_space, application_undelegation_space,
+                      submit_relay_request_space)
 
 application_stake = {
     "name": "Application Stake",
@@ -37,5 +39,15 @@ application_undelegation = {
     "boundary_action_options": [],
     "called_by": ["Application"],
     "codomain": [application_undelegation_space],
+    "parameters_used": [],
+}
+
+submit_relay_request = {
+    "name": "Submit Relay Request",
+    "description": "An Application submits a Relay Request, or an API requests to be routed to any Relay Chain",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Application"],
+    "codomain": [submit_relay_request_space],
     "parameters_used": [],
 }
