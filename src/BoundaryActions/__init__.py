@@ -5,6 +5,7 @@ from .Application import (application_stake, application_unstake, application_de
                           application_undelegation, submit_relay_request)
 from .Validator import validator_stake, validator_pause, validator_unstake, validator_unpause, become_validator
 from .Portal import portal_registration, portal_unregistration
+from .Treasury import (burn_pokt)
 
 boundary_actions = {
     "Dummy Boundary Action": dummy_boundary_action,
@@ -24,5 +25,6 @@ boundary_actions = {
     "Validator Unpause": validator_unpause,
     "Become Validator": become_validator,
     "Submit Relay Request":submit_relay_request,
-    "Servicer Relay": servicer_relay
+    "Servicer Relay": servicer_relay,
+    "Burn POKT": burn_pokt
 }
