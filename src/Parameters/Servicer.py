@@ -43,6 +43,11 @@ servicer_parameter_set = {"name": "Servicer Parameter Set",
                                         "name": "minimum_report_card_threshold",
                                         "description": "The minimum report card score to earn salary. Below the MinimumReportCardThreshold no reward is given to prevent cheap Sybil attacks and freeloading nodes.",
                                         "symbol": None,
+                                       "domain": None},
+                                       {"variable_type": NumberOfBlocksType,
+                                        "name": "servicer_unbounding_period",
+                                        "description": "The number of blocks before a servicer has their stake returned to them after unstaking.",
+                                        "symbol": None,
                                        "domain": None}]}
 
 
