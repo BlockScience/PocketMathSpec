@@ -4,3 +4,4 @@ from .Primitives import (PublicKeyType, uPOKTType, ServiceURLType,
                          BlockHeightType, NumberOfBlocksType)
 from .Actor import ActorType
 from .Entity import RelayChainEntityType
+from .Data import SessionType
