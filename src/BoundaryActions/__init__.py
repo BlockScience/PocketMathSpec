@@ -6,6 +6,7 @@ from .Validator import validator_stake, validator_pause, validator_unstake, vali
 from .Portal import portal_registration, portal_unregistration
 from .Treasury import (burn_pokt)
 from .Node import (unjail_node)
+from .RelayChain import (relay_chain_join, relay_chain_leave)
 
 boundary_actions = {
     "Servicer Stake": servicer_stake,
@@ -26,5 +27,7 @@ boundary_actions = {
     "Submit Relay Request":submit_relay_request,
     "Servicer Relay": servicer_relay,
     "Burn POKT": burn_pokt,
-    "Unjail Node": unjail_node
+    "Unjail Node": unjail_node,
+    "Relay Chain Join": relay_chain_join,
+    "Relay Chain Leave": relay_chain_leave
 }

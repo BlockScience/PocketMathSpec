@@ -4,10 +4,14 @@ from .Application import application_state
 from .Validator import validator_state
 from .Portal import portal_state
 from .Treasury import treasury_state
+from .RelayChain import relay_chain_state
+from .Global import global_state
 
-state = {"Servicer": servicer_state,
+state = {"Global": global_state,
+         "Servicer": servicer_state,
          "Fisherman": fisherman_state,
          "Application": application_state,
          "Validator": validator_state,
          "Portal": portal_state,
-         "Treasury": treasury_state}
+         "Treasury": treasury_state,
+         "Relay Chain": relay_chain_state}
