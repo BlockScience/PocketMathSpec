@@ -12,6 +12,7 @@ from .Validator import (validator_stake_space, modify_validator_pokt_space, vali
 from .Portal import (portal_registration_space, portal_unregistration_space)
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space)
 from .Node import unjail_node_space
+from .RelayChain import relay_chain_join_space, relay_chain_leave_space
 
 spaces = {"Servicer Stake Space": servicer_stake_space,
           "Servicer Pause Space": servicer_pause_space,
@@ -47,7 +48,9 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Jail Node Space": jail_node_space,
           "Unjail Node Space": unjail_node_space,
           "Servicer Salary Space": servicer_salary_space,
-          "Return Servicer Stake Space": return_servicer_stake_space}
+          "Return Servicer Stake Space": return_servicer_stake_space,
+          "Relay Chain Join Space": relay_chain_join_space,
+          "Relay Chain Leave Space": relay_chain_leave_space}
 
 
 
