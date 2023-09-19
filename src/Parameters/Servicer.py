@@ -28,4 +28,16 @@ servicer_parameter_set = {"name": "Servicer Parameter Set",
                                         "name": "salary_block_frequency",
                                         "description": "The frequency of salary blocks for servicers",
                                         "symbol": None,
+                                       "domain": None},
+                                        {"variable_type": float,
+                                        "name": "usage_to_reward_coeffecient",
+                                        "description": "The scalar used to modify volume to salary rewards based upon volume",
+                                        "symbol": None,
+                                       "domain": None},
+                                        {"variable_type": int,
+                                        "name": "minimum_test_score_threshold",
+                                        "description": "The minimum test scores to be eligible for salary for servicers",
+                                        "symbol": None,
                                        "domain": None}]}
+
+

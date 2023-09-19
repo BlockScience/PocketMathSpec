@@ -75,4 +75,4 @@ func DistributeRewards(relayChain, geoZone, height):
                         "policy_options": [],
                         "domain": [assign_servicer_salary_space],
                         "codomain": [servicer_salary_space],
-                        "parameters_used": []}
+                        "parameters_used": ["usage_to_reward_coeffecient", "minimum_test_score_threshold"]}
