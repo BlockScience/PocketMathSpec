@@ -1,4 +1,4 @@
-from ..Spaces import assign_servicer_salary_space
+from ..Spaces import assign_servicer_salary_space, return_servicer_stake_space
 
 assign_servicer_salary = {
     "name": "Assign Servicer Salary",
@@ -15,4 +15,11 @@ For example, a 100% ReportCard results in zero burning of the maxServicerReward,
     "parameters_used": ["salary_block_frequency"],
 }
 
-
+return_servicer_stake = {
+    "name": "Return Servicer Stake",
+    "description": """After unstaking, the original stake (i.e. deposit) is returned to the Servicer's custodial account after ServicerUnbondingPeriod has elapsed.""",
+    "constraints": [],
+    "control_action_options": [],
+    "codomain": [return_servicer_stake_space],
+    "parameters_used": ["servicer_unbounding_period"],
+}
