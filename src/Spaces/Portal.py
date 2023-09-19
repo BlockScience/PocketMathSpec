@@ -6,4 +6,5 @@ portal_registration_space = TypedDict("Portal Registration Space", {"public_key"
                                                           "service_url": ServiceURLType, # The API endpoint where the Portal service is provided
                                                                 })
 
-portal_unregistration_space = TypedDict("Portal Unregistration Space", {})
+portal_unregistration_space = TypedDict("Portal Unregistration Space", {"public_key": PublicKeyType, # The public cryptographic id of the Portal account
+                                                                })
