@@ -1,4 +1,4 @@
-from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space
+from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space, application_delegate_to_portal_space
 
 application_transmission_channels = []
 
@@ -28,4 +28,9 @@ application_transmission_channels.append({"origin": "Set Application Parameters 
                                         "space": application_param_update_space,
                                         "optional": True})
 
+
+application_transmission_channels.append({"origin": "Application Delegate to Portal",
+                                        "target": "Application Delegate to Portal Policy",
+                                        "space": application_delegate_to_portal_space,
+                                        "optional": False})
 
