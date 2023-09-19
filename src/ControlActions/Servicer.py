@@ -12,7 +12,7 @@ For example, a 100% ReportCard results in zero burning of the maxServicerReward,
     "constraints": [],
     "control_action_options": [],
     "codomain": [assign_servicer_salary_space],
-    "parameters_used": [],
+    "parameters_used": ["salary_block_frequency"],
 }
 
 
