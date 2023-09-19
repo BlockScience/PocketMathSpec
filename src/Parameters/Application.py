@@ -13,5 +13,11 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "description": "The maximum servicers per session.",
                                        "symbol": None,
                                        "domain": None
-                                       },]}
+                                       },
+                                       {"variable_type": int,
+                                       "name": "application_unstaking_time",
+                                       "description": "The time before an application has their stake returned.",
+                                       "symbol": None,
+                                       "domain": None
+                                       }]}
 

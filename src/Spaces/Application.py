@@ -31,6 +31,8 @@ application_delegate_to_portal_space = TypedDict("Application Delegate to Portal
 application_undelegation_space = TypedDict("Application Undelegation Space", {"application_public_key": PublicKeyType, # The cryptographic ID of the Application
                                                                               "portal_public_key": PublicKeyType, # The cryptographic ID of the Portal
                                                                               })
+return_application_stake_space = TypedDict("Return Application Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "amount": uPOKTType})
 
 # TODO:
 
