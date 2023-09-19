@@ -1,4 +1,5 @@
-from .Servicer import servicer_stake_policy, set_servicer_parameters_policy, servicer_unpause_policy, servicer_pause_policy
+from .Servicer import (servicer_stake_policy, set_servicer_parameters_policy, servicer_unpause_policy,
+                       servicer_pause_policy, assign_servicer_salary_policy)
 from .Application import application_stake_policy, set_application_parameters_policy
 from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy
 
@@ -11,5 +12,6 @@ policies = {
     "Servicer Pause Policy": servicer_pause_policy,
     "Validator Stake Policy": validator_stake_policy,
     "Set Validator Parameters Policy": set_validator_parameters_policy,
-    "Validator Unpause Policy": validator_unpause_policy
+    "Validator Unpause Policy": validator_unpause_policy,
+    "Assign Servicer Salary Policy": assign_servicer_salary_policy
 }
