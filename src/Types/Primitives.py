@@ -25,6 +25,8 @@ AddressType = NewType("Address", int)
 
 BlockHeightType = NewType("Block Height", int)
 
+# Number of blocks
+NumberOfBlocksType = NewType("Number of Blocks", int)
 
 ServicerTestScoresType = NewType('Service Test Scores', TypedDict('Service Test Scores', {"sampling_start": datetime,
                                                                                           "total_samples": int,

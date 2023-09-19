@@ -1,4 +1,4 @@
-from ..Types import POKTType, Days
+from ..Types import POKTType, Days, NumberOfBlocksType
 
 servicer_parameter_set = {"name": "Servicer Parameter Set",
                        "notes": "",
@@ -23,4 +23,9 @@ servicer_parameter_set = {"name": "Servicer Parameter Set",
                                        "name": "max_chains_servicer",
                                        "description": "When staking as a servicer, every servicer must register their stake for the relay chains that they support. Currently, servicers can register each stake to apply to their work in up to 15 different blockchains, which is the maximum number that can be chosen. ",
                                        "symbol": None,
+                                       "domain": None},
+                                       {"variable_type": NumberOfBlocksType,
+                                        "name": "salary_block_frequency",
+                                        "description": "The frequency of salary blocks for servicers",
+                                        "symbol": None,
                                        "domain": None}]}

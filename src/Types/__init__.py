@@ -1,2 +1,5 @@
-from .Primitives import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType, ServicerReportCardType, ServicerTestScoresType, POKTType, Days, AddressType, BlockHeightType
+from .Primitives import (PublicKeyType, uPOKTType, ServiceURLType,
+                         RelayChainType, GeoZoneType, ServicerReportCardType,
+                         ServicerTestScoresType, POKTType, Days, AddressType,
+                         BlockHeightType, NumberOfBlocksType)
 from .Actor import ActorType
