@@ -46,6 +46,16 @@ servicer_unstake_space = TypedDict("Servicer Unstake Space", {"actor_type": Acto
                                                               "address": AddressType,
                                                               "signer": AddressType,})
 
+
+assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {"geo_zone": GeoZoneType, # The physical geo-location identifier
+                                                                          "relay_chain": RelayChainType,
+                                                                          "height": BlockHeightType})
+servicer_salary_space = TypedDict("Servicer Salary Space",  {"geo_zone": GeoZoneType, # The physical geo-location identifier
+                                                                          "relay_chain": RelayChainType,
+                                                                          "height": BlockHeightType,
+                                                                          "public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                                          "reward_amount": uPOKTType})
+
 return_servicer_stake_space = TypedDict("Return Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "amount": uPOKTType})
 
@@ -53,6 +63,5 @@ return_servicer_stake_space = TypedDict("Return Servicer Stake Space", {"public_
 #TODO
 
 
-assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {})
+
 servicer_relay_space = TypedDict("Servicer Relay Space", {})
-servicer_salary_space = TypedDict("Servicer Salary Space", {})
