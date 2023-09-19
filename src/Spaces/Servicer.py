@@ -46,6 +46,10 @@ servicer_unstake_space = TypedDict("Servicer Unstake Space", {"actor_type": Acto
                                                               "address": AddressType,
                                                               "signer": AddressType,})
 
+return_servicer_stake_space = TypedDict("Return Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "amount": uPOKTType})
+
+
 #TODO
 
 
