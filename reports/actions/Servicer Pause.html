@@ -209,7 +209,7 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr></table><h2>Spaces</h2><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
+      </tr></table><h2>Spaces</h2><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
 <p>1. Servicer</p><p>2. Fisherman</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Servicer Pause Policy</h3><p>The policy which determines if a servicer will be paused. One consideration is whether or not the servicer is already paused currently.</p><h4>Preceded By:</h4>
 <p>1. Servicer Pause</p><h4>Domain Spaces:</h4>

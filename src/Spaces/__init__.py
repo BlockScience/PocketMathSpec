@@ -54,7 +54,7 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Relay Chain Leave Space": relay_chain_leave_space,
           "Return Application Stake Space": return_application_stake_space,
           "Servicer Block Reward Space": servicer_block_reward_space,
-          "Mint POKT Space": mint_pokt_mechanism_space}
+          "Mint POKT Mechanism Space": mint_pokt_mechanism_space}
 
 
 
