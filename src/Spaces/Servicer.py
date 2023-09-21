@@ -59,10 +59,13 @@ servicer_salary_space = TypedDict("Servicer Salary Space",  {"geo_zone": GeoZone
 return_servicer_stake_space = TypedDict("Return Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "amount": uPOKTType})
 
+servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {"public_key": PublicKeyType, # The key of the servicer that is receiving the block reward
+                                                                        "number_of_relays": int, # The number of relays that the servicer completed
+                                                                        })
 
 #TODO
 
 
 
 servicer_relay_space = TypedDict("Servicer Relay Space", {})
-servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {})
+
