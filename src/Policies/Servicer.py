@@ -88,6 +88,7 @@ This reward amount is then emitted as a message for servicers to earn rewards + 
                         "constraints": [],
                         "policy_options": [],
                         "domain": [servicer_block_reward_space],
-                        "codomain": [],
+                        "codomain": [modify_servicer_pokt_space],
                         "parameters_used": ["relays_to_tokens_multiplier", "servicer_stake_floor_multiplier", "servicer_stake_floor_multiplier_exponent",
                                             "servicer_stake_weight_multiplier", "servicer_stake_weight_ceiling"]}
+
