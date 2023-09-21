@@ -79,9 +79,15 @@ func DistributeRewards(relayChain, geoZone, height):
 
 
 servicer_block_reward_policy = {"name": "Servicer Block Reward Policy",
-                        "description": "Policy which determines block rewards for servicers",
+                        "description": """Policy which determines block rewards for servicers. The formula breaks down into the following:
+1. reward_amount = INPUTS[0].number_of_relays * relays_to_tokens_multiplier
+2. bin_number = (min(servicer_stake, servicer_stake_weight_ceiling) - stake_minimum) // servicer_stake_floor_multiplier + 1
+3. reward_amount = reward_amount * bin_number ** servicer_stake_floor_multiplier_exponent / servicer_stake_weight_multiplier
+
+This reward amount is then emitted as a message for servicers to earn rewards + the treasury to mint the rewards.""",
                         "constraints": [],
                         "policy_options": [],
                         "domain": [servicer_block_reward_space],
                         "codomain": [],
-                        "parameters_used": []}
+                        "parameters_used": ["relays_to_tokens_multiplier", "servicer_stake_floor_multiplier", "servicer_stake_floor_multiplier_exponent",
+                                            "servicer_stake_weight_multiplier", "servicer_stake_weight_ceiling"]}

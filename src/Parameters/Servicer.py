@@ -82,6 +82,11 @@ For example, if the way nodes are positioned in bins leads to an emission rate o
 
 This is the parameter most likely to be changed frequently, since it affects inflation most directly.""",
                                         "symbol": None,
-                                       "domain": None}]}
-
+                                       "domain": None},
+                                       {"variable_type": POKTType,
+                                        "name": "relays_to_tokens_multiplier",
+                                        "description": """The amount of POKT rewarded for each relay in block rewards.""",
+                                        "symbol": None,
+                                       "domain": None},
+                                       ]}
 
