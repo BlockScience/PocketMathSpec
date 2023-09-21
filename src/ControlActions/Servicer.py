@@ -1,4 +1,4 @@
-from ..Spaces import assign_servicer_salary_space, return_servicer_stake_space
+from ..Spaces import assign_servicer_salary_space, return_servicer_stake_space, servicer_block_reward_space
 
 assign_servicer_salary = {
     "name": "Assign Servicer Salary",
@@ -23,3 +23,10 @@ return_servicer_stake = {
     "codomain": [return_servicer_stake_space],
     "parameters_used": ["servicer_unbounding_period"],
 }
+
+servicer_block_reward = {"name": "Servicer Block Reward",
+    "description": "Rewards allocated on a block basis",
+    "constraints": [],
+    "control_action_options": [],
+    "codomain": [servicer_block_reward_space],
+    "parameters_used": [],}

@@ -1,7 +1,7 @@
 from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
                        assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space,
                        servicer_unpause_space2, servicer_pause_space2, servicer_relay_space, servicer_salary_space,
-                       return_servicer_stake_space)
+                       return_servicer_stake_space, servicer_block_reward_space)
 from .Application import (application_stake_space, modify_application_pokt_space, application_param_update_space,
                           application_unstake_space, application_delegate_to_portal_space,
                           application_undelegation_space, submit_relay_request_space,
@@ -52,7 +52,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Return Servicer Stake Space": return_servicer_stake_space,
           "Relay Chain Join Space": relay_chain_join_space,
           "Relay Chain Leave Space": relay_chain_leave_space,
-          "Return Application Stake Space": return_application_stake_space}
+          "Return Application Stake Space": return_application_stake_space,
+          "Servicer Block Reward Space": servicer_block_reward_space}
 
 
 
