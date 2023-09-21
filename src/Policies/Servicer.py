@@ -1,6 +1,7 @@
 from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space,
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space, servicer_pause_space2,
-                      assign_servicer_salary_space, servicer_salary_space, servicer_block_reward_space)
+                      assign_servicer_salary_space, servicer_salary_space, servicer_block_reward_space,
+                      mint_pokt_mechanism_space)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "Policy which takes care of actions to occur after a servicer attempts to stake",
@@ -88,7 +89,7 @@ This reward amount is then emitted as a message for servicers to earn rewards + 
                         "constraints": [],
                         "policy_options": [],
                         "domain": [servicer_block_reward_space],
-                        "codomain": [modify_servicer_pokt_space],
+                        "codomain": [modify_servicer_pokt_space, mint_pokt_mechanism_space],
                         "parameters_used": ["relays_to_tokens_multiplier", "servicer_stake_floor_multiplier", "servicer_stake_floor_multiplier_exponent",
                                             "servicer_stake_weight_multiplier", "servicer_stake_weight_ceiling"]}
 

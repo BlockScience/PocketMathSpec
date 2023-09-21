@@ -1,6 +1,7 @@
 from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space,
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space,
-                      servicer_pause_space2, assign_servicer_salary_space, servicer_block_reward_space)
+                      servicer_pause_space2, assign_servicer_salary_space, servicer_block_reward_space,
+                      mint_pokt_mechanism_space)
 
 servicer_transmission_channels = []
 
@@ -66,3 +67,9 @@ servicer_transmission_channels.append({"origin": "Servicer Block Reward Policy",
                                         "target": "Modify Servicer POKT Holdings",
                                         "space": modify_servicer_pokt_space,
                                         "optional": True})
+
+servicer_transmission_channels.append({"origin": "Servicer Block Reward Policy",
+                                        "target": "Mint POKT Mechanism",
+                                        "space": mint_pokt_mechanism_space,
+                                        "optional": True})
+
