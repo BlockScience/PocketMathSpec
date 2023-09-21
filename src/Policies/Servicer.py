@@ -1,6 +1,6 @@
 from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space,
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space, servicer_pause_space2,
-                      assign_servicer_salary_space, servicer_salary_space)
+                      assign_servicer_salary_space, servicer_salary_space, servicer_block_reward_space)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "Policy which takes care of actions to occur after a servicer attempts to stake",
@@ -76,3 +76,12 @@ func DistributeRewards(relayChain, geoZone, height):
                         "domain": [assign_servicer_salary_space],
                         "codomain": [servicer_salary_space],
                         "parameters_used": ["usage_to_reward_coeffecient", "minimum_test_score_threshold", "minimum_report_card_threshold"]}
+
+
+servicer_block_reward_policy = {"name": "Servicer Block Reward Policy",
+                        "description": "Policy which determines block rewards for servicers",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [servicer_block_reward_space],
+                        "codomain": [],
+                        "parameters_used": []}
