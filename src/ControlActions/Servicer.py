@@ -29,4 +29,5 @@ servicer_block_reward = {"name": "Servicer Block Reward",
     "constraints": [],
     "control_action_options": [],
     "codomain": [servicer_block_reward_space],
-    "parameters_used": [],}
+    "parameters_used": ["servicer_stake_floor_multiplier", "servicer_stake_weight_ceiling",
+                        "servicer_stake_floor_multiplier_exponent", "servicer_stake_weight_multiplier"],}
