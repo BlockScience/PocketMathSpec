@@ -7,4 +7,4 @@ block_reward_policy_aggregate = {"name": "Block Reward Policy Aggregate",
                         "policy_options": [],
                         "domain": [mint_block_rewards_space],
                         "codomain": [mint_pokt_mechanism_space, assign_servicer_salary_space, validator_block_reward_space],
-                        "parameters_used": []}
+                        "parameters_used": ["validator_fee_percentage", "dao_fee_percentage"]}
