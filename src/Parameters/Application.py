@@ -19,5 +19,11 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "description": "The time before an application has their stake returned.",
                                        "symbol": None,
                                        "domain": None
+                                       },
+                                       {"variable_type": POKTType,
+                                       "name": "application_fee_per_relay",
+                                       "description": "The fee charged per relay to applications.",
+                                       "symbol": None,
+                                       "domain": None
                                        }]}
 
