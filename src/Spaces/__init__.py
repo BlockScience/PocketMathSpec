@@ -15,7 +15,7 @@ from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_spac
                        burn_pokt_mechanism_space)
 from .Node import unjail_node_space
 from .RelayChain import relay_chain_join_space, relay_chain_leave_space
-from .DAO import dao_block_reward_space
+from .DAO import (dao_block_reward_space, modify_dao_pokt_space)
 
 spaces = {"Servicer Stake Space": servicer_stake_space,
           "Servicer Pause Space": servicer_pause_space,
@@ -57,7 +57,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Servicer Block Reward Space": servicer_block_reward_space,
           "Mint POKT Mechanism Space": mint_pokt_mechanism_space,
           "Burn POKT Mechanism Space": burn_pokt_mechanism_space,
-          "DAO Block Reward Space": dao_block_reward_space}
+          "DAO Block Reward Space": dao_block_reward_space,
+          "Modify DAO POKT Space": modify_dao_pokt_space}
 
 
 
