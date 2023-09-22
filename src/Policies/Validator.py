@@ -1,5 +1,5 @@
 from ..Spaces import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
-                      validator_unpause_space)
+                      validator_unpause_space, validator_block_reward_space)
 
 validator_stake_policy = {"name": "Validator Stake Policy",
                         "description": "Policy for determining actions to take from a validator moving to stake.",
@@ -25,3 +25,14 @@ validator_unpause_policy =  {"name": "Validator Unpause Policy",
                         "domain": [validator_unpause_space],
                         "codomain": [validator_unpause_space],
                         "parameters_used": ["minimum_validator_pause_time"]}
+
+
+validator_block_reward_policy = {"name": "Validator Block Reward Policy",
+                        "description": "Policy for allocation of block rewards to validator",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [validator_block_reward_space],
+                        "codomain": [],
+                        "parameters_used": []}
+
+
