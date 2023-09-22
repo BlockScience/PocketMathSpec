@@ -2,7 +2,7 @@ from .Servicer import (modify_servicer_pokt_holdings, modify_servicer_stake, upd
                        prune_servicer_qos, servicer_unpause_mechanism, servicer_update_pause_height)
 from .Application import modify_application_pokt_holdings, modify_application_stake, update_application_params
 from .Validator import modify_validator_pokt_holdings, modify_validator_stake, update_validator_params
-from .Treasury import mint_pokt_mechanism
+from .Treasury import mint_pokt_mechanism, burn_pokt_mechanism
 
 mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
              "Modify Servicer Stake": modify_servicer_stake,
@@ -16,4 +16,5 @@ mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
 "Modify Validator POKT Holdings": modify_validator_pokt_holdings,
 "Modify Validator Stake": modify_validator_stake,
 "Update Validator Params": update_validator_params,
-"Mint POKT Mechanism": mint_pokt_mechanism}
+"Mint POKT Mechanism": mint_pokt_mechanism,
+"Burn POKT Mechanism": burn_pokt_mechanism}
