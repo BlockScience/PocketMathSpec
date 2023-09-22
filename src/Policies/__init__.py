@@ -2,6 +2,7 @@ from .Servicer import (servicer_stake_policy, set_servicer_parameters_policy, se
                        servicer_pause_policy, assign_servicer_salary_policy, servicer_block_reward_policy)
 from .Application import application_stake_policy, set_application_parameters_policy, application_delegate_to_portal_policy
 from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy
+from .Treasury import block_reward_policy_aggregate
 
 policies = {
     "Servicer Stake Policy": servicer_stake_policy,
@@ -15,5 +16,6 @@ policies = {
     "Validator Unpause Policy": validator_unpause_policy,
     "Assign Servicer Salary Policy": assign_servicer_salary_policy,
     "Application Delegate to Portal Policy": application_delegate_to_portal_policy,
-    "Servicer Block Reward Policy": servicer_block_reward_policy
+    "Servicer Block Reward Policy": servicer_block_reward_policy,
+    "Block Reward Policy Aggregate": block_reward_policy_aggregate
 }
