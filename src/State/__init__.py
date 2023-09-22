@@ -6,6 +6,7 @@ from .Portal import portal_state
 from .Treasury import treasury_state
 from .RelayChain import relay_chain_state
 from .Global import global_state
+from .DAO import dao_state
 
 state = {"Global": global_state,
          "Servicer": servicer_state,
@@ -14,4 +15,5 @@ state = {"Global": global_state,
          "Validator": validator_state,
          "Portal": portal_state,
          "Treasury": treasury_state,
-         "Relay Chain": relay_chain_state}
+         "Relay Chain": relay_chain_state,
+         "DAO": dao_state}
