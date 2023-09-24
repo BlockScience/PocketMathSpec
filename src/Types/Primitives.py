@@ -11,6 +11,8 @@ PublicKeyType = NewType('Public Key', str)
 uPOKTType = NewType('uPOKT', int)
 POKTType = NewType('POKT', int)
 
+USDType = NewType('USD', float)
+
 # A URL for an api end point
 ServiceURLType = NewType('Service URL', str)
 
