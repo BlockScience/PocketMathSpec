@@ -3,7 +3,7 @@ from .Servicer import (servicer_stake, servicer_pause, servicer_unpause, service
 from .Application import (application_stake, application_unstake, application_delegate_to_portal,
                           application_undelegation, submit_relay_request)
 from .Validator import validator_stake, validator_pause, validator_unstake, validator_unpause, become_validator
-from .Portal import portal_registration, portal_unregistration
+from .Portal import portal_registration, portal_unregistration, submit_relay_request_portal
 from .Treasury import (burn_pokt)
 from .Node import (unjail_node)
 from .RelayChain import (relay_chain_join, relay_chain_leave)
@@ -29,5 +29,6 @@ boundary_actions = {
     "Burn POKT": burn_pokt,
     "Unjail Node": unjail_node,
     "Relay Chain Join": relay_chain_join,
-    "Relay Chain Leave": relay_chain_leave
+    "Relay Chain Leave": relay_chain_leave,
+    "Submit Relay Request (Portal)": submit_relay_request_portal
 }

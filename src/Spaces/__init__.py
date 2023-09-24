@@ -10,7 +10,7 @@ from .Validator import (validator_stake_space, modify_validator_pokt_space, vali
                         validator_pause_space, validator_stake_burning_space, validator_unstake_space,
                         validator_unpause_space, validator_jail_space, become_validator_space,
                         validator_block_reward_space)
-from .Portal import (portal_registration_space, portal_unregistration_space)
+from .Portal import (portal_registration_space, portal_unregistration_space, portal_relay_request_space)
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space, mint_pokt_mechanism_space,
                        burn_pokt_mechanism_space)
 from .Node import unjail_node_space
@@ -58,7 +58,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Mint POKT Mechanism Space": mint_pokt_mechanism_space,
           "Burn POKT Mechanism Space": burn_pokt_mechanism_space,
           "DAO Block Reward Space": dao_block_reward_space,
-          "Modify DAO POKT Space": modify_dao_pokt_space}
+          "Modify DAO POKT Space": modify_dao_pokt_space,
+          "Portal Relay Request Space": portal_relay_request_space}
 
 
 

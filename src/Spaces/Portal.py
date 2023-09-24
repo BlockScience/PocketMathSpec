@@ -8,3 +8,6 @@ portal_registration_space = TypedDict("Portal Registration Space", {"public_key"
 
 portal_unregistration_space = TypedDict("Portal Unregistration Space", {"public_key": PublicKeyType, # The public cryptographic id of the Portal account
                                                                 })
+
+# TODO
+portal_relay_request_space = TypedDict("Portal Relay Request Space", {})

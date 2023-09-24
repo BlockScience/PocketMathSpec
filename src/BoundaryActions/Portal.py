@@ -1,4 +1,4 @@
-from ..Spaces import portal_registration_space, portal_unregistration_space
+from ..Spaces import portal_registration_space, portal_unregistration_space, portal_relay_request_space
 
 portal_registration = {
     "name": "Portal Registration",
@@ -20,4 +20,12 @@ portal_unregistration = {
     "parameters_used": [],
 }
 
-
+submit_relay_request_portal = {
+    "name": "Submit Relay Request (Portal)",
+    "description": "Portal submitting a relay request on behalf of an application.",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Portal"],
+    "codomain": [portal_relay_request_space],
+    "parameters_used": [],
+}
