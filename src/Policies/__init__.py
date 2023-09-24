@@ -4,6 +4,7 @@ from .Application import application_stake_policy, set_application_parameters_po
 from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy, validator_block_reward_policy
 from .Treasury import block_reward_policy_aggregate
 from .DAO import dao_block_reward_policy
+from .Portal import submit_relay_request_portal_policy
 
 policies = {
     "Servicer Stake Policy": servicer_stake_policy,
@@ -20,5 +21,6 @@ policies = {
     "Servicer Block Reward Policy": servicer_block_reward_policy,
     "Block Reward Policy Aggregate": block_reward_policy_aggregate,
     "Validator Block Reward Policy": validator_block_reward_policy,
-    "DAO Block Reward Policy": dao_block_reward_policy
+    "DAO Block Reward Policy": dao_block_reward_policy,
+    "Submit Relay Request (Portal) Policy": submit_relay_request_portal_policy
 }
