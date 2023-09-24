@@ -21,6 +21,10 @@ validator_pause_space = TypedDict("Validator Pause Space", {"actor_type": ActorT
                                                               "caller_address": AddressType, # Who called for the validator to be paused
                                                               "signer": AddressType,})
 
+validator_block_reward_space = TypedDict("Validator Block Reward Space", {"public_key": PublicKeyType, # The public cryptographic id of the validator account
+                                                          "block_height": BlockHeightType,
+                                                          "reward_amount": uPOKTType})
+
 #TODO
 
 
@@ -29,4 +33,3 @@ validator_unstake_space = TypedDict("Validator Unstake Space", {})
 validator_unpause_space = TypedDict("Validator Unpause Space", {})
 validator_jail_space = TypedDict("Validator Jail Space", {})
 become_validator_space = TypedDict("Become Validator Space", {})
-validator_block_reward_space = TypedDict("Validator Block Reward Space", {})

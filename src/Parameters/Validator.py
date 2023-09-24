@@ -1,4 +1,4 @@
-from ..Types import POKTType, Days
+from ..Types import POKTType, Days, PercentType
 
 validator_parameter_set = {"name": "Validator Parameter Set",
                        "notes": "",
@@ -19,5 +19,12 @@ validator_parameter_set = {"name": "Validator Parameter Set",
                                        "description": "The maximum number of validators allowed at any given time",
                                        "symbol": None,
                                        "domain": None
-                                       }]}
+                                       },
+                                       {"variable_type": PercentType,
+                                       "name": "block_proposer_allocation",
+                                       "description": "The percent allocation of fees charged to portals and applications that goes to the validator.",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       ]}
 

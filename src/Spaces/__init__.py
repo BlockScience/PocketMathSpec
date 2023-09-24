@@ -1,6 +1,6 @@
 from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
                        assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space,
-                       servicer_unpause_space2, servicer_pause_space2, servicer_relay_space, servicer_salary_space,
+                       servicer_unpause_space2, servicer_pause_space2, servicer_relay_space,
                        return_servicer_stake_space, servicer_block_reward_space)
 from .Application import (application_stake_space, modify_application_pokt_space, application_param_update_space,
                           application_unstake_space, application_delegate_to_portal_space,
@@ -10,10 +10,12 @@ from .Validator import (validator_stake_space, modify_validator_pokt_space, vali
                         validator_pause_space, validator_stake_burning_space, validator_unstake_space,
                         validator_unpause_space, validator_jail_space, become_validator_space,
                         validator_block_reward_space)
-from .Portal import (portal_registration_space, portal_unregistration_space)
-from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space, mint_pokt_mechanism_space)
+from .Portal import (portal_registration_space, portal_unregistration_space, portal_relay_request_space)
+from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space, mint_pokt_mechanism_space,
+                       burn_pokt_mechanism_space)
 from .Node import unjail_node_space
 from .RelayChain import relay_chain_join_space, relay_chain_leave_space
+from .DAO import (dao_block_reward_space, modify_dao_pokt_space)
 
 spaces = {"Servicer Stake Space": servicer_stake_space,
           "Servicer Pause Space": servicer_pause_space,
@@ -48,13 +50,16 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Burn POKT Space": burn_pokt_space,
           "Jail Node Space": jail_node_space,
           "Unjail Node Space": unjail_node_space,
-          "Servicer Salary Space": servicer_salary_space,
           "Return Servicer Stake Space": return_servicer_stake_space,
           "Relay Chain Join Space": relay_chain_join_space,
           "Relay Chain Leave Space": relay_chain_leave_space,
           "Return Application Stake Space": return_application_stake_space,
           "Servicer Block Reward Space": servicer_block_reward_space,
-          "Mint POKT Mechanism Space": mint_pokt_mechanism_space}
+          "Mint POKT Mechanism Space": mint_pokt_mechanism_space,
+          "Burn POKT Mechanism Space": burn_pokt_mechanism_space,
+          "DAO Block Reward Space": dao_block_reward_space,
+          "Modify DAO POKT Space": modify_dao_pokt_space,
+          "Portal Relay Request Space": portal_relay_request_space}
 
 
 

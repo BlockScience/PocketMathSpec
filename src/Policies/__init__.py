@@ -1,7 +1,11 @@
 from .Servicer import (servicer_stake_policy, set_servicer_parameters_policy, servicer_unpause_policy,
-                       servicer_pause_policy, assign_servicer_salary_policy, servicer_block_reward_policy)
+                       servicer_pause_policy, assign_servicer_salary_policy, servicer_block_reward_policy,
+                       servicer_relay_policy)
 from .Application import application_stake_policy, set_application_parameters_policy, application_delegate_to_portal_policy
-from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy
+from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy, validator_block_reward_policy
+from .Treasury import block_reward_policy_aggregate
+from .DAO import dao_block_reward_policy
+from .Portal import submit_relay_request_portal_policy
 
 policies = {
     "Servicer Stake Policy": servicer_stake_policy,
@@ -15,5 +19,10 @@ policies = {
     "Validator Unpause Policy": validator_unpause_policy,
     "Assign Servicer Salary Policy": assign_servicer_salary_policy,
     "Application Delegate to Portal Policy": application_delegate_to_portal_policy,
-    "Servicer Block Reward Policy": servicer_block_reward_policy
+    "Servicer Block Reward Policy": servicer_block_reward_policy,
+    "Block Reward Policy Aggregate": block_reward_policy_aggregate,
+    "Validator Block Reward Policy": validator_block_reward_policy,
+    "DAO Block Reward Policy": dao_block_reward_policy,
+    "Submit Relay Request (Portal) Policy": submit_relay_request_portal_policy,
+    "Servicer Relay Policy": servicer_relay_policy
 }
