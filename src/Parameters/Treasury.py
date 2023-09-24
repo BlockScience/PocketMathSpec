@@ -1,4 +1,4 @@
-from ..Types import PercentType, USDType
+from ..Types import PercentType, USDType, NumberRelaysPerDayType
 
 treasury_parameter_set = {"name": "Treasury Parameter Set",
                        "notes": "",
@@ -25,5 +25,42 @@ treasury_parameter_set = {"name": "Treasury Parameter Set",
                                        "description": "This is set at 30% of Infura's average price per relay",
                                        "symbol": None,
                                        "domain": None
+                                       },
+                                       {"variable_type": USDType,
+                                       "name": "min_bootstrap_gateway_fee_per_relay",
+                                       "description": "",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       {"variable_type": USDType,
+                                       "name": "max_bootstrap_servicer_cost_per_relay",
+                                       "description": "",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       {"variable_type": NumberRelaysPerDayType,
+                                       "name": "servicer_bootstrap_unwind_start",
+                                       "description": "",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       {"variable_type": NumberRelaysPerDayType,
+                                       "name": "servicer_bootstrap_end",
+                                       "description": "",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       {"variable_type": NumberRelaysPerDayType,
+                                       "name": "gateway_bootstrap_unwind_start",
+                                       "description": "",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       {"variable_type": NumberRelaysPerDayType,
+                                       "name": "gateway_bootstrap_unwind_end",
+                                       "description": "",
+                                       "symbol": None,
+                                       "domain": None
                                        }
                                        ]}
+
