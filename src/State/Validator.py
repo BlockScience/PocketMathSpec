@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, PublicKeyType, ServiceURLType
+from ..Types import uPOKTType, PublicKeyType, ServiceURLType, StakeStatusType
 
 validator_state = {"name": "Validator State",
               "notes": "",
@@ -25,6 +25,11 @@ validator_state = {"name": "Validator State",
                              {"type": PublicKeyType,
                              "name": "Operator Public Key",
                              "description": "OPTIONAL; The non-custodial pubKey operating this node",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": StakeStatusType,
+                             "name": "Stake Status",
+                             "description": "The status of staking for the actor",
                              "symbol": None,
                              "domain": None}]}
 
