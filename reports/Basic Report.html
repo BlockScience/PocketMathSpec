@@ -561,17 +561,17 @@
 
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-478 244.48,-478 244.48,4 -4,4"/>
 
-<!-- Fisherman -->
+<!-- Servicer -->
 
 <g id="node1" class="node">
 
-<title>Fisherman</title>
+<title>Servicer</title>
 
-<path fill="none" stroke="black" d="M114.24,-470.73C114.24,-472.53 97.21,-474 76.24,-474 55.27,-474 38.24,-472.53 38.24,-470.73 38.24,-470.73 38.24,-441.27 38.24,-441.27 38.24,-439.47 55.27,-438 76.24,-438 97.21,-438 114.24,-439.47 114.24,-441.27 114.24,-441.27 114.24,-470.73 114.24,-470.73"/>
+<path fill="none" stroke="black" d="M107.74,-470.73C107.74,-472.53 93.62,-474 76.24,-474 58.86,-474 44.74,-472.53 44.74,-470.73 44.74,-470.73 44.74,-441.27 44.74,-441.27 44.74,-439.47 58.86,-438 76.24,-438 93.62,-438 107.74,-439.47 107.74,-441.27 107.74,-441.27 107.74,-470.73 107.74,-470.73"/>
 
-<path fill="none" stroke="black" d="M114.24,-470.73C114.24,-468.92 97.21,-467.45 76.24,-467.45 55.27,-467.45 38.24,-468.92 38.24,-470.73"/>
+<path fill="none" stroke="black" d="M107.74,-470.73C107.74,-468.92 93.62,-467.45 76.24,-467.45 58.86,-467.45 44.74,-468.92 44.74,-470.73"/>
 
-<text text-anchor="middle" x="76.24" y="-452.3" font-family="Times,serif" font-size="14.00">Fisherman</text>
+<text text-anchor="middle" x="76.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
 
 </g>
 
@@ -587,11 +587,11 @@
 
 </g>
 
-<!-- Fisherman&#45;&gt;Servicer Pause -->
+<!-- Servicer&#45;&gt;Servicer Pause -->
 
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 
-<title>Fisherman&#45;&gt;Servicer Pause</title>
+<title>Servicer&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M86.89,-437.81C92.42,-428.89 99.27,-417.84 105.32,-408.08"/>
 
@@ -599,25 +599,25 @@
 
 </g>
 
-<!-- Servicer -->
+<!-- Fisherman -->
 
 <g id="node2" class="node">
 
-<title>Servicer</title>
+<title>Fisherman</title>
 
-<path fill="none" stroke="black" d="M195.74,-470.73C195.74,-472.53 181.62,-474 164.24,-474 146.86,-474 132.74,-472.53 132.74,-470.73 132.74,-470.73 132.74,-441.27 132.74,-441.27 132.74,-439.47 146.86,-438 164.24,-438 181.62,-438 195.74,-439.47 195.74,-441.27 195.74,-441.27 195.74,-470.73 195.74,-470.73"/>
+<path fill="none" stroke="black" d="M202.24,-470.73C202.24,-472.53 185.21,-474 164.24,-474 143.27,-474 126.24,-472.53 126.24,-470.73 126.24,-470.73 126.24,-441.27 126.24,-441.27 126.24,-439.47 143.27,-438 164.24,-438 185.21,-438 202.24,-439.47 202.24,-441.27 202.24,-441.27 202.24,-470.73 202.24,-470.73"/>
 
-<path fill="none" stroke="black" d="M195.74,-470.73C195.74,-468.92 181.62,-467.45 164.24,-467.45 146.86,-467.45 132.74,-468.92 132.74,-470.73"/>
+<path fill="none" stroke="black" d="M202.24,-470.73C202.24,-468.92 185.21,-467.45 164.24,-467.45 143.27,-467.45 126.24,-468.92 126.24,-470.73"/>
 
-<text text-anchor="middle" x="164.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
+<text text-anchor="middle" x="164.24" y="-452.3" font-family="Times,serif" font-size="14.00">Fisherman</text>
 
 </g>
 
-<!-- Servicer&#45;&gt;Servicer Pause -->
+<!-- Fisherman&#45;&gt;Servicer Pause -->
 
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 
-<title>Servicer&#45;&gt;Servicer Pause</title>
+<title>Fisherman&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M153.59,-437.81C148.06,-428.89 141.21,-417.84 135.16,-408.08"/>
 
@@ -3141,7 +3141,7 @@ This reward amount is then emitted as a message for servicers to earn rewards + 
 <h3>Block Reward Policy Aggregate</h3><p>The aggregate policy for creating the total amount of block reward and also splitting it between different groups.
 
 There are two components that are aggregated here, one for fees and one for general block rewards. Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369</p><h4>Preceded By:</h4>
-<p>1. Mint Blocks Rewards</p><h4>Domain Spaces:</h4>
+<p>1. Mint Block Rewards</p><h4>Domain Spaces:</h4>
 <p>1. Mint Block Rewards Space</p><h4>Followed By:</h4>
 <p>1. Mint POKT Mechanism</p><p>2. Assign Servicer Salary Policy</p><p>3. Validator Block Reward Policy</p><p>4. DAO Block Reward Policy</p><h4>Codomain Spaces:</h4>
 <p>1. Mint POKT Mechanism Space</p><p>2. Assign Servicer Salary Space</p><p>3. Validator Block Reward Space</p><h4>Constraints:</h4>
