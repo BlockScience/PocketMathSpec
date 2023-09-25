@@ -1,4 +1,4 @@
-from ..Spaces import (portal_relay_request_space)
+from ..Spaces import (portal_relay_request_space, portal_registration_space)
 
 submit_relay_request_portal_policy = {"name": "Submit Relay Request (Portal) Policy",
                         "description": "Policy which handles the logic of portal relay requests and fees",
@@ -12,4 +12,10 @@ submit_relay_request_portal_policy = {"name": "Submit Relay Request (Portal) Pol
 
 
 
-
+portal_registration_policy = {"name": "Portal Registration Policy",
+                        "description": "Policy which handles the logic of portal registration and if enough stake is present.",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [portal_registration_space],
+                        "codomain": [],
+                        "parameters_used": ["portal_minimum_stake"]}

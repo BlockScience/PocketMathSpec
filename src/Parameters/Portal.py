@@ -13,6 +13,12 @@ portal_parameter_set = {"name": "Portal Parameter Set",
                                        "description": "The fee per relay to portals.",
                                        "symbol": None,
                                        "domain": None
+                                       },
+                                       {"variable_type": POKTType,
+                                       "name": "portal_minimum_stake",
+                                       "description": "The minimum stake for the portal, starting at 150,000 POKT.",
+                                       "symbol": None,
+                                       "domain": None
                                        }]}
 
 
