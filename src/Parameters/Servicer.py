@@ -1,4 +1,4 @@
-from ..Types import POKTType, Days, NumberOfBlocksType
+from ..Types import POKTType, Days, NumberOfBlocksType, PercentType
 
 servicer_parameter_set = {"name": "Servicer Parameter Set",
                        "notes": "",
@@ -83,5 +83,15 @@ This is the parameter most likely to be changed frequently, since it affects inf
                                         "description": """The amount of POKT rewarded for each relay in block rewards.""",
                                         "symbol": None,
                                        "domain": None},
+                                       {"variable_type": PercentType,
+                                        "name": "slash_fraction_downtime",
+                                        "description": """The % of a node’s stake that is burned for downtime, where 1 is 100%.""",
+                                        "symbol": None,
+                                       "domain": None},
+                                       {"variable_type": PercentType,
+                                        "name": "replay_attack_burn_multiplier",
+                                        "description": """The multiplier slash factor for submitting a replay attack. The base slash is directly proportional to the amount of relays claimed.""",
+                                        "symbol": None,
+                                       "domain": None}
                                        ]}
 

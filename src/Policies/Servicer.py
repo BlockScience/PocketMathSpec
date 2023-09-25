@@ -114,4 +114,4 @@ servicer_stake_burn_policy = {
     "policy_options": [],
     "domain": [servicer_stake_burn_space],
     "codomain": [],
-    "parameters_used": []}
+    "parameters_used": ["slash_fraction_downtime", "replay_attack_burn_multiplier"]}
