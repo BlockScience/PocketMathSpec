@@ -18,7 +18,12 @@ servicer_block_reward = {"name": "Servicer Block Reward",
                         "servicer_stake_floor_multiplier_exponent", "servicer_stake_weight_multiplier"],}
 
 servicer_stake_burn = {"name": "Servicer Stake Burn",
-    "description": "The control action for a servicer having their stake burned due to bad behavior.",
+    "description": """The control action for a servicer having their stake burned due to bad behavior.
+
+A Servicer's stake can be burnt in two situations:
+
+1. A Servicer receives a TestScore below the TestScoreBurnThreshold
+2. A Fisherman initiates a PauseMsg with the required evidence""",
     "constraints": [],
     "control_action_options": [],
     "codomain": [servicer_stake_burn_space],
