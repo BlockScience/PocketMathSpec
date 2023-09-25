@@ -57,6 +57,7 @@ return_servicer_stake_space = TypedDict("Return Servicer Stake Space", {"public_
 
 servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {"public_key": PublicKeyType, # The key of the servicer that is receiving the block reward
                                                                         "number_of_relays": int, # The number of relays that the servicer completed
+                                                                        "usage_to_reward_coeffecient": float, # The scalar for rewards to the servicers
                                                                         })
 
 #TODO
