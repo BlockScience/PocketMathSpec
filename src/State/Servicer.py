@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType, PublicKeyType, GeoZoneType, RelayChainType, ServiceURLType, BlockHeightType
+from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType, PublicKeyType, GeoZoneType, RelayChainType, ServiceURLType, BlockHeightType, StakeStatusType
 from typing import List
 
 servicer_state = {"name": "Servicer State",
@@ -45,7 +45,7 @@ servicer_state = {"name": "Servicer State",
                              "domain": None},
                              {"type": GeoZoneType,
                              "name": "GeoZone",
-                             "description": "The physical geo-location identifier this Servicer registered in",
+                             "description": "The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.",
                              "symbol": None,
                              "domain": None},
                              {"type": PublicKeyType,
@@ -56,6 +56,11 @@ servicer_state = {"name": "Servicer State",
                              {"type": BlockHeightType,
                              "name": "Pause Height",
                              "description": "The height for which a servicer has been paused at",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": StakeStatusType,
+                             "name": "Stake Status",
+                             "description": "The status of staking for the actor",
                              "symbol": None,
                              "domain": None}
                              ]}

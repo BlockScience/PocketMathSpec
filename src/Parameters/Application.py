@@ -25,5 +25,12 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "description": "The fee charged per relay to applications.",
                                        "symbol": None,
                                        "domain": None
-                                       }]}
+                                       },
+                                       {"variable_type": POKTType,
+                                       "name": "minimum_application_stake",
+                                       "description": "The minimum stake needed for applications.",
+                                       "symbol": None,
+                                       "domain": None}
+                                       ]}
+
 

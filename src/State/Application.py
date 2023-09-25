@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, PublicKeyType, GeoZoneType, RelayChainType
+from ..Types import uPOKTType, PublicKeyType, GeoZoneType, RelayChainType, StakeStatusType
 from typing import List
 
 
@@ -33,7 +33,13 @@ application_state = {"name": "Application State",
                              "name": "Number of Servicers",
                              "description": "The number of servicers per request to be using",
                              "symbol": None,
-                             "domain": None},]}
+                             "domain": None},
+                             {"type": StakeStatusType,
+                             "name": "Stake Status",
+                             "description": "The status of staking for the actor",
+                             "symbol": None,
+                             "domain": None}
+                             ]}
 
 
 
