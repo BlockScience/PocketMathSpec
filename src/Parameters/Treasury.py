@@ -1,4 +1,4 @@
-from ..Types import PercentType, USDType, NumberRelaysPerDayType
+from ..Types import PercentType, USDType, NumberRelaysPerDayType, POKTType
 
 treasury_parameter_set = {"name": "Treasury Parameter Set",
                        "notes": "",
@@ -59,6 +59,12 @@ treasury_parameter_set = {"name": "Treasury Parameter Set",
                                        {"variable_type": NumberRelaysPerDayType,
                                        "name": "gateway_bootstrap_unwind_end",
                                        "description": "",
+                                       "symbol": None,
+                                       "domain": None
+                                       },
+                                       {"variable_type": POKTType,
+                                       "name": "transaction_fee",
+                                       "description": "The fee applied to every transaction, default value of 0.01 POKT.",
                                        "symbol": None,
                                        "domain": None
                                        }
