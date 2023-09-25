@@ -65,4 +65,4 @@ servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {"public_
 
 
 servicer_relay_space = TypedDict("Servicer Relay Space", {})
-
+servicer_stake_burn_space = TypedDict("Servicer Stake Burn Space", {})
