@@ -11,7 +11,8 @@ application_stake_policy = {"name": "Application Stake Policy",
                         "policy_options": [],
                         "domain": [application_stake_space],
                         "codomain": [application_stake_space, modify_application_pokt_space, modify_application_pokt_space],
-                        "parameters_used": ["minimum_servicers_per_session", "maximum_servicers_per_session"]}
+                        "parameters_used": ["minimum_servicers_per_session", "maximum_servicers_per_session",
+                                            "minimum_application_stake"]}
 
 set_application_parameters_policy = {"name": "Set Application Parameters Policy",
                         "description": "Policy for determining if application parameters should be updated",
