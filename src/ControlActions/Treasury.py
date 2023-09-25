@@ -1,7 +1,7 @@
 from ..Spaces import mint_block_rewards_space, jail_node_space
 
 mint_block_rewards = {
-    "name": "Mint Blocks Rewards",
+    "name": "Mint Block Rewards",
     "description": """The action of the protocol minting block rewards""",
     "constraints": [],
     "control_action_options": [],
