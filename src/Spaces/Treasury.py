@@ -9,4 +9,6 @@ mint_block_rewards_space = TypedDict("Mint Block Rewards Space", {"current_heigh
                                                                   })
 burn_pokt_space = TypedDict("Burn POKT Space", {"burn_amount": uPOKTType,
                                                 "block_height": BlockHeightType})
-jail_node_space = TypedDict("Jail Node Space", {})
+jail_node_space = TypedDict("Jail Node Space", {"node_address": PublicKeyType,
+                                                "block_height": BlockHeightType,
+                                                "jailer_address": PublicKeyType})
