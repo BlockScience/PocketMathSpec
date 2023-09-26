@@ -34,6 +34,8 @@ application_undelegation_space = TypedDict("Application Undelegation Space", {"a
 return_application_stake_space = TypedDict("Return Application Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "amount": uPOKTType})
 
-# TODO:
-
-submit_relay_request_space = TypedDict("Submit Relay Request Space", {})
+submit_relay_request_space = TypedDict("Submit Relay Request Space", {"payload": dict, # the data payload of the request
+                                                                      "meta": dict, # metadata for the relay request
+                                                                      "proof": dict, # the authentication scheme needed for work
+                                                                      "application_address": PublicKeyType
+                                                                      })
