@@ -2421,17 +2421,17 @@
 
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-112 265.04,-112 265.04,4 -4,4"/>
 
-<!-- Portal -->
+<!-- Application -->
 
 <g id="node1" class="node">
 
-<title>Portal</title>
+<title>Application</title>
 
-<path fill="none" stroke="black" d="M114.52,-104.73C114.52,-106.53 102.42,-108 87.52,-108 72.62,-108 60.52,-106.53 60.52,-104.73 60.52,-104.73 60.52,-75.27 60.52,-75.27 60.52,-73.47 72.62,-72 87.52,-72 102.42,-72 114.52,-73.47 114.52,-75.27 114.52,-75.27 114.52,-104.73 114.52,-104.73"/>
+<path fill="none" stroke="black" d="M129.02,-104.73C129.02,-106.53 110.42,-108 87.52,-108 64.62,-108 46.02,-106.53 46.02,-104.73 46.02,-104.73 46.02,-75.27 46.02,-75.27 46.02,-73.47 64.62,-72 87.52,-72 110.42,-72 129.02,-73.47 129.02,-75.27 129.02,-75.27 129.02,-104.73 129.02,-104.73"/>
 
-<path fill="none" stroke="black" d="M114.52,-104.73C114.52,-102.92 102.42,-101.45 87.52,-101.45 72.62,-101.45 60.52,-102.92 60.52,-104.73"/>
+<path fill="none" stroke="black" d="M129.02,-104.73C129.02,-102.92 110.42,-101.45 87.52,-101.45 64.62,-101.45 46.02,-102.92 46.02,-104.73"/>
 
-<text text-anchor="middle" x="87.52" y="-86.3" font-family="Times,serif" font-size="14.00">Portal</text>
+<text text-anchor="middle" x="87.52" y="-86.3" font-family="Times,serif" font-size="14.00">Application</text>
 
 </g>
 
@@ -2447,11 +2447,11 @@
 
 </g>
 
-<!-- Portal&#45;&gt;Submit Relay Request -->
+<!-- Application&#45;&gt;Submit Relay Request -->
 
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 
-<title>Portal&#45;&gt;Submit Relay Request</title>
+<title>Application&#45;&gt;Submit Relay Request</title>
 
 <path fill="none" stroke="black" d="M98.15,-71.7C103.3,-63.32 109.57,-53.1 115.23,-43.9"/>
 
@@ -2459,25 +2459,25 @@
 
 </g>
 
-<!-- Application -->
+<!-- Portal -->
 
 <g id="node2" class="node">
 
-<title>Application</title>
+<title>Portal</title>
 
-<path fill="none" stroke="black" d="M216.02,-104.73C216.02,-106.53 197.42,-108 174.52,-108 151.62,-108 133.02,-106.53 133.02,-104.73 133.02,-104.73 133.02,-75.27 133.02,-75.27 133.02,-73.47 151.62,-72 174.52,-72 197.42,-72 216.02,-73.47 216.02,-75.27 216.02,-75.27 216.02,-104.73 216.02,-104.73"/>
+<path fill="none" stroke="black" d="M201.52,-104.73C201.52,-106.53 189.42,-108 174.52,-108 159.62,-108 147.52,-106.53 147.52,-104.73 147.52,-104.73 147.52,-75.27 147.52,-75.27 147.52,-73.47 159.62,-72 174.52,-72 189.42,-72 201.52,-73.47 201.52,-75.27 201.52,-75.27 201.52,-104.73 201.52,-104.73"/>
 
-<path fill="none" stroke="black" d="M216.02,-104.73C216.02,-102.92 197.42,-101.45 174.52,-101.45 151.62,-101.45 133.02,-102.92 133.02,-104.73"/>
+<path fill="none" stroke="black" d="M201.52,-104.73C201.52,-102.92 189.42,-101.45 174.52,-101.45 159.62,-101.45 147.52,-102.92 147.52,-104.73"/>
 
-<text text-anchor="middle" x="174.52" y="-86.3" font-family="Times,serif" font-size="14.00">Application</text>
+<text text-anchor="middle" x="174.52" y="-86.3" font-family="Times,serif" font-size="14.00">Portal</text>
 
 </g>
 
-<!-- Application&#45;&gt;Submit Relay Request -->
+<!-- Portal&#45;&gt;Submit Relay Request -->
 
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 
-<title>Application&#45;&gt;Submit Relay Request</title>
+<title>Portal&#45;&gt;Submit Relay Request</title>
 
 <path fill="none" stroke="black" d="M163.64,-71.7C158.24,-63.11 151.63,-52.58 145.74,-43.21"/>
 
@@ -3013,7 +3013,7 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>POKT Holdings</td><td>The holdings of the DAO in uPOKT</td><td>uPOKT</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>relay_chain: Relay Chain,<br/>height: Block Height}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Application Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Application Delegate to Portal Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Validator Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>operator_public_key: Public Key}</p><h3>Modify Validator POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Validator Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>operator_public_key: Public Key}</p><h3>Portal Registration Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL}</p><h3>Portal Unregistration Space</h3><p>{public_key: Public Key}</p><h3>Application Undelegation Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Validator Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Validator Stake Burning Space</h3><p>{}</p><h3>Validator Unstake Space</h3><p>{}</p><h3>Validator Unpause Space</h3><p>{}</p><h3>Validator Jail Space</h3><p>{}</p><h3>Become Validator Space</h3><p>{}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h3>Submit Relay Request Space</h3><p>{payload: dict,<br/>meta: dict,<br/>proof: dict,<br/>application_address: Public Key}</p><h3>Servicer Relay Space</h3><p>{}</p><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Burn POKT Space</h3><p>{burn_amount: uPOKT,<br/>block_height: Block Height}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Unjail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height}</p><h3>Return Servicer Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Relay Chain Join Space</h3><p>{name: str,<br/>portal_api_prefix: str,<br/>relay_chain_id: str}</p><h3>Relay Chain Leave Space</h3><p>{relay_chain_id: str}</p><h3>Return Application Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Block Reward Space</h3><p>{public_key: Public Key,<br/>number_of_relays: int,<br/>usage_to_reward_coeffecient: float}</p><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>DAO Block Reward Space</h3><p>{}</p><h3>Modify DAO POKT Space</h3><p>{}</p><h3>Portal Relay Request Space</h3><p>{}</p><h3>Servicer Stake Burn Space</h3><p>{}</p><h2>Behavioral Action Space</h2><h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
+      </tr><tr><td>POKT Holdings</td><td>The holdings of the DAO in uPOKT</td><td>uPOKT</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>relay_chain: Relay Chain,<br/>height: Block Height}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Application Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Application Delegate to Portal Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Validator Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>operator_public_key: Public Key}</p><h3>Modify Validator POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Validator Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>operator_public_key: Public Key}</p><h3>Portal Registration Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL}</p><h3>Portal Unregistration Space</h3><p>{public_key: Public Key}</p><h3>Application Undelegation Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Validator Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Validator Stake Burning Space</h3><p>{}</p><h3>Validator Unstake Space</h3><p>{}</p><h3>Validator Unpause Space</h3><p>{}</p><h3>Validator Jail Space</h3><p>{}</p><h3>Become Validator Space</h3><p>{}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h3>Submit Relay Request Space</h3><p>{payload: dict,<br/>meta: dict,<br/>proof: dict,<br/>application_address: Public Key}</p><h3>Servicer Relay Space</h3><p>{}</p><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Burn POKT Space</h3><p>{burn_amount: uPOKT,<br/>block_height: Block Height}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Unjail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height}</p><h3>Return Servicer Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Relay Chain Join Space</h3><p>{name: str,<br/>portal_api_prefix: str,<br/>relay_chain_id: str}</p><h3>Relay Chain Leave Space</h3><p>{relay_chain_id: str}</p><h3>Return Application Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Block Reward Space</h3><p>{public_key: Public Key,<br/>number_of_relays: int,<br/>usage_to_reward_coeffecient: float}</p><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>DAO Block Reward Space</h3><p>{}</p><h3>Modify DAO POKT Space</h3><p>{}</p><h3>Portal Relay Request Space</h3><p>{}</p><h3>Servicer Stake Burn Space</h3><p>{}</p><h3>Servicer Forced Unstaked Space</h3><p>{public_key: Public Key}</p><h2>Behavioral Action Space</h2><h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
 <h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
 <p>1. Servicer</p><p>2. Fisherman</p><h4>Constraints:</h4>
@@ -3280,4 +3280,4 @@ There are two components that are aggregated here, one for fees and one for gene
 <p>1. Modify DAO POKT Space</p><h4>State Updates:</h4>
 <p>1. DAO.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
-<p>The DAO has its holdings increased by the value</p><h2>Parameters</h2><p>minimum_stake_servicer</p><p>minimum_stake_period_servicer</p><p>minimum_pause_time</p><p>max_chains_servicer</p><p>salary_block_frequency</p><p>minimum_test_score_threshold</p><p>minimum_report_card_threshold</p><p>servicer_unbounding_period</p><p>servicer_stake_floor_multiplier</p><p>servicer_stake_weight_ceiling</p><p>servicer_stake_floor_multiplier_exponent</p><p>servicer_stake_weight_multiplier</p><p>relays_to_tokens_multiplier</p><p>slash_fraction_downtime</p><p>replay_attack_burn_multiplier</p><p>minimum_servicers_per_session</p><p>maximum_servicers_per_session</p><p>application_unstaking_time</p><p>application_fee_per_relay</p><p>minimum_application_stake</p><p>minimum_validator_stake</p><p>minimum_validator_pause_time</p><p>max_validators</p><p>block_proposer_allocation</p><p>stake_per_app_delegation</p><p>portal_fee_per_relay</p><p>portal_minimum_stake</p><p>session_block_frequency</p><p>dao_fee_percentage</p><p>validator_fee_percentage</p><p>maturity_relay_cost</p><p>maturity_relay_charge</p><p>min_bootstrap_gateway_fee_per_relay</p><p>max_bootstrap_servicer_cost_per_relay</p><p>servicer_bootstrap_unwind_start</p><p>servicer_bootstrap_end</p><p>gateway_bootstrap_unwind_start</p><p>gateway_bootstrap_unwind_end</p><p>transaction_fee</p>
+<p>The DAO has its holdings increased by the value</p><h2>Parameters</h2><p>minimum_stake_servicer</p><p>minimum_stake_period_servicer</p><p>minimum_pause_time</p><p>max_chains_servicer</p><p>salary_block_frequency</p><p>minimum_test_score_threshold</p><p>minimum_report_card_threshold</p><p>servicer_unbounding_period</p><p>servicer_stake_floor_multiplier</p><p>servicer_stake_weight_ceiling</p><p>servicer_stake_floor_multiplier_exponent</p><p>servicer_stake_weight_multiplier</p><p>relays_to_tokens_multiplier</p><p>slash_fraction_downtime</p><p>replay_attack_burn_multiplier</p><p>max_jailed_blocks</p><p>downtime_jail_duration</p><p>minimum_servicers_per_session</p><p>maximum_servicers_per_session</p><p>application_unstaking_time</p><p>application_fee_per_relay</p><p>minimum_application_stake</p><p>minimum_validator_stake</p><p>minimum_validator_pause_time</p><p>max_validators</p><p>block_proposer_allocation</p><p>stake_per_app_delegation</p><p>portal_fee_per_relay</p><p>portal_minimum_stake</p><p>session_block_frequency</p><p>dao_fee_percentage</p><p>validator_fee_percentage</p><p>maturity_relay_cost</p><p>maturity_relay_charge</p><p>min_bootstrap_gateway_fee_per_relay</p><p>max_bootstrap_servicer_cost_per_relay</p><p>servicer_bootstrap_unwind_start</p><p>servicer_bootstrap_end</p><p>gateway_bootstrap_unwind_start</p><p>gateway_bootstrap_unwind_end</p><p>transaction_fee</p>

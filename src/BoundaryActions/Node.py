@@ -7,5 +7,5 @@ unjail_node = {
     "boundary_action_options": [],
     "called_by": ["Servicer", "Validator"],
     "codomain": [unjail_node_space],
-    "parameters_used": [],
+    "parameters_used": ["downtime_jail_duration"],
 }

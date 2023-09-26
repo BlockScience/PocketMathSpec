@@ -28,6 +28,8 @@ AddressType = NewType("Address", int)
 
 BlockHeightType = NewType("Block Height", int)
 
+NanoSecondsType = NewType("Nanoseconds", int)
+
 # Number of blocks
 NumberOfBlocksType = NewType("Number of Blocks", int)
 
