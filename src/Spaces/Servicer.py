@@ -59,7 +59,8 @@ servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {"public_
                                                                         "number_of_relays": int, # The number of relays that the servicer completed
                                                                         "usage_to_reward_coeffecient": float, # The scalar for rewards to the servicers
                                                                         })
-
+servicer_forced_unstake_space = TypedDict("Servicer Forced Unstaked Space", {"public_key": PublicKeyType, # The key of the servicer that is being force unstaked
+                                                                        })
 #TODO
 
 

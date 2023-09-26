@@ -1,7 +1,8 @@
 from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
                        assign_servicer_salary_space, modify_servicer_pokt_space, servicer_param_update_space, servicer_unstake_space,
                        servicer_unpause_space2, servicer_pause_space2, servicer_relay_space,
-                       return_servicer_stake_space, servicer_block_reward_space, servicer_stake_burn_space)
+                       return_servicer_stake_space, servicer_block_reward_space, servicer_stake_burn_space,
+                       servicer_forced_unstake_space)
 from .Application import (application_stake_space, modify_application_pokt_space, application_param_update_space,
                           application_unstake_space, application_delegate_to_portal_space,
                           application_undelegation_space, submit_relay_request_space,
@@ -60,7 +61,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "DAO Block Reward Space": dao_block_reward_space,
           "Modify DAO POKT Space": modify_dao_pokt_space,
           "Portal Relay Request Space": portal_relay_request_space,
-          "Servicer Stake Burn Space": servicer_stake_burn_space}
+          "Servicer Stake Burn Space": servicer_stake_burn_space,
+          "Servicer Forced Unstake Space": servicer_forced_unstake_space}
 
 
 

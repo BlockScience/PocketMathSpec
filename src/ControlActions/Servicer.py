@@ -1,4 +1,5 @@
-from ..Spaces import return_servicer_stake_space, servicer_block_reward_space, servicer_stake_burn_space
+from ..Spaces import (return_servicer_stake_space, servicer_block_reward_space,
+                      servicer_stake_burn_space, servicer_forced_unstake_space)
 
 return_servicer_stake = {
     "name": "Return Servicer Stake",
@@ -28,3 +29,10 @@ A Servicer's stake can be burnt in two situations:
     "control_action_options": [],
     "codomain": [servicer_stake_burn_space],
     "parameters_used": [],}
+
+servicer_forced_unstake = {"name": "Servicer Stake Burn",
+    "description": """After reaching MaxJailedBlocks, a servicer will be force unstaked which will result in a node’s entire stake being slashed.""",
+    "constraints": [],
+    "control_action_options": [],
+    "codomain": [servicer_forced_unstake_space],
+    "parameters_used": ["max_jailed_blocks"],}

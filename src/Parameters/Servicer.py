@@ -92,6 +92,11 @@ This is the parameter most likely to be changed frequently, since it affects inf
                                         "name": "replay_attack_burn_multiplier",
                                         "description": """The multiplier slash factor for submitting a replay attack. The base slash is directly proportional to the amount of relays claimed.""",
                                         "symbol": None,
+                                       "domain": None},
+                                       {"variable_type": NumberOfBlocksType,
+                                        "name": "max_jailed_blocks",
+                                        "description": """The amount of time (in blocks) a node has to unjail before being force unstaked and slashed.""",
+                                        "symbol": None,
                                        "domain": None}
                                        ]}
 
