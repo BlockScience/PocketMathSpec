@@ -41,6 +41,7 @@ ServicerTestScoresType = NewType('Service Test Scores', TypedDict('Service Test 
                                                                                           "volume": int
                                                                                           }))
 
-#TODO
-ServicerReportCardType = NewType('Service Report Card', dict)
+# Simple representation of a floating point number between 0-1
+# In actual implementation it is going to be a rolling average of test scores
+ServicerReportCardType = NewType('Service Report Card', float)
 

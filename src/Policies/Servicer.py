@@ -16,10 +16,16 @@ servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "codomain": [servicer_stake_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
                         "parameters_used": ["minimum_stake_servicer", "max_chains_servicer"]}
 
+set_servicer_parameters_policy_option_v1 = {"name": "Set Servicer Parameters Policy V1",
+                                 "description": "This policy determines if the parameters of a servicer should be updated and if so executes on it.",
+                                 "logic": "As long as the servicer has a staking amount equal to or greater than the current staked amount, the servicer will have its parameters all updated. In addition, the Servicer's historical QoS (TestScores, ReportCard, etc...) will be pruned from the state."
+                                 }
+
+
 set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
                         "description": "Policy for determining the impact of servicer parameter changes",
                         "constraints": [],
-                        "policy_options": [],
+                        "policy_options": [set_servicer_parameters_policy_option_v1],
                         "domain": [servicer_stake_space],
                         "codomain": [servicer_param_update_space, servicer_param_update_space],
                         "parameters_used": []}
