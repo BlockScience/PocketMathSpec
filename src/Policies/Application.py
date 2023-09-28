@@ -14,11 +14,16 @@ application_stake_policy = {"name": "Application Stake Policy",
                         "parameters_used": ["minimum_servicers_per_session", "maximum_servicers_per_session",
                                             "minimum_application_stake"]}
 
+set_application_parameters_policy_option_v1 = {"name": "Set Application Parameters Policy Option V1",
+                                 "description": "This policy determines if the parameters of an application should be updated and if so executes on it.",
+                                 "logic": "As long as the application has a staking amount equal to or greater than the current staked amount and as well the passed NumServicers is bounded between MinServicersPerSession and MaxServicersPerSession, the application will have its parameters all updated. "
+                                 }
+
 set_application_parameters_policy = {"name": "Set Application Parameters Policy",
                         "description": "Policy for determining if application parameters should be updated",
                         "constraints": ["DOMAIN[0].number_servicers >= PARAMS.MinServicersPerSession",
                                         "DOMAIN[0].number_servicers <= PARAMS.MaxServicersPerSession"],
-                        "policy_options": [],
+                        "policy_options": [set_application_parameters_policy_option_v1],
                         "domain": [application_stake_space],
                         "codomain": [application_param_update_space],
                         "parameters_used": ["minimum_servicers_per_session", "maximum_servicers_per_session"]}

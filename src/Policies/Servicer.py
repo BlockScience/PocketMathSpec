@@ -25,7 +25,7 @@ set_servicer_parameters_policy_option_v1 = {"name": "Set Servicer Parameters Pol
 set_servicer_parameters_policy = {"name": "Set Servicer Parameters Policy",
                         "description": "Policy for determining the impact of servicer parameter changes",
                         "constraints": [],
-                        "policy_options": [],
+                        "policy_options": [set_servicer_parameters_policy_option_v1],
                         "domain": [servicer_stake_space],
                         "codomain": [servicer_param_update_space, servicer_param_update_space],
                         "parameters_used": []}
