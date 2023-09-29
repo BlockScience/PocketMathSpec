@@ -2,7 +2,7 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space, servicer_pause_space2,
                       assign_servicer_salary_space, servicer_block_reward_space,
                       mint_pokt_mechanism_space, modify_servicer_pokt_space, burn_pokt_mechanism_space,
-                      servicer_relay_space, servicer_stake_burn_space)
+                      servicer_relay_space, servicer_stake_burn_space, servicer_unstake_space)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "Policy which takes care of actions to occur after a servicer attempts to stake",
@@ -121,3 +121,12 @@ servicer_stake_burn_policy = {
     "domain": [servicer_stake_burn_space],
     "codomain": [],
     "parameters_used": ["slash_fraction_downtime", "replay_attack_burn_multiplier"]}
+
+servicer_unstake_policy = {
+    "name": "Servicer Unstake Policy",
+    "description": "The policy which determines any behaviors around servicers unstaking.",
+    "constraints": [],
+    "policy_options": [],
+    "domain": [servicer_unstake_space],
+    "codomain": [],
+    "parameters_used": []}
