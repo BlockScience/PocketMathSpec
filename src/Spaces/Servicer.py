@@ -1,4 +1,5 @@
-from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType, ActorType, AddressType, BlockHeightType
+from ..Types import (PublicKeyType, uPOKTType, ServiceURLType, RelayChainType,
+                     GeoZoneType, ActorType, AddressType, BlockHeightType, StakeStatusType)
 from typing import TypedDict, List
 
 servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
@@ -61,6 +62,14 @@ servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {"public_
                                                                         })
 servicer_forced_unstake_space = TypedDict("Servicer Forced Unstaked Space", {"public_key": PublicKeyType, # The key of the servicer that is being force unstaked
                                                                         })
+
+servicer_stake_status_space = TypedDict("Servicer Stake Status Space", {"address": PublicKeyType, # address of the unstaking servicer
+                                                                        "height": BlockHeightType,
+                                                                        "status": StakeStatusType
+                                                                        })
+
+
+
 #TODO
 
 
