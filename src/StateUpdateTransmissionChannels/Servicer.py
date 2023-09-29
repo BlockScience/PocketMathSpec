@@ -49,3 +49,16 @@ servicer_transmission_channels.append({"origin": "Servicer Update Pause Height",
                                      "entity": "Servicer",
                                      "variable": "Pause Height",
                                      "optional": False})
+
+servicer_transmission_channels.append({"origin": "Update Servicer Stake Status",
+                                     "entity": "Servicer",
+                                     "variable": "Stake Status",
+                                     "optional": False})
+
+servicer_transmission_channels.append({"origin": "Update Servicer Stake Status",
+                                     "entity": "Servicer",
+                                     "variable": "Unstaking Height",
+                                     "optional": False})
+
+
+

@@ -62,5 +62,10 @@ servicer_state = {"name": "Servicer State",
                              "name": "Stake Status",
                              "description": "The status of staking for the actor",
                              "symbol": None,
+                             "domain": None},
+                             {"type": BlockHeightType,
+                             "name": "Unstaking Height",
+                             "description": "The height for which a servicer has begun unstaking at or none to represent no unstaking",
+                             "symbol": None,
                              "domain": None}
                              ]}
