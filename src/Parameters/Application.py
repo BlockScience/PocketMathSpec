@@ -30,7 +30,7 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "name": "minimum_application_stake",
                                        "description": "The minimum stake needed for applications.",
                                        "symbol": None,
-                                       "domain": None}
+                                       "domain": None},
                                        ]}
 
 
