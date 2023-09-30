@@ -25,4 +25,12 @@ application_transmission_channels.append({"origin": "Update Application Params",
                                      "variable": "Number of Servicers",
                                      "optional": False})
 
+application_transmission_channels.append({"origin": "Update Application Stake Status",
+                                     "entity": "Application",
+                                     "variable": "Stake Status",
+                                     "optional": False})
 
+application_transmission_channels.append({"origin": "Update Application Stake Status",
+                                     "entity": "Application",
+                                     "variable": "Unstaking Height",
+                                     "optional": False})
