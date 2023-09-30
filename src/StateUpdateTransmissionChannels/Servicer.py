@@ -27,7 +27,7 @@ servicer_transmission_channels.append({"origin": "Update Servicer Params",
 
 servicer_transmission_channels.append({"origin": "Update Servicer Params",
                                      "entity": "Servicer",
-                                     "variable": "Relay Chains",
+                                     "variable": "Services",
                                      "optional": False})
 
 servicer_transmission_channels.append({"origin": "Update Servicer Params",

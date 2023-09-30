@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType, PublicKeyType, GeoZoneType, RelayChainType, ServiceURLType, BlockHeightType, StakeStatusType
+from ..Types import uPOKTType, ServicerReportCardType, ServicerTestScoresType, PublicKeyType, GeoZoneType, ServiceType, ServiceURLType, BlockHeightType, StakeStatusType
 from typing import List
 
 servicer_state = {"name": "Servicer State",
@@ -38,8 +38,8 @@ servicer_state = {"name": "Servicer State",
                              "description": "The API endpoint where the Web3 service is provided",
                              "symbol": None,
                              "domain": None},
-                             {"type": List[RelayChainType],
-                             "name": "Relay Chains",
+                             {"type": List[ServiceType],
+                             "name": "Services",
                              "description": "The flavor(s) of Web3 hosted by this Servicer",
                              "symbol": None,
                              "domain": None},

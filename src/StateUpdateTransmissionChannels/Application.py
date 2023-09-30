@@ -12,7 +12,7 @@ application_transmission_channels.append({"origin": "Modify Application Stake",
 
 application_transmission_channels.append({"origin": "Update Application Params",
                                      "entity": "Application",
-                                     "variable": "Relay Chains",
+                                     "variable": "Services",
                                      "optional": False})
 
 application_transmission_channels.append({"origin": "Update Application Params",

@@ -17,7 +17,7 @@ NumberRelaysPerDayType = NewType('Number of Relays per Day', int)
 # A URL for an api end point
 ServiceURLType = NewType('Service URL', str)
 
-RelayChainType = NewType('Relay Chain', str)
+ServiceType = NewType('Service', str)
 
 # The physical geo-location identifier this Servicer registered in
 GeoZoneType = NewType('GeoZone', str)
