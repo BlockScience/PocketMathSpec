@@ -1,4 +1,4 @@
-from ..Types import PublicKeyType, uPOKTType, ServiceURLType, ServiceType, GeoZoneType, ActorType, AddressType, BlockHeightType
+from ..Types import PublicKeyType, uPOKTType, ServiceURLType, ActorType, AddressType, BlockHeightType
 from typing import TypedDict, List
 
 validator_stake_space = TypedDict("Validator Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
@@ -29,7 +29,4 @@ validator_block_reward_space = TypedDict("Validator Block Reward Space", {"publi
 
 
 validator_stake_burning_space = TypedDict("Validator Stake Burning Space", {})
-validator_unstake_space = TypedDict("Validator Unstake Space", {})
-validator_unpause_space = TypedDict("Validator Unpause Space", {})
-validator_jail_space = TypedDict("Validator Jail Space", {})
-become_validator_space = TypedDict("Become Validator Space", {})
+

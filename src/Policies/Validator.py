@@ -1,3 +1,4 @@
+"""
 from ..Spaces import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
                       validator_unpause_space, validator_block_reward_space)
 
@@ -26,6 +27,8 @@ validator_unpause_policy =  {"name": "Validator Unpause Policy",
                         "codomain": [validator_unpause_space],
                         "parameters_used": ["minimum_validator_pause_time"]}
 
+"""
+from ..Spaces import (validator_block_reward_space)
 
 validator_block_reward_policy = {"name": "Validator Block Reward Policy",
                         "description": "Policy for allocation of block rewards to validator",

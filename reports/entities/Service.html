@@ -26,59 +26,59 @@
 
 <title>Service</title>
 
-<path fill="none" stroke="black" d="M209.24,-104.73C209.24,-106.53 196.24,-108 180.24,-108 164.24,-108 151.24,-106.53 151.24,-104.73 151.24,-104.73 151.24,-75.27 151.24,-75.27 151.24,-73.47 164.24,-72 180.24,-72 196.24,-72 209.24,-73.47 209.24,-75.27 209.24,-75.27 209.24,-104.73 209.24,-104.73"/>
+<path fill="none" stroke="black" d="M199.13,-104.73C199.13,-106.53 186.13,-108 170.13,-108 154.13,-108 141.13,-106.53 141.13,-104.73 141.13,-104.73 141.13,-75.27 141.13,-75.27 141.13,-73.47 154.13,-72 170.13,-72 186.13,-72 199.13,-73.47 199.13,-75.27 199.13,-75.27 199.13,-104.73 199.13,-104.73"/>
 
-<path fill="none" stroke="black" d="M209.24,-104.73C209.24,-102.92 196.24,-101.45 180.24,-101.45 164.24,-101.45 151.24,-102.92 151.24,-104.73"/>
+<path fill="none" stroke="black" d="M199.13,-104.73C199.13,-102.92 186.13,-101.45 170.13,-101.45 154.13,-101.45 141.13,-102.92 141.13,-104.73"/>
 
-<text text-anchor="middle" x="180.24" y="-86.3" font-family="Times,serif" font-size="14.00">Service</text>
-
-</g>
-
-<!-- Service Leave -->
-
-<g id="node2" class="node">
-
-<title>Service Leave</title>
-
-<polygon fill="orange" stroke="orange" points="88.24,-36 -0.24,-18 88.24,0 176.72,-18 88.24,-36"/>
-
-<text text-anchor="middle" x="88.24" y="-14.3" font-family="Times,serif" font-size="14.00">Service Leave</text>
-
-</g>
-
-<!-- Service&#45;&gt;Service Leave -->
-
-<g id="edge1" class="edge">
-
-<title>Service&#45;&gt;Service Leave</title>
-
-<path fill="none" stroke="black" d="M158.44,-72.41C145.15,-62.3 128.09,-49.32 114.12,-38.69"/>
-
-<polygon fill="black" stroke="black" points="115.96,-35.69 105.88,-32.42 111.72,-41.26 115.96,-35.69"/>
+<text text-anchor="middle" x="170.13" y="-86.3" font-family="Times,serif" font-size="14.00">Service</text>
 
 </g>
 
 <!-- Service Join -->
 
-<g id="node3" class="node">
+<g id="node2" class="node">
 
 <title>Service Join</title>
 
-<polygon fill="orange" stroke="orange" points="272.24,-36 193.98,-18 272.24,0 350.5,-18 272.24,-36"/>
+<polygon fill="orange" stroke="orange" points="78.13,-36 -0.13,-18 78.13,0 156.39,-18 78.13,-36"/>
 
-<text text-anchor="middle" x="272.24" y="-14.3" font-family="Times,serif" font-size="14.00">Service Join</text>
+<text text-anchor="middle" x="78.13" y="-14.3" font-family="Times,serif" font-size="14.00">Service Join</text>
 
 </g>
 
 <!-- Service&#45;&gt;Service Join -->
 
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 
 <title>Service&#45;&gt;Service Join</title>
 
-<path fill="none" stroke="black" d="M202.04,-72.41C215.42,-62.23 232.61,-49.15 246.64,-38.48"/>
+<path fill="none" stroke="black" d="M148.33,-72.41C134.95,-62.23 117.76,-49.15 103.73,-38.48"/>
 
-<polygon fill="black" stroke="black" points="249.06,-41.04 254.89,-32.2 244.82,-35.47 249.06,-41.04"/>
+<polygon fill="black" stroke="black" points="105.55,-35.47 95.47,-32.2 101.31,-41.04 105.55,-35.47"/>
+
+</g>
+
+<!-- Service Leave -->
+
+<g id="node3" class="node">
+
+<title>Service Leave</title>
+
+<polygon fill="orange" stroke="orange" points="262.13,-36 173.65,-18 262.13,0 350.61,-18 262.13,-36"/>
+
+<text text-anchor="middle" x="262.13" y="-14.3" font-family="Times,serif" font-size="14.00">Service Leave</text>
+
+</g>
+
+<!-- Service&#45;&gt;Service Leave -->
+
+<g id="edge2" class="edge">
+
+<title>Service&#45;&gt;Service Leave</title>
+
+<path fill="none" stroke="black" d="M191.93,-72.41C205.22,-62.3 222.28,-49.32 236.25,-38.69"/>
+
+<polygon fill="black" stroke="black" points="238.65,-41.26 244.49,-32.42 234.41,-35.69 238.65,-41.26"/>
 
 </g>
 
@@ -92,8 +92,8 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Name</td><td>The name of the service</td><td>str</td><td></td><td></td></tr><tr><td>Portal API Prefix</td><td>Prefix for the portal API</td><td>str</td><td></td><td></td></tr><tr><td>Service ID</td><td>The identifier used for the chain</td><td>str</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Service Leave Space</h3><p>{service_id: str}</p><h3>Service Join Space</h3><p>{name: str,<br/>portal_api_prefix: str,<br/>service_id: str}</p><h2>Behavioral Action Space</h2><h3>Service Leave</h3><p>Action for Service moving to leave the system.</p><h4>Called By:</h4>
+      </tr><tr><td>Name</td><td>The name of the service</td><td>str</td><td></td><td></td></tr><tr><td>Portal API Prefix</td><td>Prefix for the portal API</td><td>str</td><td></td><td></td></tr><tr><td>Service ID</td><td>The identifier used for the chain</td><td>str</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Service Join Space</h3><p>{name: str,<br/>portal_api_prefix: str,<br/>service_id: str}</p><h3>Service Leave Space</h3><p>{service_id: str}</p><h2>Behavioral Action Space</h2><h3>Service Join</h3><p>Action for Service moving to be added to the system.</p><h4>Called By:</h4>
 <p>1. Service</p><h4>Constraints:</h4>
-<h3>Service Join</h3><p>Action for Service moving to be added to the system.</p><h4>Called By:</h4>
+<h3>Service Leave</h3><p>Action for Service moving to leave the system.</p><h4>Called By:</h4>
 <p>1. Service</p><h4>Constraints:</h4>
 <h2>Policies</h2><h2>Mechanisms</h2><h2>Parameters</h2>

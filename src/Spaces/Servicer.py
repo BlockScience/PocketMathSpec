@@ -74,9 +74,5 @@ servicer_relay_space = TypedDict("Servicer Relay Space", {"servicers": ServicerG
                                                           "applications": ApplicationEntityType,
                                                           "session": SessionType})
 
-#TODO
-
-
-
-
-servicer_stake_burn_space = TypedDict("Servicer Stake Burn Space", {})
+servicer_stake_burn_space = TypedDict("Servicer Stake Burn Space", {"address": PublicKeyType,
+                                                                    "burn_amount": uPOKTType})
