@@ -1,4 +1,4 @@
-from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space, application_delegate_to_portal_space, application_unstake_space
+from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space, application_delegate_to_portal_space, application_unstake_space, submit_relay_request_space
 
 application_stake_policy = {"name": "Application Stake Policy",
                         "description": "The policy which takes care of whether an application can stake and if it should update parameters.",
@@ -42,5 +42,14 @@ application_unstake_policy = {
     "constraints": [],
     "policy_options": [],
     "domain": [application_unstake_space],
+    "codomain": [],
+    "parameters_used": []}
+
+submit_relay_request_policy = {
+    "name": "Submit Relay Request Policy",
+    "description": "The policy for determining aspects of the service request.",
+    "constraints": [],
+    "policy_options": [],
+    "domain": [submit_relay_request_space],
     "codomain": [],
     "parameters_used": []}

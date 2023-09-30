@@ -43,7 +43,8 @@ servicer_unpause = {
 
 servicer_relay_v1_option = {"name": "Servicer Relay V1",
                                  "description": "Version 1 of selection policy for servicers to be using with relay.",
-                                 "logic": """Logic can be found here: https://github.com/pokt-network/pocket-network-protocol/blob/main/utility/README.md#311-actor-selection-dispatch
+                                 "logic": """The Servicer(s) that are paired to service an Application in a Session are equally distributed among all of the Servicers in the network.
+More logic can be found here: https://github.com/pokt-network/pocket-network-protocol/blob/main/utility/README.md#311-actor-selection-dispatch
 """}
 
 servicer_relay = {
