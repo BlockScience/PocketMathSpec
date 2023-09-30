@@ -1,5 +1,5 @@
 from ..Types import (PublicKeyType, uPOKTType, ServiceURLType, RelayChainType,
-                     GeoZoneType, ActorType, AddressType, BlockHeightType, StakeStatusType)
+                     GeoZoneType, ActorType, AddressType, BlockHeightType, StakeStatusType, ServicerEntityType, ApplicationEntityType, SessionType)
 from typing import TypedDict, List
 
 servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
@@ -69,10 +69,13 @@ servicer_stake_status_space = TypedDict("Servicer Stake Status Space", {"address
                                                                         })
 
 
+servicer_relay_space = TypedDict("Servicer Relay Space", {"servicers": List[ServicerEntityType], # Addresses of servicers serviving during a session
+                                                          "applications": ApplicationEntityType,
+                                                          "session": SessionType})
 
 #TODO
 
 
 
-servicer_relay_space = TypedDict("Servicer Relay Space", {})
+
 servicer_stake_burn_space = TypedDict("Servicer Stake Burn Space", {})
