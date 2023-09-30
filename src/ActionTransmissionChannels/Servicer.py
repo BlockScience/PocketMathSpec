@@ -1,7 +1,6 @@
 from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space,
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space,
-                      servicer_pause_space2, servicer_block_reward_space,
-                      mint_pokt_mechanism_space, servicer_relay_space, servicer_stake_burn_space,
+                      servicer_pause_space2, servicer_relay_space, servicer_stake_burn_space,
                       servicer_unstake_space, servicer_stake_status_space)
 
 servicer_transmission_channels = []
