@@ -45,11 +45,20 @@ application_unstake_policy = {
     "codomain": [],
     "parameters_used": []}
 
+submit_relay_request_policy_option_v1 = {"name": "Submit Relay Request Policy Option V1",
+                                 "description": "V1 Implementation",
+                                 "logic": """During each Session, the amount of POKT an Application has staked (see Application Protocol for more details) is mapped to "Service Tokens" that represent the amount of work a Servicer can provide using the SessionTokenBucketCoefficient governance parameter. The Token Bucket rate limiting algorithm is used to determine the maximum number of requests a Servicer can relay, and be rewarded for, thereby disincentivizing it to process relays for the Application once the cap is reached.
+
+At the beginning of the session, each Servicer initializes: AppSessionTokens = (AppStakeAmount * SessionTokenBucketCoefficient) / NumServicersPerSession. When one of the Servicers in the session is out of session tokens, the Application can continue to use other Servicers until every they are all exhausted.
+
+The mechanism described above enables future iterations of the protocol where different types of request may vary the required number of AppSessionTokens per request."""
+                                 }
+
 submit_relay_request_policy = {
     "name": "Submit Relay Request Policy",
     "description": "The policy for determining aspects of the service request.",
     "constraints": [],
-    "policy_options": [],
+    "policy_options": [submit_relay_request_policy_option_v1],
     "domain": [submit_relay_request_space],
     "codomain": [],
     "parameters_used": []}
