@@ -41,11 +41,16 @@ servicer_unpause = {
     "parameters_used": [],
 }
 
+servicer_relay_v1_option = {"name": "Servicer Relay V1",
+                                 "description": "Version 1 of selection policy for servicers to be using with relay.",
+                                 "logic": """Logic can be found here: https://github.com/pokt-network/pocket-network-protocol/blob/main/utility/README.md#311-actor-selection-dispatch
+"""}
+
 servicer_relay = {
     "name": "Servicer Relay",
     "description": "A Servicer ‘services’ the Application, by routing the Relay Request to the Relay Chain and forwarding the response to the Application.",
     "constraints": [],
-    "boundary_action_options": [],
+    "boundary_action_options": [servicer_relay_v1_option],
     "called_by": ["Servicer"],
     "codomain": [servicer_relay_space],
     "parameters_used": [],
