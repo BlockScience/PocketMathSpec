@@ -54,21 +54,6 @@ servicer_transmission_channels.append({"origin": "Servicer Pause Policy",
                                         "optional": True})
 
 
-servicer_transmission_channels.append({"origin": "Servicer Block Reward",
-                                        "target": "Servicer Block Reward Policy",
-                                        "space": servicer_block_reward_space,
-                                        "optional": False})
-
-servicer_transmission_channels.append({"origin": "Servicer Block Reward Policy",
-                                        "target": "Modify Servicer POKT Holdings",
-                                        "space": modify_servicer_pokt_space,
-                                        "optional": True})
-
-servicer_transmission_channels.append({"origin": "Servicer Block Reward Policy",
-                                        "target": "Mint POKT Mechanism",
-                                        "space": mint_pokt_mechanism_space,
-                                        "optional": True})
-
 servicer_transmission_channels.append({"origin": "Servicer Relay",
                                         "target": "Servicer Relay Policy",
                                         "space": servicer_relay_space,

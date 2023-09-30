@@ -10,14 +10,6 @@ return_servicer_stake = {
     "parameters_used": ["servicer_unbounding_period"],
 }
 
-servicer_block_reward = {"name": "Servicer Block Reward",
-    "description": "Rewards allocated on a block basis",
-    "constraints": [],
-    "control_action_options": [],
-    "codomain": [servicer_block_reward_space],
-    "parameters_used": ["servicer_stake_floor_multiplier", "servicer_stake_weight_ceiling",
-                        "servicer_stake_floor_multiplier_exponent", "servicer_stake_weight_multiplier"],}
-
 servicer_stake_burn = {"name": "Servicer Stake Burn",
     "description": """The control action for a servicer having their stake burned due to bad behavior.
 
