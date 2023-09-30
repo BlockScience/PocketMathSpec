@@ -1,10 +1,12 @@
-from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType, ActorType, AddressType, BlockHeightType
+from ..Types import (PublicKeyType, uPOKTType, ServiceURLType, ServiceType,
+                     GeoZoneType, ActorType, AddressType, BlockHeightType, StakeStatusType, ServicerEntityType,
+                     ApplicationEntityType, SessionType, ServicerGroupType)
 from typing import TypedDict, List
 
 servicer_stake_space = TypedDict("Servicer Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "stake_amount": uPOKTType, # The amount of uPOKT in escrow (i.e. a security deposit)
                                                           "service_url": ServiceURLType, # The API endpoint where the Web3 service is provided
-                                                          "relay_chains": List[RelayChainType], # The flavor(s) of Web3 hosted by this Servicer
+                                                          "services": List[ServiceType], # The flavor(s) of Web3 hosted by this Servicer
                                                           "geo_zone": GeoZoneType, # The physical geo-location identifier this Servicer registered in
                                                           "operator_public_key": PublicKeyType # OPTIONAL; The non-custodial pubKey operating this node
 })
@@ -17,7 +19,7 @@ modify_servicer_pokt_space = TypedDict("Modify Servicer POKT Space", {"public_ke
 
 servicer_param_update_space = TypedDict("Servicer Param Update Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
                                                           "service_url": ServiceURLType, # The API endpoint where the Web3 service is provided
-                                                          "relay_chains": List[RelayChainType], # The flavor(s) of Web3 hosted by this Servicer
+                                                          "services": List[ServiceType], # The flavor(s) of Web3 hosted by this Servicer
                                                           "geo_zone": GeoZoneType, # The physical geo-location identifier this Servicer registered in
                                                           "operator_public_key": PublicKeyType # OPTIONAL; The non-custodial pubKey operating this node
 })
@@ -48,7 +50,7 @@ servicer_unstake_space = TypedDict("Servicer Unstake Space", {"actor_type": Acto
 
 
 assign_servicer_salary_space = TypedDict("Assign Servicer Salary Space", {"geo_zone": GeoZoneType, # The physical geo-location identifier
-                                                                          "relay_chain": RelayChainType,
+                                                                          "service": ServiceType,
                                                                           "height": BlockHeightType})
 
 
@@ -61,9 +63,20 @@ servicer_block_reward_space = TypedDict("Servicer Block Reward Space", {"public_
                                                                         })
 servicer_forced_unstake_space = TypedDict("Servicer Forced Unstaked Space", {"public_key": PublicKeyType, # The key of the servicer that is being force unstaked
                                                                         })
+
+servicer_stake_status_space = TypedDict("Servicer Stake Status Space", {"address": PublicKeyType, # address of the unstaking servicer
+                                                                        "height": BlockHeightType,
+                                                                        "status": StakeStatusType
+                                                                        })
+
+
+servicer_relay_space = TypedDict("Servicer Relay Space", {"servicers": ServicerGroupType, # Addresses of servicers serviving during a session
+                                                          "applications": ApplicationEntityType,
+                                                          "session": SessionType})
+
 #TODO
 
 
 
-servicer_relay_space = TypedDict("Servicer Relay Space", {})
+
 servicer_stake_burn_space = TypedDict("Servicer Stake Burn Space", {})

@@ -1,11 +1,11 @@
-from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space, application_delegate_to_portal_space
+from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space, application_delegate_to_portal_space, application_unstake_space, submit_relay_request_space
 
 application_stake_policy = {"name": "Application Stake Policy",
                         "description": "The policy which takes care of whether an application can stake and if it should update parameters.",
                         "constraints": ["DOMAIN[0].public_key must not be null",
                                         "DOMAIN[0].amount > 0",
-                                        "LEN(DOMAIN[0].relay_chains) > 0",
-                                        "All chains in DOMAIN[0].relay_chains must be valid",
+                                        "LEN(DOMAIN[0].services) > 0",
+                                        "All chains in DOMAIN[0].services must be valid",
                                         "DOMAIN[0].number_servicers >= PARAMS.MinServicersPerSession",
                                         "DOMAIN[0].number_servicers <= PARAMS.MaxServicersPerSession"],
                         "policy_options": [],
@@ -35,3 +35,30 @@ application_delegate_to_portal_policy = {"name": "Application Delegate to Portal
                         "domain": [application_delegate_to_portal_space],
                         "codomain": [application_delegate_to_portal_space],
                         "parameters_used": ["stake_per_app_delegation"]}
+
+application_unstake_policy = {
+    "name": "Application Unstake Policy",
+    "description": "The policy for determining what happens when an application unstakes.",
+    "constraints": [],
+    "policy_options": [],
+    "domain": [application_unstake_space],
+    "codomain": [],
+    "parameters_used": []}
+
+submit_relay_request_policy_option_v1 = {"name": "Submit Relay Request Policy Option V1",
+                                 "description": "V1 Implementation",
+                                 "logic": """During each Session, the amount of POKT an Application has staked (see Application Protocol for more details) is mapped to "Service Tokens" that represent the amount of work a Servicer can provide using the SessionTokenBucketCoefficient governance parameter. The Token Bucket rate limiting algorithm is used to determine the maximum number of requests a Servicer can relay, and be rewarded for, thereby disincentivizing it to process relays for the Application once the cap is reached.
+
+At the beginning of the session, each Servicer initializes: AppSessionTokens = (AppStakeAmount * SessionTokenBucketCoefficient) / NumServicersPerSession. When one of the Servicers in the session is out of session tokens, the Application can continue to use other Servicers until every they are all exhausted.
+
+The mechanism described above enables future iterations of the protocol where different types of request may vary the required number of AppSessionTokens per request."""
+                                 }
+
+submit_relay_request_policy = {
+    "name": "Submit Relay Request Policy",
+    "description": "The policy for determining aspects of the service request.",
+    "constraints": [],
+    "policy_options": [submit_relay_request_policy_option_v1],
+    "domain": [submit_relay_request_space],
+    "codomain": [],
+    "parameters_used": ["session_token_bucket_coefficient"]}

@@ -1,11 +1,11 @@
 from typing import List
-from ..Types import RelayChainEntityType, SessionType
+from ..Types import ServiceEntityType, SessionType
 
 global_state = {"name": "Global State",
               "notes": "",
-              "variables": [{"type": List[RelayChainEntityType],
-                             "name": "Relay Chains",
-                             "description": "The relay chains active in the system",
+              "variables": [{"type": List[ServiceEntityType],
+                             "name": "Services",
+                             "description": "The services active in the system",
                              "symbol": None,
                              "domain": None},
                              {"type": List[SessionType],

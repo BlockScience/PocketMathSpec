@@ -1,4 +1,5 @@
-from ..Spaces import modify_servicer_pokt_space, servicer_param_update_space, servicer_unpause_space2, servicer_pause_space2
+from ..Spaces import (modify_servicer_pokt_space, servicer_param_update_space, servicer_unpause_space2,
+                      servicer_pause_space2, servicer_stake_status_space)
 
 
 modify_servicer_pokt_holdings = {"name": "Modify Servicer POKT Holdings",
@@ -42,3 +43,11 @@ servicer_update_pause_height = {"name": "Servicer Update Pause Height",
                            "logic": "The servicer at DOMAIN[0].address has its pause_height variable updated to DOMAIN[0].height",
                            "domain": [servicer_pause_space2],
                            "parameters_used": []}
+
+update_servicer_stake_status = {"name": "Update Servicer Stake Status",
+                           "description": "The mechanism which updates the staking status and as well the unstaking height.",
+                           "constraints": [],
+                           "logic": "The servicer at DOMAIN[0].address has its unstaking_height variable updated to DOMAIN[0].height which will be none if it is staking. It will also have its stake status set to DOMAIN[0].status.",
+                           "domain": [servicer_stake_status_space],
+                           "parameters_used": []}
+

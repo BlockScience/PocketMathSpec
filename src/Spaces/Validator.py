@@ -1,4 +1,4 @@
-from ..Types import PublicKeyType, uPOKTType, ServiceURLType, RelayChainType, GeoZoneType, ActorType, AddressType, BlockHeightType
+from ..Types import PublicKeyType, uPOKTType, ServiceURLType, ServiceType, GeoZoneType, ActorType, AddressType, BlockHeightType
 from typing import TypedDict, List
 
 validator_stake_space = TypedDict("Validator Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account

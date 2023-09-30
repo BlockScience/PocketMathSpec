@@ -4,7 +4,7 @@ from .Application import application_state
 from .Validator import validator_state
 from .Portal import portal_state
 from .Treasury import treasury_state
-from .RelayChain import relay_chain_state
+from .Service import service_state
 from .Global import global_state
 from .DAO import dao_state
 
@@ -15,5 +15,5 @@ state = {"Global": global_state,
          "Validator": validator_state,
          "Portal": portal_state,
          "Treasury": treasury_state,
-         "Relay Chain": relay_chain_state,
+         "Service": service_state,
          "DAO": dao_state}
