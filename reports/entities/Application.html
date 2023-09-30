@@ -404,23 +404,23 @@
 
 </g>
 
-<!-- Application.Relay Chains -->
+<!-- Application.Services -->
 
 <g id="node17" class="node">
 
-<title>Application.Relay Chains</title>
+<title>Application.Services</title>
 
 <ellipse fill="none" stroke="black" cx="386.94" cy="-91" rx="104.78" ry="18"/>
 
-<text text-anchor="middle" x="386.94" y="-87.3" font-family="Times,serif" font-size="14.00">Application.Relay Chains</text>
+<text text-anchor="middle" x="386.94" y="-87.3" font-family="Times,serif" font-size="14.00">Application.Services</text>
 
 </g>
 
-<!-- Update Application Params&#45;&gt;Application.Relay Chains -->
+<!-- Update Application Params&#45;&gt;Application.Services -->
 
 <g id="edge15" class="edge">
 
-<title>Update Application Params&#45;&gt;Application.Relay Chains</title>
+<title>Update Application Params&#45;&gt;Application.Services</title>
 
 <path fill="none" stroke="black" d="M386.94,-180.97C386.94,-164.38 386.94,-138.88 386.94,-119.43"/>
 
@@ -514,11 +514,11 @@
 
 </g>
 
-<!-- Application.Relay Chains&#45;&gt;Application_2 -->
+<!-- Application.Services&#45;&gt;Application_2 -->
 
 <g id="edge20" class="edge">
 
-<title>Application.Relay Chains&#45;&gt;Application_2</title>
+<title>Application.Services&#45;&gt;Application_2</title>
 
 <path fill="none" stroke="black" d="M432.42,-74.77C466.23,-63.45 512.39,-47.99 547.53,-36.22"/>
 
@@ -567,9 +567,9 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Public key</td><td>The identifier of the application</td><td>Public Key</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The staked amount of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Relay Chains</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Relay Chain]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Number of Servicers</td><td>The number of servicers an application would prefer, if available, for a session.</td><td>int</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Submit Relay Request Space</h3><p>{payload: dict,<br/>meta: dict,<br/>proof: dict,<br/>application_address: Public Key}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Application Undelegation Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Application Delegate to Portal Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Application Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h3>Application Undelegation</h3><p>If a staked Application wants to stop using a Portal, and prevent the Portal from further signing relays on its behalf, it would simply submit an on-chain UndelegateMsg. Further relays signed by the Portal on behalf of the Application would be rejected by the Servicers.</p><h4>Called By:</h4>
+      </tr><tr><td>Public key</td><td>The identifier of the application</td><td>Public Key</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The staked amount of the application in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Services</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Service]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Number of Servicers</td><td>The number of servicers an application would prefer, if available, for a session.</td><td>int</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Submit Relay Request Space</h3><p>{payload: dict,<br/>meta: dict,<br/>proof: dict,<br/>application_address: Public Key}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Application Undelegation Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Application Delegate to Portal Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Application Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h3>Application Undelegation</h3><p>If a staked Application wants to stop using a Portal, and prevent the Portal from further signing relays on its behalf, it would simply submit an on-chain UndelegateMsg. Further relays signed by the Portal on behalf of the Application would be rejected by the Servicers.</p><h4>Called By:</h4>
 <p>1. Application</p><h4>Constraints:</h4>
-<h3>Submit Relay Request</h3><p>An application or the portal acting on its behalf submits a Relay Request, or an API requests to be routed to any Relay Chain</p><h4>Called By:</h4>
+<h3>Submit Relay Request</h3><p>An application or the portal acting on its behalf submits a Relay Request, or an API requests to be routed to any Service</p><h4>Called By:</h4>
 <p>1. Application</p><p>2. Portal</p><h4>Constraints:</h4>
 <h3>Application Stake</h3><p>In order to participate as a Application in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are consuming the Web3 access. Upon registration, the Application is required to provide information necessary to create applicable Sessions (GeoZone(s), Service(s), etc...).</p><h4>Called By:</h4>
 <p>1. Application</p><h4>Constraints:</h4>
@@ -584,8 +584,8 @@
 <p>1. Application Stake Space</p><p>2. Modify Application POKT Space</p><p>3. Modify Application POKT Space</p><h4>Constraints:</h4>
 <p>1. DOMAIN[0].public_key must not be null
 </p><p>2. DOMAIN[0].amount > 0
-</p><p>3. LEN(DOMAIN[0].relay_chains) > 0
-</p><p>4. All chains in DOMAIN[0].relay_chains must be valid
+</p><p>3. LEN(DOMAIN[0].services) > 0
+</p><p>4. All chains in DOMAIN[0].services must be valid
 </p><p>5. DOMAIN[0].number_servicers >= PARAMS.MinServicersPerSession
 </p><p>6. DOMAIN[0].number_servicers <= PARAMS.MaxServicersPerSession
 </p><h3>Application Delegate to Portal Policy</h3><p>Policy for determining if application is able to delegate to a portal. The stake_per_app_delegation parameter, current stake of the portal, and current number of delegators will be used in determining if the portal is able to support the addition of this specific delegation.</p><h4>Preceded By:</h4>
@@ -614,6 +614,6 @@
 <p>The servicer at DOMAIN[0].application_address has its stake modified by DOMAIN[0].value</p><h3>Update Application Params</h3><p>The mechanism which updates application params</p><h4>Preceded By:</h4>
 <p>1. Set Application Parameters Policy</p><h4>Domain Spaces:</h4>
 <p>1. Application Param Update Space</p><h4>State Updates:</h4>
-<p>1. Application.Relay Chains</p><p>2. Application.GeoZone</p><p>3. Application.Number of Servicers</p><h4>Constraints:</h4>
+<p>1. Application.Services</p><p>2. Application.GeoZone</p><p>3. Application.Number of Servicers</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The application at DOMAIN[0].public_key has its params updated</p><h2>Parameters</h2><p>stake_per_app_delegation</p><p>minimum_servicers_per_session</p><p>maximum_servicers_per_session</p><p>minimum_application_stake</p>

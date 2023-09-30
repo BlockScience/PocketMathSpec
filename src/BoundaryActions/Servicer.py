@@ -49,7 +49,7 @@ More logic can be found here: https://github.com/pokt-network/pocket-network-pro
 
 servicer_relay = {
     "name": "Servicer Relay",
-    "description": "A Servicer ‘services’ the Application, by routing the Relay Request to the Relay Chain and forwarding the response to the Application.",
+    "description": "A Servicer ‘services’ the Application, by routing the Relay Request to the Service and forwarding the response to the Application.",
     "constraints": [],
     "boundary_action_options": [servicer_relay_v1_option],
     "called_by": ["Servicer"],

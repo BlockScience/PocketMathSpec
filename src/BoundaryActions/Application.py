@@ -44,7 +44,7 @@ application_undelegation = {
 
 submit_relay_request = {
     "name": "Submit Relay Request",
-    "description": "An application or the portal acting on its behalf submits a Relay Request, or an API requests to be routed to any Relay Chain",
+    "description": "An application or the portal acting on its behalf submits a Relay Request, or an API requests to be routed to any Service",
     "constraints": [],
     "boundary_action_options": [],
     "called_by": ["Application", "Portal"],

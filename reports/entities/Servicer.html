@@ -1136,23 +1136,23 @@
 
 </g>
 
-<!-- Servicer.Relay Chains -->
+<!-- Servicer.Services -->
 
 <g id="node45" class="node">
 
-<title>Servicer.Relay Chains</title>
+<title>Servicer.Services</title>
 
 <ellipse fill="none" stroke="black" cx="379.59" cy="-91" rx="91.78" ry="18"/>
 
-<text text-anchor="middle" x="379.59" y="-87.3" font-family="Times,serif" font-size="14.00">Servicer.Relay Chains</text>
+<text text-anchor="middle" x="379.59" y="-87.3" font-family="Times,serif" font-size="14.00">Servicer.Services</text>
 
 </g>
 
-<!-- Update Servicer Params&#45;&gt;Servicer.Relay Chains -->
+<!-- Update Servicer Params&#45;&gt;Servicer.Services -->
 
 <g id="edge43" class="edge">
 
-<title>Update Servicer Params&#45;&gt;Servicer.Relay Chains</title>
+<title>Update Servicer Params&#45;&gt;Servicer.Services</title>
 
 <path fill="none" stroke="black" d="M720.01,-184.39C694.32,-178.2 663.86,-170.59 636.59,-163 584.58,-148.53 572.58,-141.51 520.59,-127 496.36,-120.24 469.6,-113.43 445.97,-107.64"/>
 
@@ -1372,11 +1372,11 @@
 
 </g>
 
-<!-- Servicer.Relay Chains&#45;&gt;Servicer_2 -->
+<!-- Servicer.Services&#45;&gt;Servicer_2 -->
 
 <g id="edge55" class="edge">
 
-<title>Servicer.Relay Chains&#45;&gt;Servicer_2</title>
+<title>Servicer.Services&#45;&gt;Servicer_2</title>
 
 <path fill="none" stroke="black" d="M445.03,-78.36C527.67,-63.65 667.44,-38.78 736.87,-26.42"/>
 
@@ -1418,7 +1418,7 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer. A ReportCard can be viewed as a rolling average of the Servicer's performance, where TestScores are removed when either TestScoreExpiration is passed or the TestScore FIFO queue exceeds MaxTestScores.</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Relay Chains</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Relay Chain]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr></table><h4>Validator State</h4><table>
+      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer. A ReportCard can be viewed as a rolling average of the Servicer's performance, where TestScores are removed when either TestScoreExpiration is passed or the TestScore FIFO queue exceeds MaxTestScores.</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Services</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Service]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr></table><h4>Validator State</h4><table>
       <tr>
         <th>Name</th>
         <th>Description</th>
@@ -1432,9 +1432,9 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Unjail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>relay_chain: Relay Chain,<br/>height: Block Height}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>relay_chains: List[Relay Chain],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Relay Space</h3><p>{}</p><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Block Reward Space</h3><p>{public_key: Public Key,<br/>number_of_relays: int,<br/>usage_to_reward_coeffecient: float}</p><h2>Behavioral Action Space</h2><h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
+      </tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Unjail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>service: Service,<br/>height: Block Height}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Relay Space</h3><p>{}</p><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Block Reward Space</h3><p>{public_key: Public Key,<br/>number_of_relays: int,<br/>usage_to_reward_coeffecient: float}</p><h2>Behavioral Action Space</h2><h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
-<h3>Servicer Relay</h3><p>A Servicer ‘services’ the Application, by routing the Relay Request to the Relay Chain and forwarding the response to the Application.</p><h4>Called By:</h4>
+<h3>Servicer Relay</h3><p>A Servicer ‘services’ the Application, by routing the Relay Request to the Service and forwarding the response to the Application.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
 <h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
 <p>1. Servicer</p><p>2. Fisherman</p><h4>Constraints:</h4>
@@ -1468,9 +1468,9 @@ There are two components that are aggregated here, one for fees and one for gene
 <p>1. Servicer Stake Space</p><p>2. Modify Servicer POKT Space</p><p>3. Modify Servicer POKT Space</p><h4>Constraints:</h4>
 <p>1. DOMAIN[0].public_key must not be null
 </p><p>2. DOMAIN[0].amount > 0
-</p><p>3. LEN(DOMAIN[0].relay_chains) > 0
-</p><p>4. All chains in DOMAIN[0].relay_chains must be valid
-</p><p>5. LEN(DOMAIN[0].relay_chains) <= PARAMS.max_chains_servicer
+</p><p>3. LEN(DOMAIN[0].services) > 0
+</p><p>4. All chains in DOMAIN[0].services must be valid
+</p><p>5. LEN(DOMAIN[0].services) <= PARAMS.max_chains_servicer
 </p><h3>Servicer Relay Policy</h3><p>The policy which determines what happens with a servicer relay including the fees.</p><h4>Preceded By:</h4>
 <p>1. Servicer Relay</p><h4>Domain Spaces:</h4>
 <p>1. Servicer Relay Space</p><h4>Followed By:</h4>
@@ -1586,6 +1586,6 @@ func DistributeRewards(Service, geoZone, height):
 <p>The servicer at DOMAIN[0].public_key has its QoS metrics pruned</p><h3>Update Servicer Params</h3><p>The mechanism which updates servicer params</p><h4>Preceded By:</h4>
 <p>1. Set Servicer Parameters Policy</p><h4>Domain Spaces:</h4>
 <p>1. Servicer Param Update Space</p><h4>State Updates:</h4>
-<p>1. Servicer.Service URL</p><p>2. Servicer.Relay Chains</p><p>3. Servicer.GeoZone</p><p>4. Servicer.Operator Public Key</p><h4>Constraints:</h4>
+<p>1. Servicer.Service URL</p><p>2. Servicer.Services</p><p>3. Servicer.GeoZone</p><p>4. Servicer.Operator Public Key</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The servicer at DOMAIN[0].public_key has its params updated with the latest stake, assuming the stake was greater than the prior stake</p><h2>Parameters</h2><p>dao_fee_percentage</p><p>maturity_relay_charge</p><p>gateway_bootstrap_unwind_end</p><p>downtime_jail_duration</p><p>servicer_bootstrap_end</p><p>minimum_test_score_threshold</p><p>validator_fee_percentage</p><p>application_fee_per_relay</p><p>portal_fee_per_relay</p><p>relays_to_tokens_multiplier</p><p>maturity_relay_cost</p><p>minimum_stake_servicer</p><p>minimum_pause_time</p><p>max_bootstrap_servicer_cost_per_relay</p><p>servicer_stake_weight_ceiling</p><p>max_chains_servicer</p><p>servicer_bootstrap_unwind_start</p><p>transaction_fee</p><p>block_proposer_allocation</p><p>minimum_report_card_threshold</p><p>servicer_stake_floor_multiplier</p><p>min_bootstrap_gateway_fee_per_relay</p><p>gateway_bootstrap_unwind_start</p><p>servicer_stake_weight_multiplier</p><p>servicer_stake_floor_multiplier_exponent</p>

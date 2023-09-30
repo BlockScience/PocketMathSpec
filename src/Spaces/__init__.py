@@ -15,7 +15,7 @@ from .Portal import (portal_registration_space, portal_unregistration_space, por
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space, mint_pokt_mechanism_space,
                        burn_pokt_mechanism_space)
 from .Node import unjail_node_space
-from .Service import relay_chain_join_space, relay_chain_leave_space
+from .Service import service_join_space, service_leave_space
 from .DAO import (dao_block_reward_space, modify_dao_pokt_space)
 
 spaces = {"Servicer Stake Space": servicer_stake_space,
@@ -52,8 +52,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Jail Node Space": jail_node_space,
           "Unjail Node Space": unjail_node_space,
           "Return Servicer Stake Space": return_servicer_stake_space,
-          "Relay Chain Join Space": relay_chain_join_space,
-          "Relay Chain Leave Space": relay_chain_leave_space,
+          "Service Join Space": service_join_space,
+          "Service Leave Space": service_leave_space,
           "Return Application Stake Space": return_application_stake_space,
           "Servicer Block Reward Space": servicer_block_reward_space,
           "Mint POKT Mechanism Space": mint_pokt_mechanism_space,
