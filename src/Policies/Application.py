@@ -61,4 +61,4 @@ submit_relay_request_policy = {
     "policy_options": [submit_relay_request_policy_option_v1],
     "domain": [submit_relay_request_space],
     "codomain": [],
-    "parameters_used": []}
+    "parameters_used": ["session_token_bucket_coefficient"]}
