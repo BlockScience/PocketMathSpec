@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, PublicKeyType, GeoZoneType, RelayChainType, StakeStatusType
+from ..Types import uPOKTType, PublicKeyType, GeoZoneType, RelayChainType, StakeStatusType, BlockHeightType
 from typing import List
 
 
@@ -37,6 +37,11 @@ application_state = {"name": "Application State",
                              {"type": StakeStatusType,
                              "name": "Stake Status",
                              "description": "The status of staking for the actor",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": BlockHeightType,
+                             "name": "Unstaking Height",
+                             "description": "The height for which a servicer has begun unstaking at or none to represent no unstaking",
                              "symbol": None,
                              "domain": None}
                              ]}

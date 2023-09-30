@@ -1,5 +1,5 @@
 from typing import TypedDict, List
-from ..Types import PublicKeyType, uPOKTType, RelayChainType, GeoZoneType, ActorType, AddressType
+from ..Types import PublicKeyType, uPOKTType, RelayChainType, GeoZoneType, ActorType, AddressType, BlockHeightType, StakeStatusType
 
 application_stake_space = TypedDict("Application Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the Application
                                                                 "stake_amount": uPOKTType, # The amount of uPOKT in escrow (i.e. a security deposit)
@@ -39,3 +39,8 @@ submit_relay_request_space = TypedDict("Submit Relay Request Space", {"payload":
                                                                       "proof": dict, # the authentication scheme needed for work
                                                                       "application_address": PublicKeyType
                                                                       })
+
+application_stake_status_space = TypedDict("Application Stake Status Space", {"address": PublicKeyType, # address of the unstaking application
+                                                                        "height": BlockHeightType,
+                                                                        "status": StakeStatusType
+                                                                        })

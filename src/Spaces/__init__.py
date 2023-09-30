@@ -6,7 +6,7 @@ from .Servicer import (servicer_stake_space, servicer_pause_space, servicer_unpa
 from .Application import (application_stake_space, modify_application_pokt_space, application_param_update_space,
                           application_unstake_space, application_delegate_to_portal_space,
                           application_undelegation_space, submit_relay_request_space,
-                          return_application_stake_space)
+                          return_application_stake_space, application_stake_status_space)
 from .Validator import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
                         validator_pause_space, validator_stake_burning_space, validator_unstake_space,
                         validator_unpause_space, validator_jail_space, become_validator_space,
@@ -63,7 +63,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Portal Relay Request Space": portal_relay_request_space,
           "Servicer Stake Burn Space": servicer_stake_burn_space,
           "Servicer Forced Unstake Space": servicer_forced_unstake_space,
-          "Servicer Stake Status Space": servicer_stake_status_space}
+          "Servicer Stake Status Space": servicer_stake_status_space,
+          "Application Stake Status Space": application_stake_status_space}
 
 
 
