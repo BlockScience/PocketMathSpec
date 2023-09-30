@@ -4,7 +4,7 @@ from ..Spaces import (application_stake_space, application_unstake_space,
 
 application_stake = {
     "name": "Application Stake",
-    "description": "In order to participate as a Application in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are consuming the Web3 access. Upon registration, the Application is required to provide information necessary to create applicable Sessions (GeoZone(s), RelayChain(s), etc...).",
+    "description": "In order to participate as a Application in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are consuming the Web3 access. Upon registration, the Application is required to provide information necessary to create applicable Sessions (GeoZone(s), Service(s), etc...).",
     "constraints": [],
     "boundary_action_options": [],
     "called_by": ["Application"],

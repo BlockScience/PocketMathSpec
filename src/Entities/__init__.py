@@ -4,7 +4,7 @@ from .Application import application_entity
 from .Validator import validator_entity
 from .Portal import portal_entity
 from .Treasury import treasury_entity
-from .RelayChain import relay_chain_entity
+from .Service import relay_chain_entity
 from .Global import global_entity
 from .DAO import dao_entity
 

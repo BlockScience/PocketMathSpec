@@ -6,7 +6,7 @@ from .Application import (application_stake, application_unstake, application_de
 from .Portal import portal_registration, portal_unregistration, submit_relay_request_portal
 from .Treasury import (burn_pokt)
 from .Node import (unjail_node)
-from .RelayChain import (relay_chain_join, relay_chain_leave)
+from .Service import (relay_chain_join, relay_chain_leave)
 
 boundary_actions = {
     "Servicer Stake": servicer_stake,
