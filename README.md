@@ -2,168 +2,232 @@
 
 ## Specification Overview
 
-The mathematical specification handles the following attributes of the system:
+The mathematical specification presented here follows the specification from the [Mathematical Specification Mapping Library](https://github.com/BlockScience/MSML). The framework allows for dynamic viewing of different aspects of the system such as:
 
-## Broad Behaviors Modeled
+- What parameters have an impact on different policies, mechanisms, etc.
+- All the chains of actions that can modify different entities and their state variables
+- Reports specifically generated for action chains which detail all the different components
 
-The following are broad behaviors that will be need to be modeled:
+## Current Version
 
-1. Mint and Burn: The behaviors associated with minting for rewards as well as fees and burning done to balance minting
-2. Servicer Stake: Behaviors around staking for servicers
-3. Servicer Relay Rewards: Rewards for servicers doing work
-4. Servicer Stake Burn: Slashing for servicers who do not perform
-5. Servicer Jailing: Behavior for additonal incentive to perform
-6. Validator Staking: Behaviors for validators staking into the network
-7. Validator Block Reward: Rewards allocated on a block basis
-8. Validator Stake Burn: Slashing from bad behavior
-9. Validator Jailing: The process of jailing a validator for bad behavior
-10. Validator Transaction Fees: Provide validators with an additional incentive for producing blocks
-11. Portal Security Stake: Staking for the security of the service
-12. Portal App Stake: "Reduce transaction costs for the system by requiring portal's to bond POKT to guarantee the bandwith they expect from Pocket's servicers, and optimise the balance between accessibility of the service for applications, as well as the economic potential of POKT. "
-13. Portal fee per relay: The fees earned by portals for relaying
-14. Application app stake: The behavior for applications staking
-15. Application fee per relay: The fees that applications get for relaying
-16. DAO Transaction Fee: A percentage of the fee for every transaction goes to the DAO, with the remaining proportion going to the producer of the block containing such transaction fees. 
-17. DAO Allocation: The DAO treasury earns this proportion of the total POKT block reward. Value is a percentage. 
+- The current version is still a work in progress but the action chains present in reports/actions are in a rough draft form and undergoing review.
+- The testing notebook allows for creation of the reports, viewing of the entire tree of the spec and parameter impact functions to zero in on what parameters are impacting the system
+- Github issues are being used to track the work in progress
+- Explanations of the terminologies used can be found in the [MSML documentation folder](https://github.com/BlockScience/MSML/tree/main/docs) 
 
-## Entity Modeling
+## Reports
 
-The following are the entities that need to be created within the spec:
+There are three types of reports currently shown in the repository which are automatically generated:
 
-1. Servicers
-2. Validators
-3. DAO Group
-4. Portals
-5. Applications
+1. The Basic Report: All pieces of the system and action chains present are presented here (please note some are still WIP)
+2. Actions: Specific reporting for each action chain which is in a rough draft form
+3. Entity: All relevant action chains either called by a given entity and/or impacting a given entity (please note some are still WIP)
 
-## Boundary Actions
+## Specification Tree
 
-A list of boundary actions to model:
+The tree below is all the components of the current specification.
 
-1. Mint POKT
-2. Burn POKT
-3. Servicer Stakes
-4. Servicer Unstakes
-5. Servicer Claims Stake Rewards?
-6. Servicer Relays
-7. Slash Servicer Stake
-8. Servicer Jailed
-9. Servicer Unjailed?
-10. Validator Stakes
-11. Validator Unstakes
-12. Block Rewards Allocated
-13. Slash Validator Stake
-14. Validator Jailed
-15. Validator Unjailed?
-16. Validator Produces Block
-17. Portal Security Stake
-18. Portal Security Unstake
-19. Portal App Stake
-20. Portal App Unstake
-21. Portal Relay
-22. Application App Stake
-23. Application App Unstake
-24. Application Relay
-
-## Parameters
-
-### Mint and Burn
-
-1. Relays per day
-2. Relays to Tokens Multiplier
-3. Fees (Gateway Fee Per Relay and Application Fee Per Relay) following a piece-wise linear function to match the bootstrapping limits of the ecosystem 
-4. MaturityRelayCharge 
-5. MaturityRelayCost
-6. MinBootstrapGatewayFeePerRelay 
-7. MaxBootstrapServicerCostPerRelay 
-8. ServicersBootstrapUnwindStart 
-9. ServicersBootstrapEnd 
-10. GatewaysBootstrapUnwindStart 
-11. GatewaysBootstrapEnd 
-12. Price of POKT in USD
-13. Infura's price per relay
-14. DAO Allocation 
-15. Servicer Relay rewards
-16. Validator block reward
-
-### Servicer Stake
-
-1. servicer_minimum_stake
-
-### Servicer Relay Rewards
-
-1. Servicer share of block rewards
-2. DAO Allocation
-3. Validator block rewards
-4. Relays
-5. Number of servicers
-6. Relay QoS
-
-### Servicer Stake Burn
-
-1. SlashFractionDowntime: The % of a node’s stake that is burned for downtime, where 1 is 100%.
-2. ReplayAttackBurnMultiplier: The multiplier slash factor for submitting a replay attack. The base slash is directly proportional to the amount of relays claimed.
-
-### Servicer Jailing
-
-1. DowntimeJailDuration: The amount of time (in nanoseconds) before a node can unjail and resume service.
-2. MaxJailedBlocks: The amount of time (in blocks) a node has to unjail before being force unstaked and slashed. Reaching MaxJailedBlocks will result in a node’s entire stake being slashed.
-
-
-### Validator Staking
-
-Modeling the Validator Threshold would need to be a product of:
-
-1. MaxValidators - currently 1,000 (expanding set will lower threshold)
-2. ProposerAllocation - currently 5% (increasing will incentivize more competition to be a validator, which will increase threshold)
-
-### Validator Block Reward
-
-1. Initial parameter = 5% as per current v0 value, proportion of total block reward
-
-### Validator Stake Burn
-
-1. double_sign_burn_percentage, default 5%
-2. missed_blocks_burn_percentage, default 1%
-
-### Validator Jailing
-
-1. DowntimeJailDuration: The amount of time (in nanoseconds) before a node can unjail and resume service.
-2. MaxJailedBlocks: The amount of time (in blocks) a node has to unjail before being force unstaked and slashed. Reaching MaxJailedBlocks will result in a node’s entire stake being slashed.
-
-### Validator Transaction Fees
-
-1. Transaction Fee = 0.01 POKT
-2. Proposer percentage of fees = 10%
-3. DAO percentage of fees = 90%
-
-### Portal Security Stake
-
-1. Portal Minimum Stake, starting parameter = 150,000 POKT
-
-### Portal App Stake
-
-1. Token to Relays Multiplier, starting parameter = 100
-
-### Portal fee per relay
-
-1. Portal Fee Per Relay
-
-### Application App Stake
-
-1. Token to Relays Multiplier, starting parameter = 100
-
-
-### Application Fee Per Relay
-
-1. Application Fee per Relay
-
-### DAO Transaction Fee
-
-1. Transaction Fee = 0.01 POKT
-2. Proposer percentage of fees = 10%
-3. DAO percentage of fees = 90%
-
-### DAO Allocation
-
-1. Initial Percentage = 10% as per current v0 value
+```
+├──Entities
+│   ├──Servicer
+│   ├──Fisherman
+│   ├──Application
+│   ├──Validator
+│   ├──Portal
+│   ├──Treasury
+│   ├──Service
+│   ├──Global
+│   ├──DAO
+├──State
+│   ├──Global
+│   │   ├──Services
+│   │   ├──Sessions
+│   ├──Servicer
+│   │   ├──Public key
+│   │   ├──Servicer Salary
+│   │   ├──Report Card
+│   │   ├──Test Scores
+│   │   ├──POKT Holdings
+│   │   ├──Staked POKT
+│   │   ├──Service URL
+│   │   ├──Services
+│   │   ├──GeoZone
+│   │   ├──Operator Public Key
+│   │   ├──Pause Height
+│   │   ├──Stake Status
+│   │   ├──Unstaking Height
+│   ├──Fisherman
+│   │   ├──Stake Status
+│   ├──Application
+│   │   ├──Public key
+│   │   ├──POKT Holdings
+│   │   ├──Staked POKT
+│   │   ├──Services
+│   │   ├──GeoZone
+│   │   ├──Number of Servicers
+│   │   ├──Stake Status
+│   │   ├──Unstaking Height
+│   ├──Validator
+│   │   ├──Public key
+│   │   ├──POKT Holdings
+│   │   ├──Staked POKT
+│   │   ├──Service URL
+│   │   ├──Operator Public Key
+│   │   ├──Stake Status
+│   ├──Portal
+│   │   ├──Stake Status
+│   ├──Treasury
+│   │   ├──Floating Supply
+│   ├──Service
+│   │   ├──Name
+│   │   ├──Portal API Prefix
+│   │   ├──Service ID
+│   ├──DAO
+│   │   ├──POKT Holdings
+├──Spaces
+│   ├──Servicer Stake Space
+│   ├──Servicer Pause Space
+│   ├──Servicer Pause Space 2
+│   ├──Servicer Unpause Space
+│   ├──Assign Servicer Salary Space
+│   ├──Modify Servicer POKT Space
+│   ├──Servicer Param Update Space
+│   ├──Servicer Unstake Space
+│   ├──Application Stake Space
+│   ├──Servicer Unpause Space 2
+│   ├──Modify Application POKT Space
+│   ├──Application Param Update Space
+│   ├──Application Unstake Space
+│   ├──Application Delegate to Portal Space
+│   ├──Validator Stake Space
+│   ├──Modify Validator POKT Space
+│   ├──Validator Param Update Space
+│   ├──Portal Registration Space
+│   ├──Portal Unregistration Space
+│   ├──Application Undelegation Space
+│   ├──Validator Pause Space
+│   ├──Validator Stake Burning Space
+│   ├──Validator Block Reward Space
+│   ├──Submit Relay Request Space
+│   ├──Servicer Relay Space
+│   ├──Mint Block Rewards Space
+│   ├──Burn POKT Space
+│   ├──Jail Node Space
+│   ├──Unjail Node Space
+│   ├──Return Servicer Stake Space
+│   ├──Service Join Space
+│   ├──Service Leave Space
+│   ├──Return Application Stake Space
+│   ├──Servicer Block Reward Space
+│   ├──Mint POKT Mechanism Space
+│   ├──Burn POKT Mechanism Space
+│   ├──DAO Block Reward Space
+│   ├──Modify DAO POKT Space
+│   ├──Portal Relay Request Space
+│   ├──Servicer Stake Burn Space
+│   ├──Servicer Forced Unstake Space
+│   ├──Servicer Stake Status Space
+│   ├──Application Stake Status Space
+├──Parameters
+│   ├──Servicer
+│   │   ├──minimum_stake_servicer
+│   │   ├──minimum_stake_period_servicer
+│   │   ├──minimum_pause_time
+│   │   ├──max_chains_servicer
+│   │   ├──salary_block_frequency
+│   │   ├──minimum_test_score_threshold
+│   │   ├──minimum_report_card_threshold
+│   │   ├──servicer_unbounding_period
+│   │   ├──relays_to_tokens_multiplier
+│   │   ├──slash_fraction_downtime
+│   │   ├──replay_attack_burn_multiplier
+│   │   ├──max_jailed_blocks
+│   │   ├──downtime_jail_duration
+│   ├──Application
+│   │   ├──minimum_servicers_per_session
+│   │   ├──maximum_servicers_per_session
+│   │   ├──application_unstaking_time
+│   │   ├──application_fee_per_relay
+│   │   ├──minimum_application_stake
+│   ├──Validator
+│   │   ├──block_proposer_allocation
+│   ├──Portal
+│   │   ├──stake_per_app_delegation
+│   │   ├──portal_fee_per_relay
+│   │   ├──portal_minimum_stake
+│   ├──Session
+│   │   ├──session_block_frequency
+│   │   ├──session_token_bucket_coefficient
+│   ├──Treasury
+│   │   ├──dao_fee_percentage
+│   │   ├──validator_fee_percentage
+│   │   ├──maturity_relay_cost
+│   │   ├──maturity_relay_charge
+│   │   ├──min_bootstrap_gateway_fee_per_relay
+│   │   ├──max_bootstrap_servicer_cost_per_relay
+│   │   ├──servicer_bootstrap_unwind_start
+│   │   ├──servicer_bootstrap_end
+│   │   ├──gateway_bootstrap_unwind_start
+│   │   ├──gateway_bootstrap_unwind_end
+│   │   ├──transaction_fee
+├──Boundary Actions
+│   ├──Servicer Stake
+│   ├──Servicer Pause
+│   ├──Servicer Unpause
+│   ├──Servicer Unstake
+│   ├──Application Stake
+│   ├──Application Unstake
+│   ├──Application Delegate to Portal
+│   ├──Portal Registration
+│   ├──Portal Unregistration
+│   ├──Application Undelegation
+│   ├──Submit Relay Request
+│   ├──Servicer Relay
+│   ├──Burn POKT
+│   ├──Unjail Node
+│   ├──Service Join
+│   ├──Service Leave
+│   ├──Submit Relay Request (Portal)
+├──Control Actions
+│   ├──Mint Block Rewards
+│   ├──Jail Node
+│   ├──Return Servicer Stake
+│   ├──Return Application Stake
+│   ├──Servicer Stake Burn
+│   ├──Servicer Forced Unstake
+├──Policies
+│   ├──Servicer Stake Policy
+│   ├──Set Servicer Parameters Policy
+│   ├──Servicer Unpause Policy
+│   ├──Application Stake Policy
+│   ├──Set Application Parameters Policy
+│   ├──Servicer Pause Policy
+│   ├──Assign Servicer Salary Policy
+│   ├──Application Delegate to Portal Policy
+│   ├──Block Reward Policy Aggregate
+│   ├──Validator Block Reward Policy
+│   ├──DAO Block Reward Policy
+│   ├──Submit Relay Request (Portal) Policy
+│   ├──Servicer Relay Policy
+│   ├──Servicer Stake Burn Policy
+│   ├──Portal Registration Policy
+│   ├──Servicer Unstake Policy
+│   ├──Application Unstake Policy
+│   ├──Submit Relay Request Policy
+├──Mechanisms
+│   ├──Modify Servicer POKT Holdings
+│   ├──Modify Servicer Stake
+│   ├──Update Servicer Params
+│   ├──Prune Servicer QoS
+│   ├──Servicer Unpause Mechanism
+│   ├──Modify Application POKT Holdings
+│   ├──Modify Application Stake
+│   ├──Update Application Params
+│   ├──Servicer Update Pause Height
+│   ├──Modify Validator POKT Holdings
+│   ├──Mint POKT Mechanism
+│   ├──Burn POKT Mechanism
+│   ├──Modify DAO POKT Holdings
+│   ├──Update Servicer Stake Status
+│   ├──Update Application Stake Status
+```
