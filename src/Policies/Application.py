@@ -33,7 +33,7 @@ application_delegate_to_portal_policy = {"name": "Application Delegate to Portal
                         "constraints": [],
                         "policy_options": [],
                         "domain": [application_delegate_to_portal_space],
-                        "codomain": [application_delegate_to_portal_space],
+                        "codomain": [application_delegate_to_portal_space, application_delegate_to_portal_space],
                         "parameters_used": ["stake_per_app_delegation"]}
 
 application_unstake_policy = {

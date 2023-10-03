@@ -36,6 +36,16 @@ application_transmission_channels.append({"origin": "Application Delegate to Por
                                         "space": application_delegate_to_portal_space,
                                         "optional": False})
 
+application_transmission_channels.append({"origin": "Application Delegate to Portal Policy",
+                                        "target": "Update Application Delegate",
+                                        "space": application_delegate_to_portal_space,
+                                        "optional": True})
+
+application_transmission_channels.append({"origin": "Application Delegate to Portal Policy",
+                                        "target": "Add Portal Delegator",
+                                        "space": application_delegate_to_portal_space,
+                                        "optional": True})
+
 application_transmission_channels.append({"origin": "Application Unstake",
                                         "target": "Application Unstake Policy",
                                         "space": application_unstake_space,
