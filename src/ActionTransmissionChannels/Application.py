@@ -67,3 +67,13 @@ application_transmission_channels.append({"origin": "Application Undelegation",
                                         "space": application_undelegation_space,
                                         "optional": False})
 
+
+application_transmission_channels.append({"origin": "Application Undelegate to Portal Policy",
+                                        "target": "Update Application Delegate",
+                                        "space": application_undelegation_space,
+                                        "optional": False})
+
+application_transmission_channels.append({"origin":  "Application Undelegate to Portal Policy",
+                                        "target": "Remove Portal Delegator",
+                                        "space": application_undelegation_space,
+                                        "optional": True})
