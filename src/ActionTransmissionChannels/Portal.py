@@ -11,3 +11,13 @@ portal_transmission_channels.append({"origin": "Portal Registration",
                                         "target": "Portal Registration Policy",
                                         "space": portal_registration_space,
                                         "optional": False})
+
+portal_transmission_channels.append({"origin": "Portal Registration Policy",
+                                        "target": "Modify Portal POKT Holdings",
+                                        "space": portal_registration_space,
+                                        "optional": True})
+
+portal_transmission_channels.append({"origin": "Portal Registration Policy",
+                                        "target": "Modify Portal Stake",
+                                        "space": portal_registration_space,
+                                        "optional": True})

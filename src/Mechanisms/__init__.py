@@ -9,7 +9,7 @@ from .Validator import modify_validator_pokt_holdings
 from .Treasury import mint_pokt_mechanism, burn_pokt_mechanism
 from .DAO import (modify_dao_pokt_holdings)
 from .Service import (add_new_service, remove_service)
-from .Portal import (add_portal_delegator, remove_portal_delegator)
+from .Portal import (add_portal_delegator, remove_portal_delegator, modify_portal_pokt_holdings, modify_portal_stake)
 
 mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
              "Modify Servicer Stake": modify_servicer_stake,
@@ -32,4 +32,6 @@ mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
  "Remove Service": remove_service,
  "Add Portal Delegator": add_portal_delegator,
 "Update Application Delegate": update_application_delegate,
-"Remove Portal Delegator": remove_portal_delegator}
+"Remove Portal Delegator": remove_portal_delegator,
+"Modify Portal POKT Holdings": modify_portal_pokt_holdings,
+"Modify Portal Stake": modify_portal_stake}
