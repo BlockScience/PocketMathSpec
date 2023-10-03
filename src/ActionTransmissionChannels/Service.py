@@ -16,3 +16,8 @@ service_transmission_channels.append({"origin": "Service Leave",
                                         "target": "Service Leave Policy",
                                         "space": service_leave_space,
                                         "optional": False})
+
+service_transmission_channels.append({"origin": "Service Leave Policy",
+                                        "target": "Remove Service",
+                                        "space": service_leave_space,
+                                        "optional": True})
