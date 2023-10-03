@@ -9,6 +9,7 @@ from .Validator import validator_block_reward_policy
 from .Treasury import block_reward_policy_aggregate
 from .DAO import dao_block_reward_policy
 from .Portal import (submit_relay_request_portal_policy, portal_registration_policy)
+from .Service import service_join_policy
 
 policies = {
     "Servicer Stake Policy": servicer_stake_policy,
@@ -31,5 +32,6 @@ policies = {
     "Portal Registration Policy": portal_registration_policy,
     "Servicer Unstake Policy": servicer_unstake_policy,
     "Application Unstake Policy": application_unstake_policy,
-    "Submit Relay Request Policy": submit_relay_request_policy
+    "Submit Relay Request Policy": submit_relay_request_policy,
+    "Service Join Policy": service_join_policy
 }
