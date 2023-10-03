@@ -6,3 +6,8 @@ service_transmission_channels.append({"origin": "Service Join",
                                         "target": "Service Join Policy",
                                         "space": service_join_space,
                                         "optional": False})
+
+service_transmission_channels.append({"origin": "Service Join Policy",
+                                        "target": "Add New Service",
+                                        "space": service_join_space,
+                                        "optional": True})
