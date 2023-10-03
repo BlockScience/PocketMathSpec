@@ -19,3 +19,8 @@ portal_transmission_channels.append({"origin": "Modify Portal Stake",
                                      "entity": "Portal",
                                      "variable": "Staked POKT",
                                      "optional": False})
+
+portal_transmission_channels.append({"origin": "Add New Portal",
+                                     "entity": "Global",
+                                     "variable": "Portals",
+                                     "optional": False})
