@@ -34,3 +34,9 @@ application_transmission_channels.append({"origin": "Update Application Stake St
                                      "entity": "Application",
                                      "variable": "Unstaking Height",
                                      "optional": False})
+
+application_transmission_channels.append({"origin": "Update Application Delegate",
+                                     "entity": "Application",
+                                     "variable": "Delegate",
+                                     "optional": False})
+
