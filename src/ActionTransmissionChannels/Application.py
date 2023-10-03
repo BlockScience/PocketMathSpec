@@ -1,6 +1,7 @@
 from ..Spaces import (application_stake_space, modify_application_pokt_space,
                       application_param_update_space, application_delegate_to_portal_space,
-                      application_unstake_space, application_stake_status_space, submit_relay_request_space)
+                      application_unstake_space, application_stake_status_space, submit_relay_request_space,
+                      application_undelegation_space)
 
 application_transmission_channels = []
 
@@ -60,3 +61,9 @@ application_transmission_channels.append({"origin": "Submit Relay Request",
                                         "target": "Submit Relay Request Policy",
                                         "space": submit_relay_request_space,
                                         "optional": False})
+
+application_transmission_channels.append({"origin": "Application Undelegation",
+                                        "target": "Application Undelegate to Portal Policy",
+                                        "space": application_undelegation_space,
+                                        "optional": False})
+
