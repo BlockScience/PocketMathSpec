@@ -19,6 +19,8 @@ ServiceURLType = NewType('Service URL', str)
 
 ServiceType = NewType('Service', str)
 
+ServiceIDType = NewType("Service ID", str)
+
 # The physical geo-location identifier this Servicer registered in
 GeoZoneType = NewType('GeoZone', str)
 

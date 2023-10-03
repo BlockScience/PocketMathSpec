@@ -7,6 +7,7 @@ from .Application import (modify_application_pokt_holdings, modify_application_s
 from .Validator import modify_validator_pokt_holdings
 from .Treasury import mint_pokt_mechanism, burn_pokt_mechanism
 from .DAO import (modify_dao_pokt_holdings)
+from .Service import (add_new_service, remove_service)
 
 mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
              "Modify Servicer Stake": modify_servicer_stake,
@@ -24,4 +25,6 @@ mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
 "Burn POKT Mechanism": burn_pokt_mechanism,
 "Modify DAO POKT Holdings": modify_dao_pokt_holdings,
 "Update Servicer Stake Status": update_servicer_stake_status,
-"Update Application Stake Status": update_application_stake_status}
+"Update Application Stake Status": update_application_stake_status,
+"Add New Service": add_new_service,
+ "Remove Service": remove_service}
