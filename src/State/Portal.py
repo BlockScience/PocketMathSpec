@@ -1,4 +1,4 @@
-from ..Types import StakeStatusType, ApplicationEntityType
+from ..Types import StakeStatusType, ApplicationEntityType, uPOKTType
 from typing import List
 
 portal_state = {"name": "Portal State",
@@ -11,5 +11,15 @@ portal_state = {"name": "Portal State",
                              {"type": List[ApplicationEntityType],
                              "name": "Delegators",
                              "description": "The applications which have delegated to this portal",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": uPOKTType,
+                             "name": "POKT Holdings",
+                             "description": "The personal holdings of the application in uPOKT",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": uPOKTType,
+                             "name": "Staked POKT",
+                             "description": "The amount that is staked by the application currently in uPOKT",
                              "symbol": None,
                              "domain": None}]}
