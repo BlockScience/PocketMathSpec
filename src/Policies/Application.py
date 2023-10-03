@@ -1,4 +1,6 @@
-from ..Spaces import application_stake_space, modify_application_pokt_space, application_param_update_space, application_delegate_to_portal_space, application_unstake_space, submit_relay_request_space
+from ..Spaces import (application_stake_space, modify_application_pokt_space, application_param_update_space,
+                      application_delegate_to_portal_space, application_unstake_space, submit_relay_request_space,
+                      application_undelegation_space)
 
 application_stake_policy = {"name": "Application Stake Policy",
                         "description": "The policy which takes care of whether an application can stake and if it should update parameters.",
@@ -33,7 +35,7 @@ application_delegate_to_portal_policy = {"name": "Application Delegate to Portal
                         "constraints": [],
                         "policy_options": [],
                         "domain": [application_delegate_to_portal_space],
-                        "codomain": [application_delegate_to_portal_space],
+                        "codomain": [application_delegate_to_portal_space, application_delegate_to_portal_space],
                         "parameters_used": ["stake_per_app_delegation"]}
 
 application_unstake_policy = {
@@ -62,3 +64,12 @@ submit_relay_request_policy = {
     "domain": [submit_relay_request_space],
     "codomain": [],
     "parameters_used": ["session_token_bucket_coefficient"]}
+
+
+application_undelegate_to_portal_policy = {"name": "Application Undelegate to Portal Policy",
+                        "description": "Policy for taking care of any actions in relation to undelegation.",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [application_undelegation_space],
+                        "codomain": [application_undelegation_space, application_undelegation_space],
+                        "parameters_used": []}

@@ -4,5 +4,5 @@ from .Primitives import (PublicKeyType, uPOKTType, ServiceURLType,
                          BlockHeightType, NumberOfBlocksType, PercentType,
                          USDType, NumberRelaysPerDayType, NanoSecondsType, ServiceIDType)
 from .Actor import ActorType, StakeStatusType
-from .Entity import ServiceEntityType, ServicerEntityType, ApplicationEntityType, ServicerGroupType
+from .Entity import ServiceEntityType, ServicerEntityType, ApplicationEntityType, ServicerGroupType, PortalEntityType
 from .Data import SessionType

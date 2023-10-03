@@ -1,4 +1,4 @@
-from ..Types import uPOKTType, PublicKeyType, GeoZoneType, ServiceType, StakeStatusType, BlockHeightType
+from ..Types import uPOKTType, PublicKeyType, GeoZoneType, ServiceType, StakeStatusType, BlockHeightType, PortalEntityType
 from typing import List
 
 
@@ -42,6 +42,11 @@ application_state = {"name": "Application State",
                              {"type": BlockHeightType,
                              "name": "Unstaking Height",
                              "description": "The height for which a servicer has begun unstaking at or none to represent no unstaking",
+                             "symbol": None,
+                             "domain": None},
+                             {"type": PortalEntityType,
+                             "name": "Delegate",
+                             "description": "The portal which has been delegated to or None if there is no delegate",
                              "symbol": None,
                              "domain": None}
                              ]}

@@ -9,7 +9,8 @@ from .Application import (application_stake_space, modify_application_pokt_space
                           return_application_stake_space, application_stake_status_space)
 from .Validator import (validator_stake_space, modify_validator_pokt_space, validator_param_update_space,
                         validator_pause_space, validator_stake_burning_space, validator_block_reward_space)
-from .Portal import (portal_registration_space, portal_unregistration_space, portal_relay_request_space)
+from .Portal import (portal_registration_space, portal_unregistration_space, portal_relay_request_space,
+                     modify_portal_pokt_space)
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space, mint_pokt_mechanism_space,
                        burn_pokt_mechanism_space)
 from .Node import unjail_node_space
@@ -58,7 +59,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Servicer Stake Burn Space": servicer_stake_burn_space,
           "Servicer Forced Unstake Space": servicer_forced_unstake_space,
           "Servicer Stake Status Space": servicer_stake_status_space,
-          "Application Stake Status Space": application_stake_status_space}
+          "Application Stake Status Space": application_stake_status_space,
+          "Modify Portal POKT Space": modify_portal_pokt_space}
 
 
 

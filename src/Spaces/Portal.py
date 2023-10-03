@@ -14,3 +14,6 @@ portal_relay_request_space = TypedDict("Portal Relay Request Space", {"payload":
                                                                       "proof": dict, # the authentication scheme needed for work
                                                                       "application_address": PublicKeyType,
                                                                       "portal_address": PublicKeyType})
+modify_portal_pokt_space = TypedDict("Modify Portal POKT Space", {"public_key": PublicKeyType,
+                                                          "amount": uPOKTType,
+})
