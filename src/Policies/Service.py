@@ -1,4 +1,4 @@
-from ..Spaces import (service_join_space)
+from ..Spaces import (service_join_space, service_leave_space)
 
 service_join_policy_option_v1 = {"name": "Service Join Policy V1",
                                  "description": "Basic policy option.",
@@ -12,3 +12,11 @@ service_join_policy = {"name": "Service Join Policy",
                         "domain": [service_join_space],
                         "codomain": [service_join_space],
                         "parameters_used": ["supported_services"]}
+
+service_leave_policy = {"name": "Service Leave Policy",
+                        "description": "The policy which decides whether a service is able to leave the system.",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [service_leave_space],
+                        "codomain": [service_leave_space],
+                        "parameters_used": []}
