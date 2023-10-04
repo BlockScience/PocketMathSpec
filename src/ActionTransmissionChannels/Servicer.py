@@ -78,3 +78,17 @@ servicer_transmission_channels.append({"origin": "Return Servicer Stake",
                                         "space": return_servicer_stake_space,
                                         "optional": False})
 
+servicer_transmission_channels.append({"origin": "Return Servicer Stake Policy",
+                                        "target": "Update Servicer Stake Status",
+                                        "space": servicer_stake_status_space,
+                                        "optional": True})
+
+servicer_transmission_channels.append({"origin": "Return Servicer Stake Policy",
+                                        "target": "Modify Servicer POKT Holdings",
+                                        "space": modify_servicer_pokt_space,
+                                        "optional": True})
+
+servicer_transmission_channels.append({"origin": "Return Servicer Stake Policy",
+                                        "target": "Modify Servicer Stake",
+                                        "space": modify_servicer_pokt_space,
+                                        "optional": True})

@@ -123,5 +123,5 @@ return_servicer_stake_policy = {
     "constraints": [],
     "policy_options": [],
     "domain": [return_servicer_stake_space],
-    "codomain": [servicer_stake_status_space, modify_servicer_pokt_space],
+    "codomain": [servicer_stake_status_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
     "parameters_used": []}
