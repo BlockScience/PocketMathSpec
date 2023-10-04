@@ -11,7 +11,7 @@ from .Validator import validator_block_reward_policy
 from .Treasury import block_reward_policy_aggregate
 from .DAO import dao_block_reward_policy
 from .Portal import (submit_relay_request_portal_policy, portal_registration_policy,
-                     portal_unregistration_policy)
+                     portal_unregistration_policy, return_portal_stake_policy)
 from .Service import service_join_policy, service_leave_policy
 
 policies = {
@@ -41,5 +41,6 @@ policies = {
     "Application Undelegate to Portal Policy": application_undelegate_to_portal_policy,
     "Portal Unregistration Policy": portal_unregistration_policy,
     "Return Servicer Stake Policy": return_servicer_stake_policy,
-    "Return Application Stake Policy": return_application_stake_policy
+    "Return Application Stake Policy": return_application_stake_policy,
+    "Return Portal Stake Policy": return_portal_stake_policy
 }
