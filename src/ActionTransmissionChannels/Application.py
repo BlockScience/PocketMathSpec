@@ -82,5 +82,21 @@ application_transmission_channels.append({"origin":  "Application Undelegate to 
 application_transmission_channels.append({"origin":  "Return Application Stake",
                                         "target": "Return Application Stake Policy",
                                         "space": return_application_stake_space,
+                                        "optional": False})
+
+
+application_transmission_channels.append({"origin":  "Return Application Stake Policy",
+                                        "target": "Update Application Stake Status",
+                                        "space": application_stake_space,
+                                        "optional": True})
+
+application_transmission_channels.append({"origin":  "Return Application Stake Policy",
+                                        "target": "Modify Application POKT Holdings",
+                                        "space": modify_application_pokt_space,
+                                        "optional": True})
+
+application_transmission_channels.append({"origin":  "Return Application Stake Policy",
+                                        "target": "Modify Application Stake",
+                                        "space": modify_application_pokt_space,
                                         "optional": True})
 
