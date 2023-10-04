@@ -49,3 +49,17 @@ portal_transmission_channels.append({"origin":  "Return Portal Stake",
                                         "space": return_portal_stake_space,
                                         "optional": False})
 
+portal_transmission_channels.append({"origin": "Return Portal Stake Policy",
+                                        "target": "Update Portal Stake Status",
+                                        "space": portal_stake_status_space,
+                                        "optional": True})
+
+portal_transmission_channels.append({"origin": "Return Portal Stake Policy",
+                                        "target": "Modify Portal POKT Holdings",
+                                        "space": modify_portal_pokt_space,
+                                        "optional": True})
+
+portal_transmission_channels.append({"origin": "Return Portal Stake Policy",
+                                        "target": "Modify Portal Stake",
+                                        "space": modify_portal_pokt_space,
+                                        "optional": True})
