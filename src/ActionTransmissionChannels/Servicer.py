@@ -1,7 +1,7 @@
 from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer_param_update_space,
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space,
                       servicer_pause_space2, servicer_relay_space, servicer_stake_burn_space,
-                      servicer_unstake_space, servicer_stake_status_space)
+                      servicer_unstake_space, servicer_stake_status_space, return_servicer_stake_space)
 
 servicer_transmission_channels = []
 
@@ -72,3 +72,9 @@ servicer_transmission_channels.append({"origin": "Servicer Unstake Policy",
                                         "target": "Update Servicer Stake Status",
                                         "space": servicer_stake_status_space,
                                         "optional": False})
+
+servicer_transmission_channels.append({"origin": "Return Servicer Stake",
+                                        "target": "Return Servicer Stake Policy",
+                                        "space": return_servicer_stake_space,
+                                        "optional": False})
+

@@ -1,6 +1,7 @@
 from .Servicer import (servicer_stake_policy, set_servicer_parameters_policy, servicer_unpause_policy,
                        servicer_pause_policy, assign_servicer_salary_policy,
-                       servicer_relay_policy, servicer_stake_burn_policy, servicer_unstake_policy)
+                       servicer_relay_policy, servicer_stake_burn_policy, servicer_unstake_policy,
+                       return_servicer_stake_policy)
 from .Application import (application_stake_policy, set_application_parameters_policy,
                           application_delegate_to_portal_policy, application_unstake_policy,
                           submit_relay_request_policy, application_undelegate_to_portal_policy)
@@ -37,5 +38,6 @@ policies = {
     "Service Join Policy": service_join_policy,
     "Service Leave Policy": service_leave_policy,
     "Application Undelegate to Portal Policy": application_undelegate_to_portal_policy,
-    "Portal Unregistration Policy": portal_unregistration_policy
+    "Portal Unregistration Policy": portal_unregistration_policy,
+    "Return Servicer Stake Policy": return_servicer_stake_policy
 }
