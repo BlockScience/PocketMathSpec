@@ -16,7 +16,9 @@ servicer_stake_burn = {"name": "Servicer Stake Burn",
 A Servicer's stake can be burnt in two situations:
 
 1. A Servicer receives a TestScore below the TestScoreBurnThreshold
-2. A Fisherman initiates a PauseMsg with the required evidence""",
+2. A Fisherman initiates a PauseMsg with the required evidence
+
+If a Service Node stake falls below the minimum amount through serving incorrect data or incorrect block validation, 20% of the minimum stake for that Service Node will be slashed and jailed. If a Service Node submits a fraudulent Relay batch, 100% of their stake will be slashed.""",
     "constraints": [],
     "control_action_options": [],
     "codomain": [servicer_stake_burn_space],
