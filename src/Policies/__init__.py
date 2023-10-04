@@ -8,7 +8,8 @@ from .Application import (application_stake_policy, set_application_parameters_p
 from .Validator import validator_block_reward_policy
 from .Treasury import block_reward_policy_aggregate
 from .DAO import dao_block_reward_policy
-from .Portal import (submit_relay_request_portal_policy, portal_registration_policy)
+from .Portal import (submit_relay_request_portal_policy, portal_registration_policy,
+                     portal_unregistration_policy)
 from .Service import service_join_policy, service_leave_policy
 
 policies = {
@@ -35,5 +36,6 @@ policies = {
     "Submit Relay Request Policy": submit_relay_request_policy,
     "Service Join Policy": service_join_policy,
     "Service Leave Policy": service_leave_policy,
-    "Application Undelegate to Portal Policy": application_undelegate_to_portal_policy
+    "Application Undelegate to Portal Policy": application_undelegate_to_portal_policy,
+    "Portal Unregistration Policy": portal_unregistration_policy
 }

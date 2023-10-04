@@ -24,3 +24,8 @@ portal_transmission_channels.append({"origin": "Add New Portal",
                                      "entity": "Global",
                                      "variable": "Portals",
                                      "optional": False})
+
+portal_transmission_channels.append({"origin": "Update Portal Stake Status",
+                                     "entity": "Portal",
+                                     "variable": "Stake Status",
+                                     "optional": False})
