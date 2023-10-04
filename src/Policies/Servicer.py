@@ -124,4 +124,4 @@ return_servicer_stake_policy = {
     "policy_options": [],
     "domain": [return_servicer_stake_space],
     "codomain": [servicer_stake_status_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
-    "parameters_used": []}
+    "parameters_used": ["servicer_unbounding_period"]}
