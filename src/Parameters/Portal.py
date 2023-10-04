@@ -1,4 +1,4 @@
-from ..Types import POKTType
+from ..Types import POKTType, NumberOfBlocksType
 
 portal_parameter_set = {"name": "Portal Parameter Set",
                        "notes": "",
@@ -19,7 +19,10 @@ portal_parameter_set = {"name": "Portal Parameter Set",
                                        "description": "The minimum stake for the portal, starting at 150,000 POKT.",
                                        "symbol": None,
                                        "domain": None
-                                       }]}
-
-
-
+                                       },
+                                       {"variable_type": NumberOfBlocksType,
+                                       "name": "portal_unstaking_time",
+                                       "description": "The time before a portal has their stake returned.",
+                                       "symbol": None,
+                                       "domain": None
+                                       },]}

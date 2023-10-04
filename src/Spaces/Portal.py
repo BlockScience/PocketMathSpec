@@ -22,3 +22,6 @@ portal_stake_status_space = TypedDict("Servicer Stake Status Space", {"address":
                                                                         "height": BlockHeightType,
                                                                         "status": StakeStatusType
                                                                         })
+
+return_portal_stake_space = TypedDict("Return Portal Stake Space", {"public_key": PublicKeyType, # The public cryptographic id of the custodial account
+                                                          "amount": uPOKTType})
