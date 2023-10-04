@@ -1,4 +1,5 @@
-from ..Spaces import (portal_relay_request_space, portal_registration_space, modify_portal_pokt_space)
+from ..Spaces import (portal_relay_request_space, portal_registration_space, modify_portal_pokt_space,
+                      portal_unregistration_space, application_undelegation_space)
 
 submit_relay_request_portal_policy = {"name": "Submit Relay Request (Portal) Policy",
                         "description": "Policy which handles the logic of portal relay requests and fees",
@@ -19,3 +20,11 @@ portal_registration_policy = {"name": "Portal Registration Policy",
                         "domain": [portal_registration_space],
                         "codomain": [modify_portal_pokt_space, modify_portal_pokt_space, portal_registration_space],
                         "parameters_used": ["portal_minimum_stake"]}
+
+portal_unregistration_policy = {"name": "Portal Unregistration Policy",
+                        "description": "Policy which handles the logic of portal unregistration process. It will set the stake status and remove any references to the portal in terms of delegation.",
+                        "constraints": [],
+                        "policy_options": [],
+                        "domain": [portal_unregistration_space],
+                        "codomain": [portal_unregistration_space, application_undelegation_space],
+                        "parameters_used": []}
