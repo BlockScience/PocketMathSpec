@@ -1,4 +1,5 @@
-from ..Spaces import portal_relay_request_space, portal_registration_space, modify_portal_pokt_space, portal_unregistration_space, application_undelegation_space
+from ..Spaces import (portal_relay_request_space, portal_registration_space, modify_portal_pokt_space,
+                      portal_unregistration_space, application_undelegation_space, portal_stake_status_space)
 portal_transmission_channels = []
 
 portal_transmission_channels.append({"origin": "Submit Relay Request (Portal)",
@@ -34,7 +35,7 @@ portal_transmission_channels.append({"origin": "Portal Unregistration",
 
 portal_transmission_channels.append({"origin": "Portal Unregistration Policy",
                                         "target": "Update Portal Stake Status",
-                                        "space": portal_unregistration_space,
+                                        "space": portal_stake_status_space,
                                         "optional": True})
 
 portal_transmission_channels.append({"origin":  "Portal Unregistration Policy",

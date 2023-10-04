@@ -1,4 +1,4 @@
-from ..Spaces import application_delegate_to_portal_space, application_undelegation_space, modify_portal_pokt_space, portal_registration_space
+from ..Spaces import application_delegate_to_portal_space, application_undelegation_space, modify_portal_pokt_space, portal_registration_space, portal_stake_status_space
 
 
 add_portal_delegator = {"name": "Add Portal Delegator",
@@ -34,5 +34,12 @@ add_new_portal = {"name": "Add New Portal",
                            "constraints": [],
                            "logic": "The portal at DOMAIN[0].portal_address is added to the global state",
                            "domain": [portal_registration_space],
+                           "parameters_used": []}
+
+update_portal_stake_status = {"name": "Update Portal Stake Status",
+                           "description": "The mechanism for updating portal stake status",
+                           "constraints": [],
+                           "logic": "The portal at DOMAIN[0].portal_address has its stake status updated to DOMAIN[0].status",
+                           "domain": [portal_stake_status_space],
                            "parameters_used": []}
 
