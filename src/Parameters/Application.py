@@ -1,4 +1,4 @@
-from ..Types import POKTType, Days
+from ..Types import POKTType, NumberOfBlocksType
 
 application_parameter_set = {"name": "Application Parameter Set",
                        "notes": "",
@@ -14,7 +14,7 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "symbol": None,
                                        "domain": None
                                        },
-                                       {"variable_type": int,
+                                       {"variable_type": NumberOfBlocksType,
                                        "name": "application_unstaking_time",
                                        "description": "The time before an application has their stake returned.",
                                        "symbol": None,
