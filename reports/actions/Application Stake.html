@@ -430,12 +430,12 @@
 </p><p>2. DOMAIN[0].number_servicers <= PARAMS.MaxServicersPerSession
 </p><h4>Policy Options:</h4>
 <details><summary><b>1. Set Application Parameters Policy Option V1</b></summary><p>This policy determines if the parameters of an application should be updated and if so executes on it.</p><p>Logic: As long as the application has a staking amount equal to or greater than the current staked amount and as well the passed NumServicers is bounded between MinServicersPerSession and MaxServicersPerSession, the application will have its parameters all updated. </p></details><br/><h2>Mechanisms</h2><h3>Modify Application POKT Holdings</h3><p>The mechanism to update the personal holdings of an application</p><h4>Preceded By:</h4>
-<p>1. Application Stake Policy</p><h4>Domain Spaces:</h4>
+<p>1. Application Stake Policy</p><p>2. Return Application Stake Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Application POKT Space</p><h4>State Updates:</h4>
 <p>1. Application.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The application at DOMAIN[0].application_address has its POKT Holdings modified by DOMAIN[0].value</p><h3>Modify Application Stake</h3><p>The mechanism to update the stake of an application</p><h4>Preceded By:</h4>
-<p>1. Application Stake Policy</p><h4>Domain Spaces:</h4>
+<p>1. Application Stake Policy</p><p>2. Return Application Stake Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Application POKT Space</p><h4>State Updates:</h4>
 <p>1. Application.Staked POKT</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
@@ -444,4 +444,4 @@
 <p>1. Application Param Update Space</p><h4>State Updates:</h4>
 <p>1. Application.Services</p><p>2. Application.GeoZone</p><p>3. Application.Number of Servicers</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
-<p>The application at DOMAIN[0].public_key has its params updated</p><h2>Parameters</h2><p>minimum_application_stake</p><p>maximum_servicers_per_session</p><p>minimum_servicers_per_session</p>
+<p>The application at DOMAIN[0].public_key has its params updated</p><h2>Parameters</h2><p>maximum_servicers_per_session</p><p>minimum_application_stake</p><p>minimum_servicers_per_session</p>
