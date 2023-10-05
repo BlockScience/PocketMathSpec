@@ -64,3 +64,8 @@ servicer_transmission_channels.append({"origin": "Remove Session",
                                      "entity": "Global",
                                      "variable": "Sessions",
                                      "optional": False})
+
+servicer_transmission_channels.append({"origin": "Remove Servicer",
+                                     "entity": "Global",
+                                     "variable": "Servicers",
+                                     "optional": False})

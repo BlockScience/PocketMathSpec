@@ -1,5 +1,5 @@
 from typing import List
-from ..Types import ServiceEntityType, SessionType, PortalEntityType
+from ..Types import ServiceEntityType, SessionType, PortalEntityType, ServicerEntityType
 
 global_state = {"name": "Global State",
               "notes": "",
@@ -17,7 +17,12 @@ global_state = {"name": "Global State",
                              "name": "Portals",
                              "description": "Portals held within the system.",
                              "symbol": None,
-                             "domain": None},]}
+                             "domain": None},
+                             {"type": List[ServicerEntityType],
+                             "name": "Servicers",
+                             "description": "Servicers held within the system.",
+                             "symbol": None,
+                             "domain": None}]}
 
 
 
