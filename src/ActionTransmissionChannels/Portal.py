@@ -1,6 +1,6 @@
 from ..Spaces import (portal_relay_request_space, portal_registration_space, modify_portal_pokt_space,
                       portal_unregistration_space, application_undelegation_space, portal_stake_status_space,
-                      return_portal_stake_space)
+                      return_portal_stake_space, submit_relay_request_space)
 portal_transmission_channels = []
 
 portal_transmission_channels.append({"origin": "Submit Relay Request (Portal)",
@@ -63,3 +63,13 @@ portal_transmission_channels.append({"origin": "Return Portal Stake Policy",
                                         "target": "Modify Portal Stake",
                                         "space": modify_portal_pokt_space,
                                         "optional": True})
+
+portal_transmission_channels.append({"origin": "Submit Relay Request (Portal) Policy",
+                                        "target": "Create New Session",
+                                        "space": submit_relay_request_space,
+                                        "optional": True})
+
+portal_transmission_channels.append({"origin": "Submit Relay Request (Portal) Policy",
+                                        "target": "Burn Per Session Policy",
+                                        "space": submit_relay_request_space,
+                                        "optional": False})
