@@ -2,7 +2,8 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space,
                       servicer_pause_space2, servicer_relay_space, servicer_stake_burn_space,
                       servicer_unstake_space, servicer_stake_status_space, return_servicer_stake_space,
-                      modify_portal_pokt_space, modify_application_pokt_space, increase_relay_fees_space)
+                      modify_portal_pokt_space, modify_application_pokt_space, increase_relay_fees_space,
+                      burn_pokt_mechanism_space)
 
 servicer_transmission_channels = []
 
@@ -107,7 +108,7 @@ servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
                                         "optional": True})
 
 servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
-                                        "target": "Modify Application POKT Holdings",
+                                        "target": "Modify Application Stake",
                                         "space": modify_application_pokt_space,
                                         "optional": True})
 
@@ -120,3 +121,19 @@ servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
                                         "target": "Remove Session",
                                         "space": servicer_relay_space,
                                         "optional": True})
+
+servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
+                                        "target": "Burn Per Relay Policy",
+                                        "space": servicer_relay_space,
+                                        "optional": False})
+
+servicer_transmission_channels.append({"origin": "Burn Per Relay Policy",
+                                        "target": "Burn POKT Mechanism",
+                                        "space": burn_pokt_mechanism_space,
+                                        "optional": False})
+
+servicer_transmission_channels.append({"origin": "Burn Per Relay Policy",
+                                        "target": "Modify Application Stake",
+                                        "space": modify_application_pokt_space,
+                                        "optional": False})
+
