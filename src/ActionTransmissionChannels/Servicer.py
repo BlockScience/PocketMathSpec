@@ -108,7 +108,7 @@ servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
                                         "optional": True})
 
 servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
-                                        "target": "Modify Application POKT Holdings",
+                                        "target": "Modify Application Stake",
                                         "space": modify_application_pokt_space,
                                         "optional": True})
 
