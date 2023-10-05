@@ -311,7 +311,7 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Return Application Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Policies</h2><h3>Return Application Stake Policy</h3><p>The policy which determines when an application can have their stake returned.</p><h4>Preceded By:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Return Application Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h2>Behavioral Action Space</h2><h2>Policies</h2><h3>Return Application Stake Policy</h3><p>The policy which determines when an application can have their stake returned.</p><h4>Preceded By:</h4>
 <p>1. Return Application Stake</p><h4>Domain Spaces:</h4>
 <p>1. Return Application Stake Space</p><h4>Followed By:</h4>
 <p>1. Update Application Stake Status</p><p>2. Modify Application POKT Holdings</p><p>3. Modify Application Stake</p><h4>Codomain Spaces:</h4>
@@ -322,12 +322,12 @@
 <p>1. Application.Stake Status</p><p>2. Application.Unstaking Height</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The application at DOMAIN[0].address has its unstaking_height variable updated to DOMAIN[0].height which will be none if it is staking. It will also have its stake status set to DOMAIN[0].status.</p><h3>Modify Application POKT Holdings</h3><p>The mechanism to update the personal holdings of an application</p><h4>Preceded By:</h4>
-<p>1. Servicer Relay Policy</p><p>2. Application Stake Policy</p><p>3. Return Application Stake Policy</p><h4>Domain Spaces:</h4>
+<p>1. Application Stake Policy</p><p>2. Return Application Stake Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Application POKT Space</p><h4>State Updates:</h4>
 <p>1. Application.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The application at DOMAIN[0].application_address has its POKT Holdings modified by DOMAIN[0].value</p><h3>Modify Application Stake</h3><p>The mechanism to update the stake of an application</p><h4>Preceded By:</h4>
-<p>1. Application Stake Policy</p><p>2. Return Application Stake Policy</p><h4>Domain Spaces:</h4>
+<p>1. Servicer Relay Policy</p><p>2. Burn Per Relay Policy</p><p>3. Application Stake Policy</p><p>4. Return Application Stake Policy</p><p>5. Burn Per Session Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Application POKT Space</p><h4>State Updates:</h4>
 <p>1. Application.Staked POKT</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
