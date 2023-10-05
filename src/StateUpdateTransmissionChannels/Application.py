@@ -39,3 +39,8 @@ application_transmission_channels.append({"origin": "Update Application Delegate
                                      "entity": "Application",
                                      "variable": "Delegate",
                                      "optional": False})
+
+application_transmission_channels.append({"origin": "Create New Session",
+                                     "entity": "Global",
+                                     "variable": "Sessions",
+                                     "optional": False})
