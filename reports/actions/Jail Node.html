@@ -289,7 +289,8 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Policies</h2><h3>Jail Node Policy</h3><p>The policy for determining both whether the node in fact should be jailed (any validations to ensure) and as well determine if any amount of stake burning should take place.</p><h4>Preceded By:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Jail Node</h3><p>The action which results in a node (servicer or validator) being jailed.</p><h4>Constraints:</h4>
+<h2>Policies</h2><h3>Jail Node Policy</h3><p>The policy for determining both whether the node in fact should be jailed (any validations to ensure) and as well determine if any amount of stake burning should take place.</p><h4>Preceded By:</h4>
 <p>1. Jail Node</p><h4>Domain Spaces:</h4>
 <p>1. Jail Node Space</p><h4>Followed By:</h4>
 <p>1. Servicer Update Pause Height</p><p>2. Modify Servicer Stake</p><p>3. Burn POKT Mechanism</p><h4>Codomain Spaces:</h4>
