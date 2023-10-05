@@ -176,7 +176,7 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Floating Supply</td><td>The amount of floating supply in the ecosystem</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Relay Fees</td><td>The amount of fees custodied in the treasury.</td><td>uPOKT</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Burn POKT Space</h3><p>{burn_amount: uPOKT,<br/>block_height: Block Height}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h2>Behavioral Action Space</h2><h3>Burn POKT</h3><p>Treasury burning supply of POKT</p><h4>Called By:</h4>
+      </tr><tr><td>Floating Supply</td><td>The amount of floating supply in the ecosystem</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Relay Fees</td><td>The amount of fees custodied in the treasury.</td><td>uPOKT</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Burn POKT Space</h3><p>{burn_amount: uPOKT,<br/>block_height: Block Height}</p><h2>Behavioral Action Space</h2><h3>Burn POKT</h3><p>Treasury burning supply of POKT</p><h4>Called By:</h4>
 <p>1. Treasury</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Burn POKT Policy</h3><p>Policy which takes care of treasury POKT being burnt.</p><h4>Preceded By:</h4>
 <p>1. Burn POKT</p><h4>Domain Spaces:</h4>
@@ -184,7 +184,7 @@
 <p>1. Burn POKT Mechanism</p><h4>Codomain Spaces:</h4>
 <p>1. Burn POKT Mechanism Space</p><h4>Constraints:</h4>
 <h2>Mechanisms</h2><h3>Burn POKT Mechanism</h3><p>The mechanism which has the treasury burning POKT</p><h4>Preceded By:</h4>
-<p>1. Burn Per Relay Policy</p><p>2. Jail Node Policy</p><p>3. Burn Per Session Policy</p><p>4. Assign Servicer Salary Policy</p><p>5. Burn POKT Policy</p><h4>Domain Spaces:</h4>
+<p>1. Burn Per Relay Policy</p><p>2. Jail Node Policy</p><p>3. Servicer Forced Unstake Policy</p><p>4. Burn Per Session Policy</p><p>5. Assign Servicer Salary Policy</p><p>6. Burn POKT Policy</p><h4>Domain Spaces:</h4>
 <p>1. Burn POKT Mechanism Space</p><h4>State Updates:</h4>
 <p>1. Treasury.Floating Supply</p><h4>Constraints:</h4>
 <h4>Logic:</h4>

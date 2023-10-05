@@ -1,6 +1,6 @@
 from .Servicer import (modify_servicer_pokt_holdings, modify_servicer_stake, update_servicer_params,
                        prune_servicer_qos, servicer_unpause_mechanism, servicer_update_pause_height,
-                       update_servicer_stake_status, remove_session)
+                       update_servicer_stake_status, remove_session, remove_servicer)
 from .Application import (modify_application_pokt_holdings, modify_application_stake,
                           update_application_params, update_application_stake_status,
                           update_application_delegate, create_new_session)
@@ -41,4 +41,5 @@ mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
 "Create New Session": create_new_session,
 "Increase Relay Fees": increase_relay_fees,
 "Remove Session": remove_session,
-"Decrease Relay Fees": decrease_relay_fees}
+"Decrease Relay Fees": decrease_relay_fees,
+"Remove Servicer": remove_servicer}
