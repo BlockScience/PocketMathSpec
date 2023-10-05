@@ -3,7 +3,7 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_pause_space2, servicer_relay_space, servicer_stake_burn_space,
                       servicer_unstake_space, servicer_stake_status_space, return_servicer_stake_space,
                       modify_portal_pokt_space, modify_application_pokt_space, increase_relay_fees_space,
-                      burn_pokt_mechanism_space)
+                      burn_pokt_mechanism_space, jail_node_space)
 
 servicer_transmission_channels = []
 
@@ -137,3 +137,7 @@ servicer_transmission_channels.append({"origin": "Burn Per Relay Policy",
                                         "space": modify_application_pokt_space,
                                         "optional": False})
 
+servicer_transmission_channels.append({"origin": "Jail Node",
+                                        "target": "Jail Node Policy",
+                                        "space": jail_node_space,
+                                        "optional": False})

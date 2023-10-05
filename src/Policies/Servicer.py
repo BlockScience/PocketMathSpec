@@ -4,7 +4,7 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_relay_space, servicer_stake_burn_space, servicer_unstake_space,
                       servicer_stake_status_space, return_servicer_stake_space,
                       modify_portal_pokt_space, modify_application_pokt_space,
-                      increase_relay_fees_space)
+                      increase_relay_fees_space, jail_node_space)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "Policy which takes care of actions to occur after a servicer attempts to stake",
@@ -137,3 +137,12 @@ burn_per_relay_policy = {
     "domain": [servicer_relay_space],
     "codomain": [burn_pokt_mechanism_space, modify_application_pokt_space],
     "parameters_used": ["app_burn_per_relay"]}
+
+jail_node_policy = {
+    "name": "Jail Node Policy",
+    "description": "The policy for determining both whether the node in fact should be jailed (any validations to ensure) and as well determine if any amount of stake burning should take place.",
+    "constraints": [],
+    "policy_options": [],
+    "domain": [jail_node_space],
+    "codomain": [],
+    "parameters_used": []}
