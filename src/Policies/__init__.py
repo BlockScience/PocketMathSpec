@@ -8,7 +8,7 @@ from .Application import (application_stake_policy, set_application_parameters_p
                           return_application_stake_policy, burn_per_session_policy)
 #from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy, validator_block_reward_policy
 from .Validator import validator_block_reward_policy
-from .Treasury import block_reward_policy_aggregate, burn_pokt_policy
+from .Treasury import block_reward_policy_aggregate, burn_pokt_policy, distribute_fees_policy
 from .DAO import dao_block_reward_policy
 from .Portal import (submit_relay_request_portal_policy, portal_registration_policy,
                      portal_unregistration_policy, return_portal_stake_policy)
@@ -45,5 +45,6 @@ policies = {
     "Return Portal Stake Policy": return_portal_stake_policy,
     "Burn POKT Policy": burn_pokt_policy,
     "Burn Per Session Policy": burn_per_session_policy,
-    "Burn Per Relay Policy": burn_per_relay_policy
+    "Burn Per Relay Policy": burn_per_relay_policy,
+    "Distribute Fees Policy": distribute_fees_policy
 }
