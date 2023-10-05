@@ -12,3 +12,5 @@ burn_pokt_space = TypedDict("Burn POKT Space", {"burn_amount": uPOKTType,
 jail_node_space = TypedDict("Jail Node Space", {"node_address": PublicKeyType,
                                                 "block_height": BlockHeightType,
                                                 "jailer_address": PublicKeyType})
+
+increase_relay_fees_space =  TypedDict("Increase Relay Fees Space", {"POKT Amount": uPOKTType,})

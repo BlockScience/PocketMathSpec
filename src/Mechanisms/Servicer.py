@@ -1,5 +1,5 @@
 from ..Spaces import (modify_servicer_pokt_space, servicer_param_update_space, servicer_unpause_space2,
-                      servicer_pause_space2, servicer_stake_status_space)
+                      servicer_pause_space2, servicer_stake_status_space, servicer_relay_space)
 
 
 modify_servicer_pokt_holdings = {"name": "Modify Servicer POKT Holdings",
@@ -51,3 +51,9 @@ update_servicer_stake_status = {"name": "Update Servicer Stake Status",
                            "domain": [servicer_stake_status_space],
                            "parameters_used": []}
 
+remove_session = {"name": "Remove Session",
+                           "description": "The mechanism which removes a session from the global state.",
+                           "constraints": [],
+                           "logic": "The session from DOMAIN[0] is removed from the global session state.",
+                           "domain": [servicer_relay_space],
+                           "parameters_used": []}

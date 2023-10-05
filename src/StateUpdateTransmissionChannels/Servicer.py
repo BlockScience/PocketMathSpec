@@ -60,5 +60,7 @@ servicer_transmission_channels.append({"origin": "Update Servicer Stake Status",
                                      "variable": "Unstaking Height",
                                      "optional": False})
 
-
-
+servicer_transmission_channels.append({"origin": "Remove Session",
+                                     "entity": "Global",
+                                     "variable": "Sessions",
+                                     "optional": False})
