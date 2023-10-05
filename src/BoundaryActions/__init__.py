@@ -1,11 +1,10 @@
 from .Servicer import (servicer_stake, servicer_pause, servicer_unpause, servicer_unstake,
-                       servicer_relay)
+                       servicer_relay, unjail_node)
 from .Application import (application_stake, application_unstake, application_delegate_to_portal,
                           application_undelegation, submit_relay_request)
 #from .Validator import validator_stake, validator_pause, validator_unstake, validator_unpause, become_validator
 from .Portal import portal_registration, portal_unregistration, submit_relay_request_portal
 from .Treasury import (burn_pokt)
-from .Node import (unjail_node)
 from .Service import (service_join, service_leave)
 
 boundary_actions = {
