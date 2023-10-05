@@ -1,7 +1,8 @@
 from .Servicer import (servicer_stake_policy, set_servicer_parameters_policy, servicer_unpause_policy,
                        servicer_pause_policy, assign_servicer_salary_policy,
                        servicer_relay_policy, servicer_stake_burn_policy, servicer_unstake_policy,
-                       return_servicer_stake_policy, burn_per_relay_policy, jail_node_policy)
+                       return_servicer_stake_policy, burn_per_relay_policy, jail_node_policy,
+                       unjail_node_policy)
 from .Application import (application_stake_policy, set_application_parameters_policy,
                           application_delegate_to_portal_policy, application_unstake_policy,
                           submit_relay_request_policy, application_undelegate_to_portal_policy,
@@ -47,5 +48,6 @@ policies = {
     "Burn Per Session Policy": burn_per_session_policy,
     "Burn Per Relay Policy": burn_per_relay_policy,
     "Distribute Fees Policy": distribute_fees_policy,
-    "Jail Node Policy": jail_node_policy
+    "Jail Node Policy": jail_node_policy,
+    "Unjail Node Policy": unjail_node_policy
 }
