@@ -127,3 +127,13 @@ return_servicer_stake_policy = {
     "domain": [return_servicer_stake_space],
     "codomain": [servicer_stake_status_space, modify_servicer_pokt_space, modify_servicer_pokt_space],
     "parameters_used": ["servicer_unbounding_period"]}
+
+
+burn_per_relay_policy = {
+    "name": "Burn Per Relay Policy",
+    "description": "The policy for determining the amount to be burned per relay. At current time there will be 0 burn but this may change in the future to move towards deflation.",
+    "constraints": [],
+    "policy_options": [],
+    "domain": [servicer_relay_space],
+    "codomain": [burn_pokt_mechanism_space, modify_application_pokt_space],
+    "parameters_used": ["app_burn_per_session"]}

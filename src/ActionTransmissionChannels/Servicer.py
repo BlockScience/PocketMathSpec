@@ -120,3 +120,10 @@ servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
                                         "target": "Remove Session",
                                         "space": servicer_relay_space,
                                         "optional": True})
+
+servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
+                                        "target": "Burn Per Relay Policy",
+                                        "space": servicer_relay_space,
+                                        "optional": False})
+
+
