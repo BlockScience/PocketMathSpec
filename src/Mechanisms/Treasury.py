@@ -1,4 +1,4 @@
-from ..Spaces import mint_pokt_mechanism_space, burn_pokt_mechanism_space, increase_relay_fees_space
+from ..Spaces import mint_pokt_mechanism_space, burn_pokt_mechanism_space, increase_relay_fees_space, decrease_relay_fees_space
 
 
 mint_pokt_mechanism = {"name": "Mint POKT Mechanism",
@@ -22,5 +22,9 @@ increase_relay_fees = {"name": "Increase Relay Fees",
                            "domain": [increase_relay_fees_space],
                            "parameters_used": []}
 
-
-
+decrease_relay_fees = {"name": "Decrease Relay Fees",
+                           "description": "The mechanism which disburses the relay fees collected by the treasury",
+                           "constraints": [],
+                           "logic": "The treasury's relay fees decreases by the POKT amount",
+                           "domain": [decrease_relay_fees_space],
+                           "parameters_used": []}

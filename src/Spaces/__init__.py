@@ -12,7 +12,8 @@ from .Validator import (validator_stake_space, modify_validator_pokt_space, vali
 from .Portal import (portal_registration_space, portal_unregistration_space, portal_relay_request_space,
                      modify_portal_pokt_space, portal_stake_status_space, return_portal_stake_space)
 from .Treasury import (mint_block_rewards_space, burn_pokt_space, jail_node_space, mint_pokt_mechanism_space,
-                       burn_pokt_mechanism_space, increase_relay_fees_space, distribute_fees_space)
+                       burn_pokt_mechanism_space, increase_relay_fees_space, distribute_fees_space,
+                       decrease_relay_fees_space)
 from .Node import unjail_node_space
 from .Service import service_join_space, service_leave_space
 from .DAO import (dao_block_reward_space, modify_dao_pokt_space)
@@ -64,7 +65,8 @@ spaces = {"Servicer Stake Space": servicer_stake_space,
           "Portal Stake Status Space": portal_stake_status_space,
           "Return Portal Stake Space": return_portal_stake_space,
           "Increase Relay Fees Space": increase_relay_fees_space,
-          "Distribute Fees Space": distribute_fees_space}
+          "Distribute Fees Space": distribute_fees_space,
+          "Decrease Relay Fees Space": decrease_relay_fees_space}
 
 
 

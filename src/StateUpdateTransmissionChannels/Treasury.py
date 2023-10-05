@@ -14,3 +14,8 @@ treasury_transmission_channels.append({"origin": "Increase Relay Fees",
                                      "entity": "Treasury",
                                      "variable": "Relay Fees",
                                      "optional": False})
+
+treasury_transmission_channels.append({"origin": "Decrease Relay Fees",
+                                     "entity": "Treasury",
+                                     "variable": "Relay Fees",
+                                     "optional": False})

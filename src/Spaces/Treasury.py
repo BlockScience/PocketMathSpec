@@ -17,4 +17,5 @@ jail_node_space = TypedDict("Jail Node Space", {"node_address": PublicKeyType,
                                                 "block_height": BlockHeightType,
                                                 "jailer_address": PublicKeyType})
 
-increase_relay_fees_space =  TypedDict("Increase Relay Fees Space", {"POKT Amount": uPOKTType,})
+increase_relay_fees_space = TypedDict("Increase Relay Fees Space", {"POKT Amount": uPOKTType,})
+decrease_relay_fees_space = TypedDict("Decrease Relay Fees Space", {"POKT Amount": uPOKTType,})
