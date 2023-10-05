@@ -77,4 +77,4 @@ servicer_relay_space = TypedDict("Servicer Relay Space", {"servicers": ServicerG
 servicer_stake_burn_space = TypedDict("Servicer Stake Burn Space", {"address": PublicKeyType,
                                                                     "burn_amount": uPOKTType})
 
-remove_servicer_space = TypedDict("Remove Service Space", {"servicer": ServicerEntityType})
+remove_servicer_space = TypedDict("Remove Servicer Space", {"servicer": ServicerEntityType})

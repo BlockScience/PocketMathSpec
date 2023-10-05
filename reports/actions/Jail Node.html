@@ -289,7 +289,7 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h2>Policies</h2><h3>Jail Node Policy</h3><p>The policy for determining both whether the node in fact should be jailed (any validations to ensure) and as well determine if any amount of stake burning should take place.</p><h4>Preceded By:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Policies</h2><h3>Jail Node Policy</h3><p>The policy for determining both whether the node in fact should be jailed (any validations to ensure) and as well determine if any amount of stake burning should take place.</p><h4>Preceded By:</h4>
 <p>1. Jail Node</p><h4>Domain Spaces:</h4>
 <p>1. Jail Node Space</p><h4>Followed By:</h4>
 <p>1. Servicer Update Pause Height</p><p>2. Modify Servicer Stake</p><p>3. Burn POKT Mechanism</p><h4>Codomain Spaces:</h4>
@@ -300,12 +300,12 @@
 <p>1. Servicer.Pause Height</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The servicer at DOMAIN[0].address has its pause_height variable updated to DOMAIN[0].height</p><h3>Modify Servicer Stake</h3><p>The mechanism to update the stake of a servicer</p><h4>Preceded By:</h4>
-<p>1. Servicer Stake Policy</p><p>2. Return Servicer Stake Policy</p><p>3. Jail Node Policy</p><h4>Domain Spaces:</h4>
+<p>1. Servicer Stake Policy</p><p>2. Return Servicer Stake Policy</p><p>3. Jail Node Policy</p><p>4. Servicer Forced Unstake Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Servicer POKT Space</p><h4>State Updates:</h4>
 <p>1. Servicer.Staked POKT</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The servicer at DOMAIN[0].servicer_address has its stake modified by DOMAIN[0].value</p><h3>Burn POKT Mechanism</h3><p>The mechanism which has the treasury burning POKT</p><h4>Preceded By:</h4>
-<p>1. Burn Per Relay Policy</p><p>2. Jail Node Policy</p><p>3. Burn Per Session Policy</p><p>4. Assign Servicer Salary Policy</p><p>5. Burn POKT Policy</p><h4>Domain Spaces:</h4>
+<p>1. Burn Per Relay Policy</p><p>2. Jail Node Policy</p><p>3. Servicer Forced Unstake Policy</p><p>4. Burn Per Session Policy</p><p>5. Assign Servicer Salary Policy</p><p>6. Burn POKT Policy</p><h4>Domain Spaces:</h4>
 <p>1. Burn POKT Mechanism Space</p><h4>State Updates:</h4>
 <p>1. Treasury.Floating Supply</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
