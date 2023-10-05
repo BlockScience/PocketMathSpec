@@ -4,7 +4,7 @@ from ..Spaces import (mint_block_rewards_space, mint_pokt_mechanism_space, assig
 block_reward_policy_aggregate = {"name": "Block Reward Policy Aggregate",
                         "description": """The aggregate policy for creating the total amount of block reward and also splitting it between different groups.
 
-There are two components that are aggregated here, one for fees and one for general block rewards. Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369""",
+Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369""",
                         "constraints": [],
                         "policy_options": [],
                         "domain": [mint_block_rewards_space],

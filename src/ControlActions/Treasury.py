@@ -1,4 +1,4 @@
-from ..Spaces import mint_block_rewards_space, jail_node_space
+from ..Spaces import mint_block_rewards_space, jail_node_space, distribute_fees_space
 
 mint_block_rewards = {
     "name": "Mint Block Rewards",
@@ -6,6 +6,15 @@ mint_block_rewards = {
     "constraints": [],
     "control_action_options": [],
     "codomain": [mint_block_rewards_space],
+    "parameters_used": [],
+}
+
+distribute_fees = {
+    "name": "Distrube Fees",
+    "description": """The action for distributing fees earned from relays and sessions.""",
+    "constraints": [],
+    "control_action_options": [],
+    "codomain": [distribute_fees_space],
     "parameters_used": [],
 }
 
