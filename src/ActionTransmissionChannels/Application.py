@@ -105,3 +105,7 @@ application_transmission_channels.append({"origin": "Submit Relay Request Policy
                                         "space": submit_relay_request_space,
                                         "optional": True})
 
+application_transmission_channels.append({"origin": "Submit Relay Request Policy",
+                                        "target": "Burn Per Session Policy",
+                                        "space": submit_relay_request_space,
+                                        "optional": False})

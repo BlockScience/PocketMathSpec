@@ -64,7 +64,7 @@ submit_relay_request_policy = {
     "constraints": [],
     "policy_options": [submit_relay_request_policy_option_v1],
     "domain": [submit_relay_request_space],
-    "codomain": [],
+    "codomain": [submit_relay_request_space, submit_relay_request_space],
     "parameters_used": ["session_token_bucket_coefficient"]}
 
 
@@ -84,3 +84,16 @@ return_application_stake_policy = {
     "domain": [return_application_stake_space],
     "codomain": [application_stake_space, modify_application_pokt_space, modify_application_pokt_space],
     "parameters_used": ["application_unstaking_time"]}
+
+
+burn_per_session_policy = {
+    "name": "Burn Per Session Policy",
+    "description": "The policy for determining the amount to be burned for session initiation.",
+    "constraints": [],
+    "policy_options": [],
+    "domain": [submit_relay_request_space],
+    "codomain": [],
+    "parameters_used": []}
+
+
+

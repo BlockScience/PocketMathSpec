@@ -5,7 +5,7 @@ from .Servicer import (servicer_stake_policy, set_servicer_parameters_policy, se
 from .Application import (application_stake_policy, set_application_parameters_policy,
                           application_delegate_to_portal_policy, application_unstake_policy,
                           submit_relay_request_policy, application_undelegate_to_portal_policy,
-                          return_application_stake_policy)
+                          return_application_stake_policy, burn_per_session_policy)
 #from .Validator import validator_stake_policy, set_validator_parameters_policy, validator_unpause_policy, validator_block_reward_policy
 from .Validator import validator_block_reward_policy
 from .Treasury import block_reward_policy_aggregate, burn_pokt_policy
@@ -43,5 +43,6 @@ policies = {
     "Return Servicer Stake Policy": return_servicer_stake_policy,
     "Return Application Stake Policy": return_application_stake_policy,
     "Return Portal Stake Policy": return_portal_stake_policy,
-    "Burn POKT Policy": burn_pokt_policy
+    "Burn POKT Policy": burn_pokt_policy,
+    "Burn Per Session Policy": burn_per_session_policy
 }
