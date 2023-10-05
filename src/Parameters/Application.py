@@ -31,6 +31,11 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "description": "The minimum stake needed for applications.",
                                        "symbol": None,
                                        "domain": None},
+                                       {"variable_type": POKTType,
+                                       "name": "app_burn_per_session",
+                                       "description": "The amount of POKT burned per session initiated. Please note this is outside of the payments for services and serves as a potential parameter to toggle for deflation.",
+                                       "symbol": None,
+                                       "domain": None},
                                        ]}
 
 

@@ -93,7 +93,7 @@ burn_per_session_policy = {
     "policy_options": [],
     "domain": [submit_relay_request_space],
     "codomain": [],
-    "parameters_used": []}
+    "parameters_used": ["app_burn_per_session"]}
 
 
 
