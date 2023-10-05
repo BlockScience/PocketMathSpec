@@ -42,6 +42,8 @@ The tree below is all the components of the current specification.
 │   ├──Global
 │   │   ├──Services
 │   │   ├──Sessions
+│   │   ├──Portals
+│   │   ├──Servicers
 │   ├──Servicer
 │   │   ├──Public key
 │   │   ├──Servicer Salary
@@ -67,6 +69,7 @@ The tree below is all the components of the current specification.
 │   │   ├──Number of Servicers
 │   │   ├──Stake Status
 │   │   ├──Unstaking Height
+│   │   ├──Delegate
 │   ├──Validator
 │   │   ├──Public key
 │   │   ├──POKT Holdings
@@ -76,8 +79,12 @@ The tree below is all the components of the current specification.
 │   │   ├──Stake Status
 │   ├──Portal
 │   │   ├──Stake Status
+│   │   ├──Delegators
+│   │   ├──POKT Holdings
+│   │   ├──Staked POKT
 │   ├──Treasury
 │   │   ├──Floating Supply
+│   │   ├──Relay Fees
 │   ├──Service
 │   │   ├──Name
 │   │   ├──Portal API Prefix
@@ -128,6 +135,13 @@ The tree below is all the components of the current specification.
 │   ├──Servicer Forced Unstake Space
 │   ├──Servicer Stake Status Space
 │   ├──Application Stake Status Space
+│   ├──Modify Portal POKT Space
+│   ├──Portal Stake Status Space
+│   ├──Return Portal Stake Space
+│   ├──Increase Relay Fees Space
+│   ├──Distribute Fees Space
+│   ├──Decrease Relay Fees Space
+│   ├──Remove Servicer Space
 ├──Parameters
 │   ├──Servicer
 │   │   ├──minimum_stake_servicer
@@ -149,12 +163,15 @@ The tree below is all the components of the current specification.
 │   │   ├──application_unstaking_time
 │   │   ├──application_fee_per_relay
 │   │   ├──minimum_application_stake
+│   │   ├──app_burn_per_session
+│   │   ├──app_burn_per_relay
 │   ├──Validator
 │   │   ├──block_proposer_allocation
 │   ├──Portal
 │   │   ├──stake_per_app_delegation
 │   │   ├──portal_fee_per_relay
 │   │   ├──portal_minimum_stake
+│   │   ├──portal_unstaking_time
 │   ├──Session
 │   │   ├──session_block_frequency
 │   │   ├──session_token_bucket_coefficient
@@ -170,6 +187,8 @@ The tree below is all the components of the current specification.
 │   │   ├──gateway_bootstrap_unwind_start
 │   │   ├──gateway_bootstrap_unwind_end
 │   │   ├──transaction_fee
+│   ├──Service
+│   │   ├──supported_services
 ├──Boundary Actions
 │   ├──Servicer Stake
 │   ├──Servicer Pause
@@ -195,6 +214,8 @@ The tree below is all the components of the current specification.
 │   ├──Return Application Stake
 │   ├──Servicer Stake Burn
 │   ├──Servicer Forced Unstake
+│   ├──Return Portal Stake
+│   ├──Distribute Fees
 ├──Policies
 │   ├──Servicer Stake Policy
 │   ├──Set Servicer Parameters Policy
@@ -214,6 +235,20 @@ The tree below is all the components of the current specification.
 │   ├──Servicer Unstake Policy
 │   ├──Application Unstake Policy
 │   ├──Submit Relay Request Policy
+│   ├──Service Join Policy
+│   ├──Service Leave Policy
+│   ├──Application Undelegate to Portal Policy
+│   ├──Portal Unregistration Policy
+│   ├──Return Servicer Stake Policy
+│   ├──Return Application Stake Policy
+│   ├──Return Portal Stake Policy
+│   ├──Burn POKT Policy
+│   ├──Burn Per Session Policy
+│   ├──Burn Per Relay Policy
+│   ├──Distribute Fees Policy
+│   ├──Jail Node Policy
+│   ├──Unjail Node Policy
+│   ├──Servicer Forced Unstake Policy
 ├──Mechanisms
 │   ├──Modify Servicer POKT Holdings
 │   ├──Modify Servicer Stake
@@ -230,4 +265,18 @@ The tree below is all the components of the current specification.
 │   ├──Modify DAO POKT Holdings
 │   ├──Update Servicer Stake Status
 │   ├──Update Application Stake Status
+│   ├──Add New Service
+│   ├──Remove Service
+│   ├──Add Portal Delegator
+│   ├──Update Application Delegate
+│   ├──Remove Portal Delegator
+│   ├──Modify Portal POKT Holdings
+│   ├──Modify Portal Stake
+│   ├──Add New Portal
+│   ├──Update Portal Stake Status
+│   ├──Create New Session
+│   ├──Increase Relay Fees
+│   ├──Remove Session
+│   ├──Decrease Relay Fees
+│   ├──Remove Servicer
 ```
