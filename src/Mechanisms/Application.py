@@ -1,4 +1,5 @@
-from ..Spaces import modify_application_pokt_space, application_param_update_space, application_stake_status_space, application_delegate_to_portal_space
+from ..Spaces import (modify_application_pokt_space, application_param_update_space, application_stake_status_space,
+                      application_delegate_to_portal_space, submit_relay_request_space)
 
 
 modify_application_pokt_holdings = {"name": "Modify Application POKT Holdings",
@@ -37,3 +38,9 @@ update_application_delegate = {"name": "Update Application Delegate",
                            "domain": [application_delegate_to_portal_space],
                            "parameters_used": []}
 
+create_new_session = {"name": "Create New Session",
+                           "description": "The mechanism which creates and adds a new session with which servicers will do relays on.",
+                           "constraints": [],
+                           "logic": "Take DOMAIN[0] and create a new session, then append to the global state.",
+                           "domain": [submit_relay_request_space],
+                           "parameters_used": []}

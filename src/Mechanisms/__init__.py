@@ -3,7 +3,7 @@ from .Servicer import (modify_servicer_pokt_holdings, modify_servicer_stake, upd
                        update_servicer_stake_status)
 from .Application import (modify_application_pokt_holdings, modify_application_stake,
                           update_application_params, update_application_stake_status,
-                          update_application_delegate)
+                          update_application_delegate, create_new_session)
 #from .Validator import modify_validator_pokt_holdings, modify_validator_stake, update_validator_params
 from .Validator import modify_validator_pokt_holdings
 from .Treasury import mint_pokt_mechanism, burn_pokt_mechanism
@@ -37,4 +37,5 @@ mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
 "Modify Portal POKT Holdings": modify_portal_pokt_holdings,
 "Modify Portal Stake": modify_portal_stake,
 "Add New Portal": add_new_portal,
-"Update Portal Stake Status": update_portal_stake_status}
+"Update Portal Stake Status": update_portal_stake_status,
+"Create New Session": create_new_session}
