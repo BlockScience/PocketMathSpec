@@ -10,7 +10,7 @@ mint_block_rewards = {
 }
 
 distribute_fees = {
-    "name": "Distrube Fees",
+    "name": "Distribute Fees",
     "description": """The action for distributing fees earned from relays and sessions.""",
     "constraints": [],
     "control_action_options": [],
