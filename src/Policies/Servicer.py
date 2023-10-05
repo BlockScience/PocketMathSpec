@@ -2,7 +2,8 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space, servicer_pause_space2,
                       assign_servicer_salary_space, modify_servicer_pokt_space, burn_pokt_mechanism_space,
                       servicer_relay_space, servicer_stake_burn_space, servicer_unstake_space,
-                      servicer_stake_status_space, return_servicer_stake_space)
+                      servicer_stake_status_space, return_servicer_stake_space,
+                      modify_portal_pokt_space, modify_application_pokt_space)
 
 servicer_stake_policy = {"name": "Servicer Stake Policy",
                         "description": "Policy which takes care of actions to occur after a servicer attempts to stake",
@@ -91,11 +92,11 @@ func DistributeRewards(Service, geoZone, height):
 
 servicer_relay_policy = {
     "name": "Servicer Relay Policy",
-    "description": "The policy which determines what happens with a servicer relay including the fees.",
+    "description": "The policy which determines what happens with a servicer relay including the fees. The servicer will be awarded their POKT and then either a portal or application will be charged this POKT (depending on the session). As well, it is possible that it is the end of the session in which case the session would be removed from the global state.",
     "constraints": [],
     "policy_options": [],
     "domain": [servicer_relay_space],
-    "codomain": [],
+    "codomain": [modify_servicer_pokt_space, modify_portal_pokt_space, modify_application_pokt_space],
     "parameters_used": ["servicer_bootstrap_unwind_start", "servicer_bootstrap_end", "maturity_relay_cost", "maturity_relay_charge"]}
 
 
