@@ -53,7 +53,9 @@ submit_relay_request_policy_option_v1 = {"name": "Submit Relay Request Policy Op
 
 At the beginning of the session, each Servicer initializes: AppSessionTokens = (AppStakeAmount * SessionTokenBucketCoefficient) / NumServicersPerSession. When one of the Servicers in the session is out of session tokens, the Application can continue to use other Servicers until every they are all exhausted.
 
-The mechanism described above enables future iterations of the protocol where different types of request may vary the required number of AppSessionTokens per request."""
+The mechanism described above enables future iterations of the protocol where different types of request may vary the required number of AppSessionTokens per request.
+
+The selection of servicers is random but assigns higher probability for higher QoS servicers."""
                                  }
 
 submit_relay_request_policy = {
