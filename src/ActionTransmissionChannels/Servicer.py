@@ -141,3 +141,18 @@ servicer_transmission_channels.append({"origin": "Jail Node",
                                         "target": "Jail Node Policy",
                                         "space": jail_node_space,
                                         "optional": False})
+
+
+servicer_transmission_channels.append({"origin": "Jail Node Policy",
+                                        "target": "Servicer Update Pause Height",
+                                        "space": servicer_pause_space2,
+                                        "optional": True})
+servicer_transmission_channels.append({"origin": "Jail Node Policy",
+                                        "target": "Modify Servicer Stake",
+                                        "space": modify_servicer_pokt_space,
+                                        "optional": True})
+
+servicer_transmission_channels.append({"origin": "Jail Node Policy",
+                                        "target": "Burn POKT Mechanism",
+                                        "space": burn_pokt_mechanism_space,
+                                        "optional": True})

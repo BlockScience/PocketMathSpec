@@ -144,5 +144,5 @@ jail_node_policy = {
     "constraints": [],
     "policy_options": [],
     "domain": [jail_node_space],
-    "codomain": [],
+    "codomain": [servicer_pause_space2, modify_servicer_pokt_space, burn_pokt_mechanism_space],
     "parameters_used": []}
