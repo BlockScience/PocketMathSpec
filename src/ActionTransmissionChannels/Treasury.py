@@ -57,3 +57,7 @@ treasury_transmission_channels.append({"origin": "Burn POKT",
                                         "space": burn_pokt_space,
                                         "optional": False})
 
+treasury_transmission_channels.append({"origin": "Burn POKT Policy",
+                                        "target": "Burn POKT Mechanism",
+                                        "space": burn_pokt_mechanism_space,
+                                        "optional": False})
