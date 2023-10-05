@@ -114,4 +114,4 @@ servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
 servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
                                         "target": "Increase Relay Fees",
                                         "space": increase_relay_fees_space,
-                                        "optional": True})
+                                        "optional": False})
