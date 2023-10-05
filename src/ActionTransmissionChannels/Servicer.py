@@ -2,7 +2,7 @@ from ..Spaces import (servicer_stake_space, modify_servicer_pokt_space, servicer
                       servicer_unpause_space, servicer_unpause_space2, servicer_pause_space,
                       servicer_pause_space2, servicer_relay_space, servicer_stake_burn_space,
                       servicer_unstake_space, servicer_stake_status_space, return_servicer_stake_space,
-                      modify_portal_pokt_space, modify_application_pokt_space)
+                      modify_portal_pokt_space, modify_application_pokt_space, increase_relay_fees_space)
 
 servicer_transmission_channels = []
 
@@ -109,4 +109,9 @@ servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
 servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
                                         "target": "Modify Application POKT Holdings",
                                         "space": modify_application_pokt_space,
+                                        "optional": True})
+
+servicer_transmission_channels.append({"origin": "Servicer Relay Policy",
+                                        "target": "Increase Relay Fees",
+                                        "space": increase_relay_fees_space,
                                         "optional": True})

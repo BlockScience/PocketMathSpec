@@ -6,7 +6,7 @@ from .Application import (modify_application_pokt_holdings, modify_application_s
                           update_application_delegate, create_new_session)
 #from .Validator import modify_validator_pokt_holdings, modify_validator_stake, update_validator_params
 from .Validator import modify_validator_pokt_holdings
-from .Treasury import mint_pokt_mechanism, burn_pokt_mechanism
+from .Treasury import mint_pokt_mechanism, burn_pokt_mechanism, increase_relay_fees
 from .DAO import (modify_dao_pokt_holdings)
 from .Service import (add_new_service, remove_service)
 from .Portal import (add_portal_delegator, remove_portal_delegator, modify_portal_pokt_holdings, modify_portal_stake,
@@ -38,4 +38,5 @@ mechanism = {"Modify Servicer POKT Holdings": modify_servicer_pokt_holdings,
 "Modify Portal Stake": modify_portal_stake,
 "Add New Portal": add_new_portal,
 "Update Portal Stake Status": update_portal_stake_status,
-"Create New Session": create_new_session}
+"Create New Session": create_new_session,
+"Increase Relay Fees": increase_relay_fees}
