@@ -24,7 +24,7 @@ If a Service Node stake falls below the minimum amount through serving incorrect
     "codomain": [servicer_stake_burn_space],
     "parameters_used": [],}
 
-servicer_forced_unstake = {"name": "Servicer Stake Burn",
+servicer_forced_unstake = {"name": "Servicer Forced Unstake",
     "description": """After reaching MaxJailedBlocks, a servicer will be force unstaked which will result in a node’s entire stake being slashed.""",
     "constraints": [],
     "control_action_options": [],
