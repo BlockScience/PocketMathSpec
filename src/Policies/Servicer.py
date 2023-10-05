@@ -97,7 +97,7 @@ servicer_relay_policy = {
     "constraints": [],
     "policy_options": [],
     "domain": [servicer_relay_space],
-    "codomain": [modify_servicer_pokt_space, modify_portal_pokt_space, modify_application_pokt_space, increase_relay_fees_space, servicer_relay_space],
+    "codomain": [modify_servicer_pokt_space, modify_portal_pokt_space, modify_application_pokt_space, increase_relay_fees_space, servicer_relay_space, servicer_relay_space],
     "parameters_used": ["servicer_bootstrap_unwind_start", "servicer_bootstrap_end", "maturity_relay_cost", "maturity_relay_charge"]}
 
 
@@ -136,4 +136,4 @@ burn_per_relay_policy = {
     "policy_options": [],
     "domain": [servicer_relay_space],
     "codomain": [burn_pokt_mechanism_space, modify_application_pokt_space],
-    "parameters_used": ["app_burn_per_session"]}
+    "parameters_used": ["app_burn_per_relay"]}

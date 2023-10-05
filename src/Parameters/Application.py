@@ -36,6 +36,11 @@ application_parameter_set = {"name": "Application Parameter Set",
                                        "description": "The amount of POKT burned per session initiated. Please note this is outside of the payments for services and serves as a potential parameter to toggle for deflation.",
                                        "symbol": None,
                                        "domain": None},
+                                       {"variable_type": POKTType,
+                                       "name": "app_burn_per_relay",
+                                       "description": "The amount of POKT burned per relay. Please note this is outside of the payments for services and serves as a potential parameter to toggle for deflation.",
+                                       "symbol": None,
+                                       "domain": None}
                                        ]}
 
 
