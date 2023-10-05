@@ -1,5 +1,5 @@
 from ..Spaces import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
-                      servicer_unstake_space, servicer_relay_space)
+                      servicer_unstake_space, servicer_relay_space, unjail_node_space)
 
 servicer_stake = {
     "name": "Servicer Stake",
@@ -55,4 +55,14 @@ servicer_relay = {
     "called_by": ["Servicer"],
     "codomain": [servicer_relay_space],
     "parameters_used": [],
+}
+
+unjail_node = {
+    "name": "Unjail Node",
+    "description": "Process of a node submitting to be unjailed.",
+    "constraints": [],
+    "boundary_action_options": [],
+    "called_by": ["Servicer"],
+    "codomain": [unjail_node_space],
+    "parameters_used": ["downtime_jail_duration"],
 }
