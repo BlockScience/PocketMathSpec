@@ -4,6 +4,9 @@ from ..Types import (
     SessionType,
     PortalEntityType,
     ServicerEntityType,
+    ApplicationEntityType,
+    DAOEntityType,
+    ValidatorEntityType,
     GeoZoneType,
 )
 
@@ -43,6 +46,27 @@ global_state = {
             "type": List[GeoZoneType],
             "name": "Geozones",
             "description": "Geozones used within the system.",
+            "symbol": None,
+            "domain": None,
+        },
+        {
+            "type": List[ApplicationEntityType],
+            "name": "Applications",
+            "description": "The applications present in the current state.",
+            "symbol": None,
+            "domain": None,
+        },
+        {
+            "type": List[ValidatorEntityType],
+            "name": "Validators",
+            "description": "The validators present in the current state.",
+            "symbol": None,
+            "domain": None,
+        },
+        {
+            "type": DAOEntityType,
+            "name": "DAO",
+            "description": "The DAO which helps with governance of the system.",
             "symbol": None,
             "domain": None,
         },
