@@ -30,7 +30,7 @@ The tree below is all the components of the current specification.
 ```
 ├──Entities
 │   ├──Servicer
-│   ├──Fisherman
+│   ├──Watcher
 │   ├──Application
 │   ├──Validator
 │   ├──Portal
@@ -58,7 +58,7 @@ The tree below is all the components of the current specification.
 │   │   ├──Pause Height
 │   │   ├──Stake Status
 │   │   ├──Unstaking Height
-│   ├──Fisherman
+│   ├──Watcher
 │   │   ├──Stake Status
 │   ├──Application
 │   │   ├──Public key
