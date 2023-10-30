@@ -561,17 +561,17 @@
 
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-478 244.48,-478 244.48,4 -4,4"/>
 
-<!-- Fisherman -->
+<!-- Watcher -->
 
 <g id="node1" class="node">
 
-<title>Fisherman</title>
+<title>Watcher</title>
 
-<path fill="none" stroke="black" d="M114.24,-470.73C114.24,-472.53 97.21,-474 76.24,-474 55.27,-474 38.24,-472.53 38.24,-470.73 38.24,-470.73 38.24,-441.27 38.24,-441.27 38.24,-439.47 55.27,-438 76.24,-438 97.21,-438 114.24,-439.47 114.24,-441.27 114.24,-441.27 114.24,-470.73 114.24,-470.73"/>
+<path fill="none" stroke="black" d="M111.74,-470.73C111.74,-472.53 97.62,-474 80.24,-474 62.86,-474 48.74,-472.53 48.74,-470.73 48.74,-470.73 48.74,-441.27 48.74,-441.27 48.74,-439.47 62.86,-438 80.24,-438 97.62,-438 111.74,-439.47 111.74,-441.27 111.74,-441.27 111.74,-470.73 111.74,-470.73"/>
 
-<path fill="none" stroke="black" d="M114.24,-470.73C114.24,-468.92 97.21,-467.45 76.24,-467.45 55.27,-467.45 38.24,-468.92 38.24,-470.73"/>
+<path fill="none" stroke="black" d="M111.74,-470.73C111.74,-468.92 97.62,-467.45 80.24,-467.45 62.86,-467.45 48.74,-468.92 48.74,-470.73"/>
 
-<text text-anchor="middle" x="76.24" y="-452.3" font-family="Times,serif" font-size="14.00">Fisherman</text>
+<text text-anchor="middle" x="80.24" y="-452.3" font-family="Times,serif" font-size="14.00">Watcher</text>
 
 </g>
 
@@ -587,15 +587,15 @@
 
 </g>
 
-<!-- Fisherman&#45;&gt;Servicer Pause -->
+<!-- Watcher&#45;&gt;Servicer Pause -->
 
 <g id="edge2" class="edge">
 
-<title>Fisherman&#45;&gt;Servicer Pause</title>
+<title>Watcher&#45;&gt;Servicer Pause</title>
 
-<path fill="none" stroke="black" d="M86.89,-437.81C92.42,-428.89 99.27,-417.84 105.32,-408.08"/>
+<path fill="none" stroke="black" d="M89.92,-437.81C94.9,-428.98 101.05,-418.06 106.51,-408.38"/>
 
-<polygon fill="black" stroke="black" points="108.29,-409.92 110.59,-399.58 102.34,-406.23 108.29,-409.92"/>
+<polygon fill="black" stroke="black" points="109.61,-410.01 111.46,-399.58 103.51,-406.57 109.61,-410.01"/>
 
 </g>
 
@@ -605,11 +605,11 @@
 
 <title>Servicer</title>
 
-<path fill="none" stroke="black" d="M195.74,-470.73C195.74,-472.53 181.62,-474 164.24,-474 146.86,-474 132.74,-472.53 132.74,-470.73 132.74,-470.73 132.74,-441.27 132.74,-441.27 132.74,-439.47 146.86,-438 164.24,-438 181.62,-438 195.74,-439.47 195.74,-441.27 195.74,-441.27 195.74,-470.73 195.74,-470.73"/>
+<path fill="none" stroke="black" d="M192.74,-470.73C192.74,-472.53 178.62,-474 161.24,-474 143.86,-474 129.74,-472.53 129.74,-470.73 129.74,-470.73 129.74,-441.27 129.74,-441.27 129.74,-439.47 143.86,-438 161.24,-438 178.62,-438 192.74,-439.47 192.74,-441.27 192.74,-441.27 192.74,-470.73 192.74,-470.73"/>
 
-<path fill="none" stroke="black" d="M195.74,-470.73C195.74,-468.92 181.62,-467.45 164.24,-467.45 146.86,-467.45 132.74,-468.92 132.74,-470.73"/>
+<path fill="none" stroke="black" d="M192.74,-470.73C192.74,-468.92 178.62,-467.45 161.24,-467.45 143.86,-467.45 129.74,-468.92 129.74,-470.73"/>
 
-<text text-anchor="middle" x="164.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
+<text text-anchor="middle" x="161.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
 
 </g>
 
@@ -619,9 +619,9 @@
 
 <title>Servicer&#45;&gt;Servicer Pause</title>
 
-<path fill="none" stroke="black" d="M153.59,-437.81C148.06,-428.89 141.21,-417.84 135.16,-408.08"/>
+<path fill="none" stroke="black" d="M151.31,-437.81C146.21,-428.98 139.91,-418.06 134.32,-408.38"/>
 
-<polygon fill="black" stroke="black" points="138.13,-406.23 129.89,-399.58 132.18,-409.92 138.13,-406.23"/>
+<polygon fill="black" stroke="black" points="137.27,-406.49 129.23,-399.58 131.2,-409.99 137.27,-406.49"/>
 
 </g>
 
@@ -7151,7 +7151,7 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer. A ReportCard can be viewed as a rolling average of the Servicer's performance, where TestScores are removed when either TestScoreExpiration is passed or the TestScore FIFO queue exceeds MaxTestScores.</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Services</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Service]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr><tr><td>Unstaking Height</td><td>The height for which a servicer has begun unstaking at or none to represent no unstaking</td><td>Block Height</td><td></td><td></td></tr></table><h4>Fisherman State</h4><table>
+      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer. A ReportCard can be viewed as a rolling average of the Servicer's performance, where TestScores are removed when either TestScoreExpiration is passed or the TestScore FIFO queue exceeds MaxTestScores.</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Services</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Service]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr><tr><td>Unstaking Height</td><td>The height for which a servicer has begun unstaking at or none to represent no unstaking</td><td>Block Height</td><td></td><td></td></tr></table><h4>Watcher State</h4><table>
       <tr>
         <th>Name</th>
         <th>Description</th>
@@ -7196,7 +7196,7 @@
       </tr><tr><td>POKT Holdings</td><td>The holdings of the DAO in uPOKT</td><td>uPOKT</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Unpause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>service: Service,<br/>height: Block Height}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>operator_public_key: Public Key}</p><h3>Servicer Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Application Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Servicer Unpause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address,<br/>block_height: Block Height}</p><h3>Modify Application POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Application Param Update Space</h3><p>{public_key: Public Key,<br/>services: List[Service],<br/>geo_zone: GeoZone,<br/>number_servicers: int}</p><h3>Application Unstake Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>signer: Address}</p><h3>Application Delegate to Portal Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Validator Stake Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL,<br/>operator_public_key: Public Key}</p><h3>Modify Validator POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Validator Param Update Space</h3><p>{public_key: Public Key,<br/>service_url: Service URL,<br/>operator_public_key: Public Key}</p><h3>Portal Registration Space</h3><p>{public_key: Public Key,<br/>stake_amount: uPOKT,<br/>service_url: Service URL}</p><h3>Portal Unregistration Space</h3><p>{public_key: Public Key}</p><h3>Application Undelegation Space</h3><p>{application_public_key: Public Key,<br/>portal_public_key: Public Key}</p><h3>Validator Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Validator Stake Burning Space</h3><p>{}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h3>Submit Relay Request Space</h3><p>{payload: dict,<br/>meta: dict,<br/>proof: dict,<br/>application_address: Public Key}</p><h3>Servicer Relay Space</h3><p>{servicers: Servicer Group,<br/>applications: Application Entity,<br/>session: Session}</p><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Burn POKT Space</h3><p>{burn_amount: uPOKT,<br/>block_height: Block Height}</p><h3>Jail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height,<br/>jailer_address: Public Key}</p><h3>Unjail Node Space</h3><p>{node_address: Public Key,<br/>block_height: Block Height}</p><h3>Return Servicer Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Service Join Space</h3><p>{name: str,<br/>portal_api_prefix: str,<br/>service_id: str}</p><h3>Service Leave Space</h3><p>{service_id: str}</p><h3>Return Application Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Block Reward Space</h3><p>{public_key: Public Key,<br/>number_of_relays: int,<br/>usage_to_reward_coeffecient: float}</p><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>DAO Block Reward Space</h3><p>{}</p><h3>Modify DAO POKT Space</h3><p>{}</p><h3>Portal Relay Request Space</h3><p>{payload: dict,<br/>meta: dict,<br/>proof: dict,<br/>application_address: Public Key,<br/>portal_address: Public Key}</p><h3>Servicer Stake Burn Space</h3><p>{address: Public Key,<br/>burn_amount: uPOKT}</p><h3>Servicer Forced Unstake Space</h3><p>{public_key: Public Key}</p><h3>Servicer Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h3>Application Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h3>Modify Portal POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h3>Return Portal Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Increase Relay Fees Space</h3><p>{POKT Amount: uPOKT}</p><h3>Distribute Fees Space</h3><p>{current_height: Block Height}</p><h3>Decrease Relay Fees Space</h3><p>{POKT Amount: uPOKT}</p><h3>Remove Servicer Space</h3><p>{servicer: Servicer Entity}</p><h2>Behavioral Action Space</h2><h3>Servicer Stake</h3><p>In order to participate as a Servicer in Pocket Network, each actor is required to bond a certain amount of tokens in escrow while they are providing Web3 access. These tokens may be burnt or removed from the actor as a result of breaking the Protocol’s Service Level Agreement, a DAO defined set of requirements for the minimum quality of service.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
 <h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
-<p>1. Servicer</p><p>2. Fisherman</p><h4>Constraints:</h4>
+<p>1. Servicer</p><p>2. Watcher</p><h4>Constraints:</h4>
 <h3>Servicer Unpause</h3><p>When a Servicer is paused, they are able resume service by submitting an `UnpauseMsg` after the `MinPauseTime` has elapsed. After a `UnpauseMsg` is validated and the World State is updated, the Servicer is eligible to continue providing Web3 service to Applications, and receive rewards.</p><h4>Called By:</h4>
 <p>1. Servicer</p><h4>Constraints:</h4>
 <h3>Servicer Unstake</h3><p>The action of unstaking from the network for a servicer</p><h4>Called By:</h4>
@@ -7239,7 +7239,7 @@ More logic can be found here: https://github.com/pokt-network/pocket-network-pro
 A Servicer's stake can be burnt in two situations:
 
 1. A Servicer receives a TestScore below the TestScoreBurnThreshold
-2. A Fisherman initiates a PauseMsg with the required evidence
+2. A Watcher initiates a PauseMsg with the required evidence
 
 If a Service Node stake falls below the minimum amount through serving incorrect data or incorrect block validation, 20% of the minimum stake for that Service Node will be slashed and jailed. If a Service Node submits a fraudulent Relay batch, 100% of their stake will be slashed.</p><h4>Constraints:</h4>
 <h3>Servicer Forced Unstake</h3><p>After reaching MaxJailedBlocks, a servicer will be force unstaked which will result in a node’s entire stake being slashed.</p><h4>Constraints:</h4>

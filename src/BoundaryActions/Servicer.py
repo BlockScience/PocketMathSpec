@@ -1,5 +1,11 @@
-from ..Spaces import (servicer_stake_space, servicer_pause_space, servicer_unpause_space,
-                      servicer_unstake_space, servicer_relay_space, unjail_node_space)
+from ..Spaces import (
+    servicer_stake_space,
+    servicer_pause_space,
+    servicer_unpause_space,
+    servicer_unstake_space,
+    servicer_relay_space,
+    unjail_node_space,
+)
 
 servicer_stake = {
     "name": "Servicer Stake",
@@ -26,7 +32,7 @@ servicer_pause = {
     "description": "Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.",
     "constraints": [],
     "boundary_action_options": [],
-    "called_by": ["Servicer", "Fisherman"],
+    "called_by": ["Servicer", "Watcher"],
     "codomain": [servicer_pause_space],
     "parameters_used": [],
 }
@@ -41,11 +47,13 @@ servicer_unpause = {
     "parameters_used": [],
 }
 
-servicer_relay_v1_option = {"name": "Servicer Relay V1",
-                                 "description": "Version 1 of selection policy for servicers to be using with relay.",
-                                 "logic": """The Servicer(s) that are paired to service an Application in a Session are equally distributed among all of the Servicers in the network.
+servicer_relay_v1_option = {
+    "name": "Servicer Relay V1",
+    "description": "Version 1 of selection policy for servicers to be using with relay.",
+    "logic": """The Servicer(s) that are paired to service an Application in a Session are equally distributed among all of the Servicers in the network.
 More logic can be found here: https://github.com/pokt-network/pocket-network-protocol/blob/main/utility/README.md#311-actor-selection-dispatch
-"""}
+""",
+}
 
 servicer_relay = {
     "name": "Servicer Relay",
