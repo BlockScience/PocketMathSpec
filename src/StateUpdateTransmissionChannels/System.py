@@ -30,7 +30,7 @@ system_transmission_channels.append(
 system_transmission_channels.append(
     {
         "origin": "Decrease Relay Fees",
-        "entity": "Treasury",
+        "entity": "Global",
         "variable": "Relay Fees",
         "optional": False,
     }

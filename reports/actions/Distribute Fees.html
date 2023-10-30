@@ -148,23 +148,23 @@
 
 </g>
 
-<!-- Treasury.Relay Fees -->
+<!-- Global.Relay Fees -->
 
 <g id="node9" class="node">
 
-<title>Treasury.Relay Fees</title>
+<title>Global.Relay Fees</title>
 
-<ellipse fill="none" stroke="black" cx="86.44" cy="-91" rx="84.49" ry="18"/>
+<ellipse fill="none" stroke="black" cx="86.44" cy="-91" rx="77.99" ry="18"/>
 
-<text text-anchor="middle" x="86.44" y="-87.3" font-family="Times,serif" font-size="14.00">Treasury.Relay Fees</text>
+<text text-anchor="middle" x="86.44" y="-87.3" font-family="Times,serif" font-size="14.00">Global.Relay Fees</text>
 
 </g>
 
-<!-- Decrease Relay Fees&#45;&gt;Treasury.Relay Fees -->
+<!-- Decrease Relay Fees&#45;&gt;Global.Relay Fees -->
 
 <g id="edge5" class="edge">
 
-<title>Decrease Relay Fees&#45;&gt;Treasury.Relay Fees</title>
+<title>Decrease Relay Fees&#45;&gt;Global.Relay Fees</title>
 
 <path fill="none" stroke="black" d="M86.44,-145.81C86.44,-137.79 86.44,-128.05 86.44,-119.07"/>
 
@@ -220,17 +220,17 @@
 
 </g>
 
-<!-- Treasury_2 -->
+<!-- Global_2 -->
 
 <g id="node6" class="node">
 
-<title>Treasury_2</title>
+<title>Global_2</title>
 
-<path fill="none" stroke="black" d="M119.44,-32.73C119.44,-34.53 104.65,-36 86.44,-36 68.23,-36 53.44,-34.53 53.44,-32.73 53.44,-32.73 53.44,-3.27 53.44,-3.27 53.44,-1.47 68.23,0 86.44,0 104.65,0 119.44,-1.47 119.44,-3.27 119.44,-3.27 119.44,-32.73 119.44,-32.73"/>
+<path fill="none" stroke="black" d="M113.94,-32.73C113.94,-34.53 101.62,-36 86.44,-36 71.27,-36 58.94,-34.53 58.94,-32.73 58.94,-32.73 58.94,-3.27 58.94,-3.27 58.94,-1.47 71.27,0 86.44,0 101.62,0 113.94,-1.47 113.94,-3.27 113.94,-3.27 113.94,-32.73 113.94,-32.73"/>
 
-<path fill="none" stroke="black" d="M119.44,-32.73C119.44,-30.92 104.65,-29.45 86.44,-29.45 68.23,-29.45 53.44,-30.92 53.44,-32.73"/>
+<path fill="none" stroke="black" d="M113.94,-32.73C113.94,-30.92 101.62,-29.45 86.44,-29.45 71.27,-29.45 58.94,-30.92 58.94,-32.73"/>
 
-<text text-anchor="middle" x="86.44" y="-14.3" font-family="Times,serif" font-size="14.00">Treasury</text>
+<text text-anchor="middle" x="86.44" y="-14.3" font-family="Times,serif" font-size="14.00">Global</text>
 
 </g>
 
@@ -262,11 +262,11 @@
 
 </g>
 
-<!-- Treasury.Relay Fees&#45;&gt;Treasury_2 -->
+<!-- Global.Relay Fees&#45;&gt;Global_2 -->
 
 <g id="edge8" class="edge">
 
-<title>Treasury.Relay Fees&#45;&gt;Treasury_2</title>
+<title>Global.Relay Fees&#45;&gt;Global_2</title>
 
 <path fill="none" stroke="black" d="M86.44,-72.81C86.44,-64.79 86.44,-55.05 86.44,-46.07"/>
 
@@ -309,12 +309,12 @@ For a more detailed version of the policy, one can look here: https://docs.googl
 <p>1. Distribute Fees Space</p><h4>Followed By:</h4>
 <p>1. Decrease Relay Fees</p><p>2. Modify Validator POKT Holdings</p><p>3. Modify DAO POKT Holdings</p><h4>Codomain Spaces:</h4>
 <p>1. Decrease Relay Fees Space</p><p>2. Modify Validator POKT Space</p><p>3. Modify DAO POKT Space</p><h4>Constraints:</h4>
-<h2>Mechanisms</h2><h3>Decrease Relay Fees</h3><p>The mechanism which disburses the relay fees collected by the treasury</p><h4>Preceded By:</h4>
+<h2>Mechanisms</h2><h3>Decrease Relay Fees</h3><p>The mechanism which disburses the relay fees collected</p><h4>Preceded By:</h4>
 <p>1. Distribute Fees Policy</p><h4>Domain Spaces:</h4>
 <p>1. Decrease Relay Fees Space</p><h4>State Updates:</h4>
-<p>1. Treasury.Relay Fees</p><h4>Constraints:</h4>
+<p>1. Global.Relay Fees</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
-<p>The treasury's relay fees decreases by the POKT amount</p><h3>Modify Validator POKT Holdings</h3><p>The mechanism to update the personal holdings of a validator</p><h4>Preceded By:</h4>
+<p>The relay fees decrease by the POKT amount</p><h3>Modify Validator POKT Holdings</h3><p>The mechanism to update the personal holdings of a validator</p><h4>Preceded By:</h4>
 <p>1. Validator Block Reward Policy</p><p>2. Distribute Fees Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Validator POKT Space</p><h4>State Updates:</h4>
 <p>1. Validator.POKT Holdings</p><h4>Constraints:</h4>
