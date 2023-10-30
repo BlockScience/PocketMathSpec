@@ -8,6 +8,7 @@ from ..Types import (
     DAOEntityType,
     ValidatorEntityType,
     GeoZoneType,
+    uPOKTType,
 )
 
 global_state = {
@@ -67,6 +68,20 @@ global_state = {
             "type": DAOEntityType,
             "name": "DAO",
             "description": "The DAO which helps with governance of the system.",
+            "symbol": None,
+            "domain": None,
+        },
+        {
+            "type": uPOKTType,
+            "name": "Floating Supply",
+            "description": "The amount of floating supply in the ecosystem",
+            "symbol": None,
+            "domain": None,
+        },
+        {
+            "type": uPOKTType,
+            "name": "Relay Fees",
+            "description": "The amount of fees custodied but not yet disbursed.",
             "symbol": None,
             "domain": None,
         },

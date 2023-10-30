@@ -1,7 +1,7 @@
 from .Servicer import servicer_transmission_channels
 from .Application import application_transmission_channels
 from .Validator import validator_transmission_channels
-from .Treasury import treasury_transmission_channels
+from .System import system_transmission_channels
 from .DAO import dao_transmission_channels
 from .Service import service_transmission_channels
 from .Portal import portal_transmission_channels
@@ -10,8 +10,7 @@ state_update_transmission_channels = []
 state_update_transmission_channels.extend(servicer_transmission_channels)
 state_update_transmission_channels.extend(application_transmission_channels)
 state_update_transmission_channels.extend(validator_transmission_channels)
-state_update_transmission_channels.extend(treasury_transmission_channels)
+state_update_transmission_channels.extend(system_transmission_channels)
 state_update_transmission_channels.extend(dao_transmission_channels)
 state_update_transmission_channels.extend(service_transmission_channels)
 state_update_transmission_channels.extend(portal_transmission_channels)
-
