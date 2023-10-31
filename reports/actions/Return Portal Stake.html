@@ -277,7 +277,7 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Return Portal Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Modify Portal POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Return Portal Stake</h3><p>After unstaking, the original stake (i.e. deposit) is returned to the Portal's custodial account after an unbounding period has elapsed.</p><h4>Constraints:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Modify Portal POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h3>Return Portal Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Return Portal Stake</h3><p>After unstaking, the original stake (i.e. deposit) is returned to the Portal's custodial account after an unbounding period has elapsed.</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Return Portal Stake Policy</h3><p>The policy which determines when a portal can have their stake returned.</p><h4>Preceded By:</h4>
 <p>1. Return Portal Stake</p><h4>Domain Spaces:</h4>
 <p>1. Return Portal Stake Space</p><h4>Followed By:</h4>
@@ -289,12 +289,12 @@
 <p>1. Portal.Stake Status</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The portal at DOMAIN[0].portal_address has its stake status updated to DOMAIN[0].status</p><h3>Modify Portal POKT Holdings</h3><p>The mechanism to update the personal holdings of a portal</p><h4>Preceded By:</h4>
-<p>1. Servicer Relay Policy</p><p>2. Portal Registration Policy</p><p>3. Return Portal Stake Policy</p><h4>Domain Spaces:</h4>
+<p>1. Portal Registration Policy</p><p>2. Return Portal Stake Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Portal POKT Space</p><h4>State Updates:</h4>
 <p>1. Portal.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The portal at DOMAIN[0].portal_address has its POKT Holdings modified by DOMAIN[0].value</p><h3>Modify Portal Stake</h3><p>The mechanism to update the stake of a portal</p><h4>Preceded By:</h4>
-<p>1. Portal Registration Policy</p><p>2. Return Portal Stake Policy</p><h4>Domain Spaces:</h4>
+<p>1. Servicer Relay Policy</p><p>2. Portal Registration Policy</p><p>3. Return Portal Stake Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Portal POKT Space</p><h4>State Updates:</h4>
 <p>1. Portal.Staked POKT</p><h4>Constraints:</h4>
 <h4>Logic:</h4>

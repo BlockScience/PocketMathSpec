@@ -20,17 +20,17 @@
 
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-478 244.48,-478 244.48,4 -4,4"/>
 
-<!-- Watcher -->
+<!-- Servicer -->
 
 <g id="node1" class="node">
 
-<title>Watcher</title>
+<title>Servicer</title>
 
 <path fill="none" stroke="black" d="M111.74,-470.73C111.74,-472.53 97.62,-474 80.24,-474 62.86,-474 48.74,-472.53 48.74,-470.73 48.74,-470.73 48.74,-441.27 48.74,-441.27 48.74,-439.47 62.86,-438 80.24,-438 97.62,-438 111.74,-439.47 111.74,-441.27 111.74,-441.27 111.74,-470.73 111.74,-470.73"/>
 
 <path fill="none" stroke="black" d="M111.74,-470.73C111.74,-468.92 97.62,-467.45 80.24,-467.45 62.86,-467.45 48.74,-468.92 48.74,-470.73"/>
 
-<text text-anchor="middle" x="80.24" y="-452.3" font-family="Times,serif" font-size="14.00">Watcher</text>
+<text text-anchor="middle" x="80.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
 
 </g>
 
@@ -46,11 +46,11 @@
 
 </g>
 
-<!-- Watcher&#45;&gt;Servicer Pause -->
+<!-- Servicer&#45;&gt;Servicer Pause -->
 
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 
-<title>Watcher&#45;&gt;Servicer Pause</title>
+<title>Servicer&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M89.92,-437.81C94.9,-428.98 101.05,-418.06 106.51,-408.38"/>
 
@@ -58,25 +58,25 @@
 
 </g>
 
-<!-- Servicer -->
+<!-- Watcher -->
 
 <g id="node2" class="node">
 
-<title>Servicer</title>
+<title>Watcher</title>
 
 <path fill="none" stroke="black" d="M192.74,-470.73C192.74,-472.53 178.62,-474 161.24,-474 143.86,-474 129.74,-472.53 129.74,-470.73 129.74,-470.73 129.74,-441.27 129.74,-441.27 129.74,-439.47 143.86,-438 161.24,-438 178.62,-438 192.74,-439.47 192.74,-441.27 192.74,-441.27 192.74,-470.73 192.74,-470.73"/>
 
 <path fill="none" stroke="black" d="M192.74,-470.73C192.74,-468.92 178.62,-467.45 161.24,-467.45 143.86,-467.45 129.74,-468.92 129.74,-470.73"/>
 
-<text text-anchor="middle" x="161.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
+<text text-anchor="middle" x="161.24" y="-452.3" font-family="Times,serif" font-size="14.00">Watcher</text>
 
 </g>
 
-<!-- Servicer&#45;&gt;Servicer Pause -->
+<!-- Watcher&#45;&gt;Servicer Pause -->
 
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 
-<title>Servicer&#45;&gt;Servicer Pause</title>
+<title>Watcher&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M151.31,-437.81C146.21,-428.98 139.91,-418.06 134.32,-408.38"/>
 
@@ -209,7 +209,7 @@
         <th>Type</th>
         <th>Symbol</th>
         <th>Domain</th>
-      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer. A ReportCard can be viewed as a rolling average of the Servicer's performance, where TestScores are removed when either TestScoreExpiration is passed or the TestScore FIFO queue exceeds MaxTestScores.</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Services</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Service]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr><tr><td>Unstaking Height</td><td>The height for which a servicer has begun unstaking at or none to represent no unstaking</td><td>Block Height</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
+      </tr><tr><td>Public key</td><td>The identifier of the node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Servicer Salary</td><td>A ServicerSalary is assigned to each individual Servicer based on their specific ReportCard, and is distributed every SalaryBlockFrequency</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Report Card</td><td>The report card used when determing salary for a servicer. A ReportCard can be viewed as a rolling average of the Servicer's performance, where TestScores are removed when either TestScoreExpiration is passed or the TestScore FIFO queue exceeds MaxTestScores.</td><td>Service Report Card</td><td></td><td></td></tr><tr><td>Test Scores</td><td>The QoS test scores</td><td>Service Test Scores</td><td></td><td></td></tr><tr><td>POKT Holdings</td><td>The personal holdings of the servicer in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Staked POKT</td><td>The amount that is staked by the servicer currently in uPOKT</td><td>uPOKT</td><td></td><td></td></tr><tr><td>Service URL</td><td>The API endpoint where the Web3 service is provided</td><td>Service URL</td><td></td><td></td></tr><tr><td>Services</td><td>The flavor(s) of Web3 hosted by this Servicer</td><td>List[Service]</td><td></td><td></td></tr><tr><td>GeoZone</td><td>The physical geo-location identifier this Servicer registered in. There is no formal requirement or validation (e.g. IP verification) for an actor to be physically located in the GeoZone it registers in. However, crypto-economic incentives drive actors to be registered close to where they are physically located to receive and provide the best service possible. The number of GeoZones an actor can stake for is limited to one to incentivize real geographic distribution.</td><td>GeoZone</td><td></td><td></td></tr><tr><td>Operator Public Key</td><td>OPTIONAL; The non-custodial pubKey operating this node</td><td>Public Key</td><td></td><td></td></tr><tr><td>Pause Height</td><td>The height for which a servicer has been paused at</td><td>Block Height</td><td></td><td></td></tr><tr><td>Stake Status</td><td>The status of staking for the actor</td><td>StakeStatusType</td><td></td><td></td></tr><tr><td>Unstaking Height</td><td>The height for which a servicer has begun unstaking at or none to represent no unstaking</td><td>Block Height</td><td></td><td></td></tr></table><h2>Spaces</h2><h3>Servicer Pause Space 2</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h3>Servicer Pause Space</h3><p>{actor_type: ActorType,<br/>address: Address,<br/>caller_address: Address,<br/>signer: Address}</p><h2>Behavioral Action Space</h2><h3>Servicer Pause</h3><p>Servicers are able to gracefully pause their service (e.g. for maintenance reasons) without the need to unstake or face downtime penalization. In addition to an Operator initiated `PauseMsg`, Fishermen are also able to temporarily pause a Servicer if a faulty or malicious process is detected during sampling.</p><h4>Called By:</h4>
 <p>1. Servicer</p><p>2. Watcher</p><h4>Constraints:</h4>
 <h2>Control Action Space</h2><h2>Policies</h2><h3>Servicer Pause Policy</h3><p>The policy which determines if a servicer will be paused. One consideration is whether or not the servicer is already paused currently.</p><h4>Preceded By:</h4>
 <p>1. Servicer Pause</p><h4>Domain Spaces:</h4>
