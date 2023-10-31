@@ -1,14 +1,18 @@
 from ..Types import POKTType, Days, PercentType
 
-validator_parameter_set = {"name": "Validator Parameter Set",
-                       "notes": "",
-                       "parameters": [{"variable_type": PercentType,
-                                       "name": "block_proposer_allocation",
-                                       "description": "The percent allocation of fees charged to portals and applications that goes to the validator.",
-                                       "symbol": None,
-                                       "domain": None
-                                       },
-                                       ]}
+validator_parameter_set = {
+    "name": "Validator Parameter Set",
+    "notes": "",
+    "parameters": [
+        {
+            "variable_type": PercentType,
+            "name": "block_proposer_allocation",
+            "description": "The percent allocation of fees charged to gateways and applications that goes to the validator.",
+            "symbol": None,
+            "domain": None,
+        },
+    ],
+}
 
 """{"variable_type": POKTType,
                                        "name": "minimum_validator_stake",

@@ -16,10 +16,10 @@ from .Servicer import (
 from .Application import (
     application_stake_policy,
     set_application_parameters_policy,
-    application_delegate_to_portal_policy,
+    application_delegate_to_gateway_policy,
     application_unstake_policy,
     submit_relay_request_policy,
-    application_undelegate_to_portal_policy,
+    application_undelegate_to_gateway_policy,
     return_application_stake_policy,
     burn_per_session_policy,
 )
@@ -32,11 +32,11 @@ from .System import (
     distribute_fees_policy,
 )
 from .DAO import dao_block_reward_policy
-from .Portal import (
-    submit_relay_request_portal_policy,
-    portal_registration_policy,
-    portal_unregistration_policy,
-    return_portal_stake_policy,
+from .Gateway import (
+    submit_relay_request_gateway_policy,
+    gateway_registration_policy,
+    gateway_unregistration_policy,
+    return_gateway_stake_policy,
 )
 from .Service import service_join_policy, service_leave_policy
 
@@ -51,24 +51,24 @@ policies = {
     # "Set Validator Parameters Policy": set_validator_parameters_policy,
     # "Validator Unpause Policy": validator_unpause_policy,
     "Assign Servicer Salary Policy": assign_servicer_salary_policy,
-    "Application Delegate to Portal Policy": application_delegate_to_portal_policy,
+    "Application Delegate to Gateway Policy": application_delegate_to_gateway_policy,
     "Block Reward Policy Aggregate": block_reward_policy_aggregate,
     "Validator Block Reward Policy": validator_block_reward_policy,
     "DAO Block Reward Policy": dao_block_reward_policy,
-    "Submit Relay Request (Portal) Policy": submit_relay_request_portal_policy,
+    "Submit Relay Request (Gateway) Policy": submit_relay_request_gateway_policy,
     "Servicer Relay Policy": servicer_relay_policy,
     "Servicer Stake Burn Policy": servicer_stake_burn_policy,
-    "Portal Registration Policy": portal_registration_policy,
+    "Gateway Registration Policy": gateway_registration_policy,
     "Servicer Unstake Policy": servicer_unstake_policy,
     "Application Unstake Policy": application_unstake_policy,
     "Submit Relay Request Policy": submit_relay_request_policy,
     "Service Join Policy": service_join_policy,
     "Service Leave Policy": service_leave_policy,
-    "Application Undelegate to Portal Policy": application_undelegate_to_portal_policy,
-    "Portal Unregistration Policy": portal_unregistration_policy,
+    "Application Undelegate to Gateway Policy": application_undelegate_to_gateway_policy,
+    "Gateway Unregistration Policy": gateway_unregistration_policy,
     "Return Servicer Stake Policy": return_servicer_stake_policy,
     "Return Application Stake Policy": return_application_stake_policy,
-    "Return Portal Stake Policy": return_portal_stake_policy,
+    "Return Gateway Stake Policy": return_gateway_stake_policy,
     "Burn POKT Policy": burn_pokt_policy,
     "Burn Per Session Policy": burn_per_session_policy,
     "Burn Per Relay Policy": burn_per_relay_policy,

@@ -23,7 +23,7 @@ from .Entity import (
     ServicerEntityType,
     ApplicationEntityType,
     ServicerGroupType,
-    PortalEntityType,
+    GatewayEntityType,
     ValidatorEntityType,
     DAOEntityType,
 )

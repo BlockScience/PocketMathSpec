@@ -313,7 +313,7 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Return Servicer Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Return Servicer Stake</h3><p>After unstaking, the original stake (i.e. deposit) is returned to the Servicer's custodial account after ServicerUnbondingPeriod has elapsed.</p><h4>Constraints:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Return Servicer Stake Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Servicer Stake Status Space</h3><p>{address: Public Key,<br/>height: Block Height,<br/>status: StakeStatusType}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Return Servicer Stake</h3><p>After unstaking, the original stake (i.e. deposit) is returned to the Servicer's custodial account after ServicerUnbondingPeriod has elapsed.</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Return Servicer Stake Policy</h3><p>The policy which determines when a servicer can have their stake returned.</p><h4>Preceded By:</h4>
 <p>1. Return Servicer Stake</p><h4>Domain Spaces:</h4>
 <p>1. Return Servicer Stake Space</p><h4>Followed By:</h4>
@@ -325,7 +325,7 @@
 <p>1. Servicer.Stake Status</p><p>2. Servicer.Unstaking Height</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The servicer at DOMAIN[0].address has its unstaking_height variable updated to DOMAIN[0].height which will be none if it is staking. It will also have its stake status set to DOMAIN[0].status.</p><h3>Modify Servicer POKT Holdings</h3><p>The mechanism to update the personal holdings of a servicer</p><h4>Preceded By:</h4>
-<p>1. Servicer Stake Policy</p><p>2. Return Servicer Stake Policy</p><p>3. Assign Servicer Salary Policy</p><h4>Domain Spaces:</h4>
+<p>1. Servicer Stake Policy</p><p>2. Return Servicer Stake Policy</p><p>3. Servicer Forced Unstake Policy</p><p>4. Assign Servicer Salary Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Servicer POKT Space</p><h4>State Updates:</h4>
 <p>1. Servicer.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>

@@ -513,10 +513,17 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>service: Service,<br/>height: Block Height}</p><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Mint Block Rewards</h3><p>The action of the protocol minting block rewards</p><h4>Constraints:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Mint Block Rewards Space</h3><p>{current_height: Block Height,<br/>block_producer: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Mint POKT Mechanism Space</h3><p>{mint_amount: uPOKT}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Assign Servicer Salary Space</h3><p>{geo_zone: GeoZone,<br/>service: Service,<br/>height: Block Height}</p><h3>Validator Block Reward Space</h3><p>{public_key: Public Key,<br/>block_height: Block Height,<br/>reward_amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Mint Block Rewards</h3><p>The action of the protocol minting block rewards</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Block Reward Policy Aggregate</h3><p>The aggregate policy for creating the total amount of block reward and also splitting it between different groups.
 
-Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369</p><h4>Preceded By:</h4>
+Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369.
+
+The burn on the demand-side to pay for access and the distribution of rewards to servicers are kept separate, even if they relate to one another in the aggregate sense when it comes to modelling the supply over time.
+
+Relay Mining will determine probabalistically how much relays each servicer did, and, therefore, who much of the servicer rewards they are entitled to.
+
+The pool of rewards should accumulate over time until drawn down by the servicers submittting a "claim" for their work using the appropriate "proof".
+</p><h4>Preceded By:</h4>
 <p>1. Mint Block Rewards</p><h4>Domain Spaces:</h4>
 <p>1. Mint Block Rewards Space</p><h4>Followed By:</h4>
 <p>1. Mint POKT Mechanism</p><p>2. Assign Servicer Salary Policy</p><p>3. Validator Block Reward Policy</p><p>4. DAO Block Reward Policy</p><h4>Codomain Spaces:</h4>
@@ -573,7 +580,7 @@ func DistributeRewards(Service, geoZone, height):
 <p>1. Global.Floating Supply</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
 <p>The floating supply increases by the POKT amount</p><h3>Modify Servicer POKT Holdings</h3><p>The mechanism to update the personal holdings of a servicer</p><h4>Preceded By:</h4>
-<p>1. Servicer Stake Policy</p><p>2. Return Servicer Stake Policy</p><p>3. Assign Servicer Salary Policy</p><h4>Domain Spaces:</h4>
+<p>1. Servicer Stake Policy</p><p>2. Return Servicer Stake Policy</p><p>3. Servicer Forced Unstake Policy</p><p>4. Assign Servicer Salary Policy</p><h4>Domain Spaces:</h4>
 <p>1. Modify Servicer POKT Space</p><h4>State Updates:</h4>
 <p>1. Servicer.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
@@ -592,4 +599,4 @@ func DistributeRewards(Service, geoZone, height):
 <p>1. Modify DAO POKT Space</p><h4>State Updates:</h4>
 <p>1. DAO.POKT Holdings</p><h4>Constraints:</h4>
 <h4>Logic:</h4>
-<p>The DAO has its holdings increased by the value</p><h2>Parameters</h2><p>gateway_bootstrap_unwind_end</p><p>transaction_fee</p><p>block_proposer_allocation</p><p>maturity_relay_cost</p><p>minimum_report_card_threshold</p><p>max_bootstrap_servicer_cost_per_relay</p><p>gateway_bootstrap_unwind_start</p><p>minimum_test_score_threshold</p><p>servicer_bootstrap_end</p><p>min_bootstrap_gateway_fee_per_relay</p><p>servicer_bootstrap_unwind_start</p><p>relays_to_tokens_multiplier</p><p>maturity_relay_charge</p>
+<p>The DAO has its holdings increased by the value</p><h2>Parameters</h2><p>maturity_relay_charge</p><p>transaction_fee</p><p>servicer_bootstrap_unwind_start</p><p>maturity_relay_cost</p><p>block_proposer_allocation</p><p>minimum_test_score_threshold</p><p>relays_to_tokens_multiplier</p><p>gateway_bootstrap_unwind_start</p><p>min_bootstrap_gateway_fee_per_relay</p><p>minimum_report_card_threshold</p><p>max_bootstrap_servicer_cost_per_relay</p><p>servicer_bootstrap_end</p><p>gateway_bootstrap_unwind_end</p>

@@ -15,7 +15,14 @@ block_reward_policy_aggregate = {
     "name": "Block Reward Policy Aggregate",
     "description": """The aggregate policy for creating the total amount of block reward and also splitting it between different groups.
 
-Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369""",
+Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369.
+
+The burn on the demand-side to pay for access and the distribution of rewards to servicers are kept separate, even if they relate to one another in the aggregate sense when it comes to modelling the supply over time.
+
+Relay Mining will determine probabalistically how much relays each servicer did, and, therefore, who much of the servicer rewards they are entitled to.
+
+The pool of rewards should accumulate over time until drawn down by the servicers submittting a "claim" for their work using the appropriate "proof".
+""",
     "constraints": [],
     "policy_options": [],
     "domain": [mint_block_rewards_space],

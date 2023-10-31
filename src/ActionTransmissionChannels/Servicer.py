@@ -11,7 +11,7 @@ from ..Spaces import (
     servicer_unstake_space,
     servicer_stake_status_space,
     return_servicer_stake_space,
-    modify_portal_pokt_space,
+    modify_gateway_pokt_space,
     modify_application_pokt_space,
     increase_relay_fees_space,
     burn_pokt_mechanism_space,
@@ -187,8 +187,8 @@ servicer_transmission_channels.append(
 servicer_transmission_channels.append(
     {
         "origin": "Servicer Relay Policy",
-        "target": "Modify Portal Stake",
-        "space": modify_portal_pokt_space,
+        "target": "Modify Gateway Stake",
+        "space": modify_gateway_pokt_space,
         "optional": True,
     }
 )
@@ -334,5 +334,14 @@ servicer_transmission_channels.append(
         "target": "Remove Servicer",
         "space": remove_servicer_space,
         "optional": False,
+    }
+)
+
+servicer_transmission_channels.append(
+    {
+        "origin": "Servicer Forced Unstake Policy",
+        "target": "Modify Servicer POKT Holdings",
+        "space": modify_servicer_pokt_space,
+        "optional": True,
     }
 )
