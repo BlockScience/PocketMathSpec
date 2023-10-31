@@ -336,3 +336,12 @@ servicer_transmission_channels.append(
         "optional": False,
     }
 )
+
+servicer_transmission_channels.append(
+    {
+        "origin": "Servicer Forced Unstake Policy",
+        "target": "Modify Servicer POKT Holdings",
+        "space": modify_servicer_pokt_space,
+        "optional": True,
+    }
+)

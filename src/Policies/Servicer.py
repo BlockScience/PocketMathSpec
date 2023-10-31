@@ -219,7 +219,7 @@ unjail_node_policy = {
 
 servicer_forced_unstake_policy = {
     "name": "Servicer Forced Unstake Policy",
-    "description": "The policy for doing a force unstake on a servicer. The stake will be slashed and they will be booted from the system.",
+    "description": "The policy for doing a force unstake on a servicer. The stake will be slashed and they will be booted from the system. It is possible they receive some of their stake back if it is a partial slashing, hence the modify Servicer POKT Holdings.",
     "constraints": [],
     "policy_options": [],
     "domain": [servicer_forced_unstake_space],
@@ -227,6 +227,7 @@ servicer_forced_unstake_policy = {
         modify_servicer_pokt_space,
         burn_pokt_mechanism_space,
         remove_servicer_space,
+        modify_servicer_pokt_space,
     ],
     "parameters_used": [],
 }
