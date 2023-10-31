@@ -359,7 +359,7 @@
 </g>
 
 </svg>
-<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Servicer Forced Unstake Space</h3><p>{public_key: Public Key}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Remove Servicer Space</h3><p>{servicer: Servicer Entity}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Servicer Forced Unstake</h3><p>After reaching MaxJailedBlocks, a servicer will be force unstaked which will result in a node’s entire stake being slashed.</p><h4>Constraints:</h4>
+<h2>State</h2><h3>Local States</h3><h2>Spaces</h2><h3>Servicer Forced Unstake Space</h3><p>{public_key: Public Key}</p><h3>Burn POKT Mechanism Space</h3><p>{burn_amount: uPOKT}</p><h3>Modify Servicer POKT Space</h3><p>{public_key: Public Key,<br/>amount: uPOKT}</p><h3>Remove Servicer Space</h3><p>{servicer: Servicer Entity}</p><h2>Behavioral Action Space</h2><h2>Control Action Space</h2><h3>Servicer Forced Unstake</h3><p>After reaching MaxJailedBlocks, a servicer will be force unstaked which will result in a node’s entire stake being slashed.</p><h4>Constraints:</h4>
 <h2>Policies</h2><h3>Servicer Forced Unstake Policy</h3><p>The policy for doing a force unstake on a servicer. The stake will be slashed and they will be booted from the system. It is possible they receive some of their stake back if it is a partial slashing, hence the modify Servicer POKT Holdings.</p><h4>Preceded By:</h4>
 <p>1. Servicer Forced Unstake</p><h4>Domain Spaces:</h4>
 <p>1. Servicer Forced Unstake Space</p><h4>Followed By:</h4>

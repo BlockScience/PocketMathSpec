@@ -561,17 +561,17 @@
 
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-478 244.48,-478 244.48,4 -4,4"/>
 
-<!-- Servicer -->
+<!-- Watcher -->
 
 <g id="node1" class="node">
 
-<title>Servicer</title>
+<title>Watcher</title>
 
 <path fill="none" stroke="black" d="M111.74,-470.73C111.74,-472.53 97.62,-474 80.24,-474 62.86,-474 48.74,-472.53 48.74,-470.73 48.74,-470.73 48.74,-441.27 48.74,-441.27 48.74,-439.47 62.86,-438 80.24,-438 97.62,-438 111.74,-439.47 111.74,-441.27 111.74,-441.27 111.74,-470.73 111.74,-470.73"/>
 
 <path fill="none" stroke="black" d="M111.74,-470.73C111.74,-468.92 97.62,-467.45 80.24,-467.45 62.86,-467.45 48.74,-468.92 48.74,-470.73"/>
 
-<text text-anchor="middle" x="80.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
+<text text-anchor="middle" x="80.24" y="-452.3" font-family="Times,serif" font-size="14.00">Watcher</text>
 
 </g>
 
@@ -587,11 +587,11 @@
 
 </g>
 
-<!-- Servicer&#45;&gt;Servicer Pause -->
+<!-- Watcher&#45;&gt;Servicer Pause -->
 
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 
-<title>Servicer&#45;&gt;Servicer Pause</title>
+<title>Watcher&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M89.92,-437.81C94.9,-428.98 101.05,-418.06 106.51,-408.38"/>
 
@@ -599,25 +599,25 @@
 
 </g>
 
-<!-- Watcher -->
+<!-- Servicer -->
 
 <g id="node2" class="node">
 
-<title>Watcher</title>
+<title>Servicer</title>
 
 <path fill="none" stroke="black" d="M192.74,-470.73C192.74,-472.53 178.62,-474 161.24,-474 143.86,-474 129.74,-472.53 129.74,-470.73 129.74,-470.73 129.74,-441.27 129.74,-441.27 129.74,-439.47 143.86,-438 161.24,-438 178.62,-438 192.74,-439.47 192.74,-441.27 192.74,-441.27 192.74,-470.73 192.74,-470.73"/>
 
 <path fill="none" stroke="black" d="M192.74,-470.73C192.74,-468.92 178.62,-467.45 161.24,-467.45 143.86,-467.45 129.74,-468.92 129.74,-470.73"/>
 
-<text text-anchor="middle" x="161.24" y="-452.3" font-family="Times,serif" font-size="14.00">Watcher</text>
+<text text-anchor="middle" x="161.24" y="-452.3" font-family="Times,serif" font-size="14.00">Servicer</text>
 
 </g>
 
-<!-- Watcher&#45;&gt;Servicer Pause -->
+<!-- Servicer&#45;&gt;Servicer Pause -->
 
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 
-<title>Watcher&#45;&gt;Servicer Pause</title>
+<title>Servicer&#45;&gt;Servicer Pause</title>
 
 <path fill="none" stroke="black" d="M151.31,-437.81C146.21,-428.98 139.91,-418.06 134.32,-408.38"/>
 
@@ -7327,7 +7327,14 @@ func DistributeRewards(Service, geoZone, height):
 <p>1. Application Delegate to Gateway Space</p><p>2. Application Delegate to Gateway Space</p><h4>Constraints:</h4>
 <h3>Block Reward Policy Aggregate</h3><p>The aggregate policy for creating the total amount of block reward and also splitting it between different groups.
 
-Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369</p><h4>Preceded By:</h4>
+Based upon the numerous parameters, the total reward for each group is determined. For a more detailed version of the policy, one can look here: https://docs.google.com/spreadsheets/d/1QYe6NzuiyimsXs5cT1BSM-UT1DtX_K38cOZsEFJOtdA/edit#gid=242780369.
+
+The burn on the demand-side to pay for access and the distribution of rewards to servicers are kept separate, even if they relate to one another in the aggregate sense when it comes to modelling the supply over time.
+
+Relay Mining will determine probabalistically how much relays each servicer did, and, therefore, who much of the servicer rewards they are entitled to.
+
+The pool of rewards should accumulate over time until drawn down by the servicers submittting a "claim" for their work using the appropriate "proof".
+</p><h4>Preceded By:</h4>
 <p>1. Mint Block Rewards</p><h4>Domain Spaces:</h4>
 <p>1. Mint Block Rewards Space</p><h4>Followed By:</h4>
 <p>1. Mint POKT Mechanism</p><p>2. Assign Servicer Salary Policy</p><p>3. Validator Block Reward Policy</p><p>4. DAO Block Reward Policy</p><h4>Codomain Spaces:</h4>
