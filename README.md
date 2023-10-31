@@ -33,7 +33,7 @@ The tree below is all the components of the current specification.
 │   ├──Watcher
 │   ├──Application
 │   ├──Validator
-│   ├──Portal
+│   ├──Gateway
 │   ├──Treasury
 │   ├──Service
 │   ├──Global
@@ -42,7 +42,7 @@ The tree below is all the components of the current specification.
 │   ├──Global
 │   │   ├──Services
 │   │   ├──Sessions
-│   │   ├──Portals
+│   │   ├──Gateways
 │   │   ├──Servicers
 │   ├──Servicer
 │   │   ├──Public key
@@ -77,7 +77,7 @@ The tree below is all the components of the current specification.
 │   │   ├──Service URL
 │   │   ├──Operator Public Key
 │   │   ├──Stake Status
-│   ├──Portal
+│   ├──Gateway
 │   │   ├──Stake Status
 │   │   ├──Delegators
 │   │   ├──POKT Holdings
@@ -87,7 +87,7 @@ The tree below is all the components of the current specification.
 │   │   ├──Relay Fees
 │   ├──Service
 │   │   ├──Name
-│   │   ├──Portal API Prefix
+│   │   ├──Gateway API Prefix
 │   │   ├──Service ID
 │   ├──DAO
 │   │   ├──POKT Holdings
@@ -105,12 +105,12 @@ The tree below is all the components of the current specification.
 │   ├──Modify Application POKT Space
 │   ├──Application Param Update Space
 │   ├──Application Unstake Space
-│   ├──Application Delegate to Portal Space
+│   ├──Application Delegate to Gateway Space
 │   ├──Validator Stake Space
 │   ├──Modify Validator POKT Space
 │   ├──Validator Param Update Space
-│   ├──Portal Registration Space
-│   ├──Portal Unregistration Space
+│   ├──Gateway Registration Space
+│   ├──Gateway Unregistration Space
 │   ├──Application Undelegation Space
 │   ├──Validator Pause Space
 │   ├──Validator Stake Burning Space
@@ -130,14 +130,14 @@ The tree below is all the components of the current specification.
 │   ├──Burn POKT Mechanism Space
 │   ├──DAO Block Reward Space
 │   ├──Modify DAO POKT Space
-│   ├──Portal Relay Request Space
+│   ├──Gateway Relay Request Space
 │   ├──Servicer Stake Burn Space
 │   ├──Servicer Forced Unstake Space
 │   ├──Servicer Stake Status Space
 │   ├──Application Stake Status Space
-│   ├──Modify Portal POKT Space
-│   ├──Portal Stake Status Space
-│   ├──Return Portal Stake Space
+│   ├──Modify Gateway POKT Space
+│   ├──Gateway Stake Status Space
+│   ├──Return Gateway Stake Space
 │   ├──Increase Relay Fees Space
 │   ├──Distribute Fees Space
 │   ├──Decrease Relay Fees Space
@@ -167,11 +167,11 @@ The tree below is all the components of the current specification.
 │   │   ├──app_burn_per_relay
 │   ├──Validator
 │   │   ├──block_proposer_allocation
-│   ├──Portal
+│   ├──Gateway
 │   │   ├──stake_per_app_delegation
-│   │   ├──portal_fee_per_relay
-│   │   ├──portal_minimum_stake
-│   │   ├──portal_unstaking_time
+│   │   ├──gateway_fee_per_relay
+│   │   ├──gateway_minimum_stake
+│   │   ├──gateway_unstaking_time
 │   ├──Session
 │   │   ├──session_block_frequency
 │   │   ├──session_token_bucket_coefficient
@@ -196,9 +196,9 @@ The tree below is all the components of the current specification.
 │   ├──Servicer Unstake
 │   ├──Application Stake
 │   ├──Application Unstake
-│   ├──Application Delegate to Portal
-│   ├──Portal Registration
-│   ├──Portal Unregistration
+│   ├──Application Delegate to Gateway
+│   ├──Gateway Registration
+│   ├──Gateway Unregistration
 │   ├──Application Undelegation
 │   ├──Submit Relay Request
 │   ├──Servicer Relay
@@ -206,7 +206,7 @@ The tree below is all the components of the current specification.
 │   ├──Unjail Node
 │   ├──Service Join
 │   ├──Service Leave
-│   ├──Submit Relay Request (Portal)
+│   ├──Submit Relay Request (Gateway)
 ├──Control Actions
 │   ├──Mint Block Rewards
 │   ├──Jail Node
@@ -214,7 +214,7 @@ The tree below is all the components of the current specification.
 │   ├──Return Application Stake
 │   ├──Servicer Stake Burn
 │   ├──Servicer Forced Unstake
-│   ├──Return Portal Stake
+│   ├──Return Gateway Stake
 │   ├──Distribute Fees
 ├──Policies
 │   ├──Servicer Stake Policy
@@ -224,24 +224,24 @@ The tree below is all the components of the current specification.
 │   ├──Set Application Parameters Policy
 │   ├──Servicer Pause Policy
 │   ├──Assign Servicer Salary Policy
-│   ├──Application Delegate to Portal Policy
+│   ├──Application Delegate to Gateway Policy
 │   ├──Block Reward Policy Aggregate
 │   ├──Validator Block Reward Policy
 │   ├──DAO Block Reward Policy
-│   ├──Submit Relay Request (Portal) Policy
+│   ├──Submit Relay Request (Gateway) Policy
 │   ├──Servicer Relay Policy
 │   ├──Servicer Stake Burn Policy
-│   ├──Portal Registration Policy
+│   ├──Gateway Registration Policy
 │   ├──Servicer Unstake Policy
 │   ├──Application Unstake Policy
 │   ├──Submit Relay Request Policy
 │   ├──Service Join Policy
 │   ├──Service Leave Policy
-│   ├──Application Undelegate to Portal Policy
-│   ├──Portal Unregistration Policy
+│   ├──Application Undelegate to Gateway Policy
+│   ├──Gateway Unregistration Policy
 │   ├──Return Servicer Stake Policy
 │   ├──Return Application Stake Policy
-│   ├──Return Portal Stake Policy
+│   ├──Return Gateway Stake Policy
 │   ├──Burn POKT Policy
 │   ├──Burn Per Session Policy
 │   ├──Burn Per Relay Policy
@@ -267,13 +267,13 @@ The tree below is all the components of the current specification.
 │   ├──Update Application Stake Status
 │   ├──Add New Service
 │   ├──Remove Service
-│   ├──Add Portal Delegator
+│   ├──Add Gateway Delegator
 │   ├──Update Application Delegate
-│   ├──Remove Portal Delegator
-│   ├──Modify Portal POKT Holdings
-│   ├──Modify Portal Stake
-│   ├──Add New Portal
-│   ├──Update Portal Stake Status
+│   ├──Remove Gateway Delegator
+│   ├──Modify Gateway POKT Holdings
+│   ├──Modify Gateway Stake
+│   ├──Add New Gateway
+│   ├──Update Gateway Stake Status
 │   ├──Create New Session
 │   ├──Increase Relay Fees
 │   ├──Remove Session

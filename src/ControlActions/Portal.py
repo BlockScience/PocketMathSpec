@@ -1,10 +1,10 @@
-from ..Spaces import return_portal_stake_space
+from ..Spaces import return_gateway_stake_space
 
-return_portal_stake = {
-    "name": "Return Portal Stake",
-    "description": """After unstaking, the original stake (i.e. deposit) is returned to the Portal's custodial account after an unbounding period has elapsed.""",
+return_gateway_stake = {
+    "name": "Return Gateway Stake",
+    "description": """After unstaking, the original stake (i.e. deposit) is returned to the Gateway's custodial account after an unbounding period has elapsed.""",
     "constraints": [],
     "control_action_options": [],
-    "codomain": [return_portal_stake_space],
-    "parameters_used": ["portal_unstaking_time"],
+    "codomain": [return_gateway_stake_space],
+    "parameters_used": ["gateway_unstaking_time"],
 }

@@ -1,6 +1,10 @@
-from ..Spaces import (application_stake_space, application_unstake_space,
-                      application_delegate_to_portal_space, application_undelegation_space,
-                      submit_relay_request_space)
+from ..Spaces import (
+    application_stake_space,
+    application_unstake_space,
+    application_delegate_to_gateway_space,
+    application_undelegation_space,
+    submit_relay_request_space,
+)
 
 application_stake = {
     "name": "Application Stake",
@@ -22,19 +26,19 @@ application_unstake = {
     "parameters_used": [],
 }
 
-application_delegate_to_portal = {
-    "name": "Application Delegate to Portal",
-    "description": "An action where the application delegates to a portal to control their on-chain actions",
+application_delegate_to_gateway = {
+    "name": "Application Delegate to Gateway",
+    "description": "An action where the application delegates to a gateway to control their on-chain actions",
     "constraints": [],
     "boundary_action_options": [],
     "called_by": ["Application"],
-    "codomain": [application_delegate_to_portal_space],
+    "codomain": [application_delegate_to_gateway_space],
     "parameters_used": [],
 }
 
 application_undelegation = {
     "name": "Application Undelegation",
-    "description": "If a staked Application wants to stop using a Portal, and prevent the Portal from further signing relays on its behalf, it would simply submit an on-chain UndelegateMsg. Further relays signed by the Portal on behalf of the Application would be rejected by the Servicers.",
+    "description": "If a staked Application wants to stop using a Gateway, and prevent the Gateway from further signing relays on its behalf, it would simply submit an on-chain UndelegateMsg. Further relays signed by the Gateway on behalf of the Application would be rejected by the Servicers.",
     "constraints": [],
     "boundary_action_options": [],
     "called_by": ["Application"],

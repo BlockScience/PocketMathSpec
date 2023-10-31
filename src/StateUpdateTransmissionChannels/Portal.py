@@ -1,31 +1,55 @@
-portal_transmission_channels = []
+gateway_transmission_channels = []
 
-portal_transmission_channels.append({"origin": "Add Portal Delegator",
-                                     "entity": "Portal",
-                                     "variable": "Delegators",
-                                     "optional": False})
+gateway_transmission_channels.append(
+    {
+        "origin": "Add Gateway Delegator",
+        "entity": "Gateway",
+        "variable": "Delegators",
+        "optional": False,
+    }
+)
 
-portal_transmission_channels.append({"origin": "Remove Portal Delegator",
-                                     "entity": "Portal",
-                                     "variable": "Delegators",
-                                     "optional": False})
+gateway_transmission_channels.append(
+    {
+        "origin": "Remove Gateway Delegator",
+        "entity": "Gateway",
+        "variable": "Delegators",
+        "optional": False,
+    }
+)
 
-portal_transmission_channels.append({"origin": "Modify Portal POKT Holdings",
-                                     "entity": "Portal",
-                                     "variable": "POKT Holdings",
-                                     "optional": False})
+gateway_transmission_channels.append(
+    {
+        "origin": "Modify Gateway POKT Holdings",
+        "entity": "Gateway",
+        "variable": "POKT Holdings",
+        "optional": False,
+    }
+)
 
-portal_transmission_channels.append({"origin": "Modify Portal Stake",
-                                     "entity": "Portal",
-                                     "variable": "Staked POKT",
-                                     "optional": False})
+gateway_transmission_channels.append(
+    {
+        "origin": "Modify Gateway Stake",
+        "entity": "Gateway",
+        "variable": "Staked POKT",
+        "optional": False,
+    }
+)
 
-portal_transmission_channels.append({"origin": "Add New Portal",
-                                     "entity": "Global",
-                                     "variable": "Portals",
-                                     "optional": False})
+gateway_transmission_channels.append(
+    {
+        "origin": "Add New Gateway",
+        "entity": "Global",
+        "variable": "Gateways",
+        "optional": False,
+    }
+)
 
-portal_transmission_channels.append({"origin": "Update Portal Stake Status",
-                                     "entity": "Portal",
-                                     "variable": "Stake Status",
-                                     "optional": False})
+gateway_transmission_channels.append(
+    {
+        "origin": "Update Gateway Stake Status",
+        "entity": "Gateway",
+        "variable": "Stake Status",
+        "optional": False,
+    }
+)

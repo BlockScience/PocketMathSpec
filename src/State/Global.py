@@ -2,7 +2,7 @@ from typing import List
 from ..Types import (
     ServiceEntityType,
     SessionType,
-    PortalEntityType,
+    GatewayEntityType,
     ServicerEntityType,
     ApplicationEntityType,
     DAOEntityType,
@@ -30,9 +30,9 @@ global_state = {
             "domain": None,
         },
         {
-            "type": List[PortalEntityType],
-            "name": "Portals",
-            "description": "Portals held within the system.",
+            "type": List[GatewayEntityType],
+            "name": "Gateways",
+            "description": "Gateways held within the system.",
             "symbol": None,
             "domain": None,
         },

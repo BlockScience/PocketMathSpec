@@ -28,13 +28,13 @@ from .System import (
 )
 from .DAO import modify_dao_pokt_holdings
 from .Service import add_new_service, remove_service
-from .Portal import (
-    add_portal_delegator,
-    remove_portal_delegator,
-    modify_portal_pokt_holdings,
-    modify_portal_stake,
-    add_new_portal,
-    update_portal_stake_status,
+from .Gateway import (
+    add_gateway_delegator,
+    remove_gateway_delegator,
+    modify_gateway_pokt_holdings,
+    modify_gateway_stake,
+    add_new_gateway,
+    update_gateway_stake_status,
 )
 
 mechanism = {
@@ -57,13 +57,13 @@ mechanism = {
     "Update Application Stake Status": update_application_stake_status,
     "Add New Service": add_new_service,
     "Remove Service": remove_service,
-    "Add Portal Delegator": add_portal_delegator,
+    "Add Gateway Delegator": add_gateway_delegator,
     "Update Application Delegate": update_application_delegate,
-    "Remove Portal Delegator": remove_portal_delegator,
-    "Modify Portal POKT Holdings": modify_portal_pokt_holdings,
-    "Modify Portal Stake": modify_portal_stake,
-    "Add New Portal": add_new_portal,
-    "Update Portal Stake Status": update_portal_stake_status,
+    "Remove Gateway Delegator": remove_gateway_delegator,
+    "Modify Gateway POKT Holdings": modify_gateway_pokt_holdings,
+    "Modify Gateway Stake": modify_gateway_stake,
+    "Add New Gateway": add_new_gateway,
+    "Update Gateway Stake Status": update_gateway_stake_status,
     "Create New Session": create_new_session,
     "Increase Relay Fees": increase_relay_fees,
     "Remove Session": remove_session,

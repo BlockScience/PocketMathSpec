@@ -9,16 +9,16 @@ from .Servicer import (
 from .Application import (
     application_stake,
     application_unstake,
-    application_delegate_to_portal,
+    application_delegate_to_gateway,
     application_undelegation,
     submit_relay_request,
 )
 
 # from .Validator import validator_stake, validator_pause, validator_unstake, validator_unpause, become_validator
-from .Portal import (
-    portal_registration,
-    portal_unregistration,
-    submit_relay_request_portal,
+from .Gateway import (
+    gateway_registration,
+    gateway_unregistration,
+    submit_relay_request_gateway,
 )
 from .System import burn_pokt
 from .Service import service_join, service_leave
@@ -30,10 +30,10 @@ boundary_actions = {
     "Servicer Unstake": servicer_unstake,
     "Application Stake": application_stake,
     "Application Unstake": application_unstake,
-    "Application Delegate to Portal": application_delegate_to_portal,
+    "Application Delegate to Gateway": application_delegate_to_gateway,
     # "Validator Stake": validator_stake,
-    "Portal Registration": portal_registration,
-    "Portal Unregistration": portal_unregistration,
+    "Gateway Registration": gateway_registration,
+    "Gateway Unregistration": gateway_unregistration,
     "Application Undelegation": application_undelegation,
     # "Validator Pause": validator_pause,
     # "Validator Unstake": validator_unstake,
@@ -45,5 +45,5 @@ boundary_actions = {
     "Unjail Node": unjail_node,
     "Service Join": service_join,
     "Service Leave": service_leave,
-    "Submit Relay Request (Portal)": submit_relay_request_portal,
+    "Submit Relay Request (Gateway)": submit_relay_request_gateway,
 }
