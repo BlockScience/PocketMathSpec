@@ -34,7 +34,6 @@ The tree below is all the components of the current specification.
 │   ├──Application
 │   ├──Validator
 │   ├──Gateway
-│   ├──Treasury
 │   ├──Service
 │   ├──Global
 │   ├──DAO
@@ -44,6 +43,12 @@ The tree below is all the components of the current specification.
 │   │   ├──Sessions
 │   │   ├──Gateways
 │   │   ├──Servicers
+│   │   ├──Geozones
+│   │   ├──Applications
+│   │   ├──Validators
+│   │   ├──DAO
+│   │   ├──Floating Supply
+│   │   ├──Relay Fees
 │   ├──Servicer
 │   │   ├──Public key
 │   │   ├──Servicer Salary
@@ -82,9 +87,6 @@ The tree below is all the components of the current specification.
 │   │   ├──Delegators
 │   │   ├──POKT Holdings
 │   │   ├──Staked POKT
-│   ├──Treasury
-│   │   ├──Floating Supply
-│   │   ├──Relay Fees
 │   ├──Service
 │   │   ├──Name
 │   │   ├──Gateway API Prefix
@@ -175,7 +177,7 @@ The tree below is all the components of the current specification.
 │   ├──Session
 │   │   ├──session_block_frequency
 │   │   ├──session_token_bucket_coefficient
-│   ├──Treasury
+│   ├──System
 │   │   ├──dao_fee_percentage
 │   │   ├──validator_fee_percentage
 │   │   ├──maturity_relay_cost
